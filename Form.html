@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Sample Form </title>
+</head>
+<body>
+<h3> PRODUCT EVALUATION FORM </h3>
+<form>
+    <fieldset>
+        <legend>Please fill this form...</legend>
+        <table>
+            <tr>
+                <td> <label for="name">Name:</label> </td>
+                <td> <input type="text" name="name" value="" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="email">Email:</label> </td>
+                <td> <input type="email" name="email" value="" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="city">City:</label> </td>
+                <td> <select name="city">
+                    <option value="">Select location</option>
+                    <option value="aberdeen">Aberdeen</option>
+                    <option value="glasgow">Glasgow</option>
+                    <option value="edinburgh">Edinburgh</option>
+                    <option value="london">London</option>
+                    <option value="southampton">Southampton</option>
+                    <option value="birmingham">Birmingham</option>
+                </select> </td>
+            </tr>
+            <tr>
+                <td><label>Comment:</label></td>
+                <td><textarea name="comments" cols="45" rows="5"> </textarea></td>
+            </tr>
+        </table>
+        <p> Please let us know your level of satistaction of our product... <br>
+            Please check which option is applicable
+        </p>
+        <p>1. How satisfied are you with delivery of the product? <input type="checkbox" name="satisfied" value="satisfied">
+            Satisfied   <input type="checkbox" name="not satisfied" value="not  satisfied">
+            Not Satisfied  <br>
+            2. How satisfied are you with the instructions before use? <input type="checkbox" name="satisfied" value="satisfied">
+            Satisfied   <input type="checkbox" name="not satisfied" value="not  satisfied">
+            Not Satisfied  <br>
+            3. How satisfied are you with the solutions offered by the product? <input type="checkbox" name="satisfied" value="satisfied">
+            Satisfied   <input type="checkbox" name="not satisfied" value="not  satisfied">
+            Not Satisfied  <br>
+
+        </p>
+        <h4>Please Rate Your Overall Satisfaction</h4>
+        <p><input type="radio" name="excellent" value="excellent"> Execellent <br>
+            <input type="radio" name="very good" value="very good"> Very Good <br>
+            <input type="radio" name="good" value="good"> Good <br>
+            <input type="radio" name="fair" value="fair"> Fair <br>
+            <input type="radio" name="poor" value="poor"> Poor <br>
+
+        </p>
+        <h5>Thanks for your feedback!</h5>
+    </fieldset>
+
+</form>
+
+</body>
+
+
+
+</html>
