@@ -1,11 +1,38 @@
 * {
-    background-color: lightgoldenrodyellow;
+    background-color: pink;
 
 }
-nav { nav-index: 3;
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+     background-color: purple;
+}
+ li {
+     float:left;
+ }
+ li a {
+    display:block;
+     color: coral;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     background-color: purple;
+
 }
 
 h1, h2, h3  {
-    color: midnightblue;
+    color: mintcream;
 
+}
+img {
+    max-width: 100px;
+    height: 100px;
+    margin: 5, 5, 5, 5;
+    padding: 5, 5, 5, 5 ;
+}
+
+div{
+    background-image: url ("jellyfish.jpg");
 }
