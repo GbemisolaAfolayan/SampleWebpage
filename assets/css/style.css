@@ -22,17 +22,40 @@
 
 }
 
-h1, h2, h3  {
+h1, h2  {
     color: mintcream;
 
 }
+h3 {
+    color: blueviolet;
+}
 img {
-    max-width: 100px;
-    height: 100px;
-    margin: 5, 5, 5, 5;
-    padding: 5, 5, 5, 5 ;
+    max-width: 200px;
+    height: 200px;
+    margin: 10, 10, 10, 10;
+    padding: 10, 10, 10, 10 ;
 }
 
-div{
-    background-image: url ("jellyfish.jpg");
+#mugContainer {
+    border-style: mix;
+    float: left;
+
+
+}
+div {
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
+p{
+    font-family: serif;
+    font-size: large;
+    text-align: justify;
+
+}
+footer p {
+    text-align: center;
+clear: both;
+
 }
