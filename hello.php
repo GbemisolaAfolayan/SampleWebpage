@@ -30,7 +30,7 @@
 </p>
 <p>
     <?php
-    $myage = 25;
+    $myage = 7;
 
     if ($myage < 16) {print "Yor are Underage! Thanks!";}
     elseif ($myage < 18) {print "You can have specs";}
