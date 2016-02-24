@@ -74,7 +74,7 @@
 </p>
 <p>
     <?php
-    $wantedgoods = "mugs"
+    $wantedgoods = "mugs";
 
     switch($wantedgoods) {
         case "mugs":
