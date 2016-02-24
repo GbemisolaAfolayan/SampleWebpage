@@ -86,6 +86,9 @@
         case "sausage roll":
             echo "You have to be 21 to buy sausage rolls";
             break;
+        default:
+            echo "You can't buy anything!";
+            break;
     }
 
     ?>
