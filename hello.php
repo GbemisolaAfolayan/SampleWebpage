@@ -97,7 +97,7 @@
 
 <p>
     <?php
-    $provisionedactivity = array("Specs", "Drugs", "Rock and Roll");
+    $provisionedActivity = array("Specs", "Drugs", "Rock and Roll");
     foreach($provisionedActivity as $x) {
         print "<p>$x</p>";
     }
