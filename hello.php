@@ -1,7 +1,26 @@
-<?php
-echo "Hello World";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloWorld</title>
+</head>
+<body>
+<p>
+    <?php echo "Hello World";
+
+    echo 5*7; ?>
+
+
+</p>
 
 
 
-echo 5*7;
-?>
+
+
+
+
+
+</body>
+
+
+</html>
