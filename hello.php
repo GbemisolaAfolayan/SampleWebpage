@@ -11,6 +11,10 @@
             echo 5*7;
             echo "<br>";
             echo "Hello," . " " . " world" . "!";
+            echo "<br>";
+            $myname = "Gbemisola Afolayan";
+            $myage = "111";
+            echo "My  name is" .$myname. "and I am ".$myage." years old";
 
     ?>
 
