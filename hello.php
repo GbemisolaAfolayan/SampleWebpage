@@ -96,7 +96,7 @@
 <p>
     <?php
     $myarray = array("do","re","mi");
-    echo $myarray[0]
+    echo $myarray[0];
     $myarray[1] = "la";
     echo $myarray[1];
     unset ($array[2]);
