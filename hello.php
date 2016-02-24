@@ -40,6 +40,18 @@
 
     ?>
 </p>
+<p>
+    <?php
+    $myage = 25;
+
+    if ($myage >= 21) {echo "You can have specs, mugs or sausage rolls";}
+    elseif ($myage >=18) {print "You can have specs and mugs";}
+    elseif ($myage >=16) {print "You can have specs";}
+
+    else {print "You cant buy anything";}
+
+    ?>
+</p>
 
 
 
