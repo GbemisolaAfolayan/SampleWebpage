@@ -72,7 +72,24 @@
 
     ?>
 </p>
+<p>
+    <?php
+    $wantedgoods = "mugs"
 
+    switch($wantedgoods) {
+        case "mugs":
+            echo "You have to be 18 to buy mugs";
+            break;
+        case "specs":
+            echo "You have to be 16 to buy specs";
+            break;
+        case "sausage roll":
+            echo "You have to be 21 to buy sausage rolls";
+            break;
+    }
+
+    ?>
+</p>
 
 
 
