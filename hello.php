@@ -90,11 +90,20 @@
             echo "You can't buy anything!";
             break;
     }
-
     ?>
 </p>
 
+<p>
+    <?php
+    $myarray = array("do","re","mi");
+    echo $myarray[0]
+    $myarray[1] = "la";
+    echo $myarray[1];
+    unset ($array[2]);
 
+    }
+    ?>
+</p>
 
 
 </body>
