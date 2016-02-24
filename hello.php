@@ -97,13 +97,29 @@
 
 <p>
     <?php
-    $provisionedActivity = array("Specs", "Drugs", "Rock and Roll");
+    $provisionedActivity = array("Specs", "Mugs", "Rock and Roll");
     foreach($provisionedActivity as $x) {
         print "<p>$x</p>";
     }
 
 
+    ?>
+</p>
+<p>
+    <?php
+    $myarray = array("do","re","mi");
+    echo $myarray[0];
 
+    $myarray[1] = "       la";
+    echo $myarray[1];
+
+
+    unset ($myarray[2]);
+    echo $myarray[2];
+
+
+    ?>
+</p>
 
 
 
