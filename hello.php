@@ -55,7 +55,7 @@
 
 <p>
     <?php
-    $numberofHobbits = 8;
+    $numberofHobbits = 3;
 
     switch ($numberofHobbits) {
         case 1:
