@@ -97,13 +97,14 @@
     <?php
     $myarray = array("do","re","mi");
     echo $myarray[0];
-    break;
-    $myarray[1] = "la";
+
+    $myarray[1] = "       la";
     echo $myarray[1];
-    break;
+
+
     unset ($myarray[2]);
     echo $myarray[2];
-    break;
+
 
     ?>
 </p>
