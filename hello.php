@@ -99,9 +99,8 @@
     echo $myarray[0];
     $myarray[1] = "la";
     echo $myarray[1];
-    unset ($array[2]);
+    unset ($myarray[2]);
 
-    }
     ?>
 </p>
 
