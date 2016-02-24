@@ -6,9 +6,13 @@
 </head>
 <body>
 <p>
-    <?php echo "Hello World";
+    <?php   echo "Hello World";
 
-    echo 5*7; ?>
+            echo 5*7;
+
+            echo "Hello," . " " . " world""!";
+
+    ?>
 
 
 </p>
