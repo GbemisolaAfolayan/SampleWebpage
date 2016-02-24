@@ -103,7 +103,9 @@
     }
     $provisionedActivity[2] = "hugs";
     unset ($provisionedActivity[3]);
-    echo $provisionedActivity[2]
+    echo $provisionedActivity[2];
+    echo $provisionedActivity[3];
+
 
     ?>
 </p>
