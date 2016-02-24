@@ -93,17 +93,18 @@
     ?>
 </p>
 
+
+
 <p>
     <?php
-    $myarray = array("do","re","mi");
-    echo $myarray[0];
+    $provisionedactivity = array("Specs", "Drugs", "Rock and Roll");
+    foreach($provisionedActivity as $x) {
+        print "<p>$x</p>";
+    }
 
-    $myarray[1] = "       la";
-    echo $myarray[1];
 
 
-    unset ($myarray[2]);
-    echo $myarray[2];
+
 
 
     ?>
