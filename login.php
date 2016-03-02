@@ -9,7 +9,7 @@
 include ("connection.php");
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {
-    echo = "Both fields are required.";
+    echo "Both fields are required.";
 }else
 {
     $username=$_POST['username'];
