@@ -1,0 +1,20 @@
+* {background-color: lightpink;
+
+    font-style: oblique;
+    font-family: "Comic Sans MS";
+}
+h1, h3 {font-family: SansSerif;
+    font-size: x-large;
+    color: crimson;
+    text-shadow: black;
+
+}
+fieldset {padding: 5%;
+        margin-outside: 30;
+        border-color: blueviolet;
+
+    background-color: darksalmon;
+
+
+
+}
