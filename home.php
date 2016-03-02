@@ -15,8 +15,8 @@ $sql="SELECT * FROM gbemisola_1515251";
 $result=mysqli_query($db,$sql);
 
 echo $result
-?>
 
+?>
 
 </body>
 </html>
