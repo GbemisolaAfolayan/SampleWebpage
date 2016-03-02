@@ -7,10 +7,16 @@
 
 <body>
 <?php
-
+include ("connection.php");
 echo"<h1> Hello". " ". $_GET["username"]."</h1>";
+
+$sql="SELECT * FROM gbemisola_1515251";
+
+$result=mysqli_query($db,$sql);
+
 ?>
-<h1>Hello</h1>
+
+
 </body>
 </html>
 
