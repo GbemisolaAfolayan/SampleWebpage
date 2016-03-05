@@ -26,6 +26,17 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 
+$sql ="SELECT * FROM gbemisola_1515251";
+$result = mysqli_query($db, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($sql = mysqli_fetch_assoc($result)) {
+        echo " Name: " . $row["username"]. " " . $row["password"]. "<br>";
+    }
+} else {
+echo "0 results";
+
 ?>
 
 </body>
