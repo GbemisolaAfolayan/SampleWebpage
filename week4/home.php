@@ -14,8 +14,6 @@ $sql="SELECT * FROM gbemisola_1515251";
 
 $result=mysqli_query($db,$sql);
 
-echo $result
-
 if (mysqli_num_rows($result) > 0) {
     echo "<table><tr><th>ID</th><th>username</th></tr>";
     // output data of each row
