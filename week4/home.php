@@ -15,10 +15,10 @@ $sql="SELECT * FROM gbemisola_1515251";
 $result=mysqli_query($db,$sql);
 
 if (mysqli_num_rows($result) > 0) {
-    echo "<table><tr><th>ID</th><th>username</th></tr>";
+    echo "<table><tr><th>uid</th><th>username</th></tr>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"]. "</td></tr>";
+        echo "<tr><td>" . $row["uid"]. "</td><td>" . $row["username"]. "</td></tr>";
     }
     echo "</table>";
 } else {
