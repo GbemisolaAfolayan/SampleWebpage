@@ -10,21 +10,6 @@
 include("connection.php");
 echo"<h1> Hello". " ". $_GET["username"]."</h1>";
 
-$sql="SELECT * FROM gbemisola_1515251";
-
-$result=mysqli_query($db,$sql);
-
-if (mysqli_num_rows($result) > 0) {
-    echo "<table><tr><th>uid</th><th>username</th></tr>";
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["uid"]. "</td><td>" . $row["username"]. "</td></tr>";
-    }
-    echo "</table>";
-} else {
-    echo "0 results";
-}
-
 
 $sql ="SELECT * FROM gbemisola_1515251";
 $result = mysqli_query($db, $sql);
@@ -35,7 +20,8 @@ if (mysqli_num_rows($result) > 0) {
         echo " Name: " . $row["username"]. " " . $row["password"]. "<br>";
     }
 } else {
-echo "0 results";
+    echo "0 results";
+}
 
 ?>
 
