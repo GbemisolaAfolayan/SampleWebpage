@@ -11,7 +11,7 @@ include("connection.php");
 echo"<h1> Hello". " ". $_GET["username"]."</h1>";
 
 
-$sql ="SELECT * FROM gbemisola_1515251";
+$sql ="SELECT * FROM users";
 $result = mysqli_query($db, $sql);
 
 if (mysqli_num_rows($result) > 0) {
