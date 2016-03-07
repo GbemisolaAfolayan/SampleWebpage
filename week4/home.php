@@ -10,7 +10,6 @@
 include("connection.php");
 echo"<h1> Hello". " ". $_GET["username"]."</h1>";
 
-$username = $_GET["username"];
 $sql ="SELECT * FROM users";
 $result = mysqli_query($db, $sql);
 
