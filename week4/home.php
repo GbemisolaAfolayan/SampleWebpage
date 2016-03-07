@@ -10,7 +10,7 @@
 include("connection.php");
 echo"<h1> Hello". " ". $_GET["username"]."</h1>";
 
-$username = $_GET["username"];
+
 $sql ="SELECT * FROM gbemisola_1515251";
 $result = mysqli_query($db, $sql);
 
