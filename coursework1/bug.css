@@ -12,7 +12,7 @@ h1, h3 {font-family: SansSerif;
 fieldset {padding: 5%;
         margin-outside: 100;
         border-color: blueviolet;
-        position: absolute;
+        position: relative;
 
 
     background-color: darksalmon;
