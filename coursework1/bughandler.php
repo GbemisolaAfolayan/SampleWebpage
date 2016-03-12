@@ -1,7 +1,23 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Oluwagbemisola
- * Date: 05/03/2016
- * Time: 19:26
- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloWorld</title>
+</head>
+<body>
+
+    <?php   echo "Hello World";
+    echo "<br>";
+    echo 5*7;
+    echo "<br>";
+    echo "Hello," . " " . " world" . "!";
+    echo "<br>";
+    $myname = "Gbemisola Afolayan";
+    $myage = "111";
+    echo "My  name is " .$myname. " and I am ".$myage." years old";
+
+    ?>
+
+
+</body>
+</html>
