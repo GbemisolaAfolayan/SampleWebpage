@@ -17,6 +17,9 @@ fieldset {padding: 5%;
 
     background-color: darksalmon;
 
+}
 
+table {position: absolute;
+        background-color: bisque;
 
 }
