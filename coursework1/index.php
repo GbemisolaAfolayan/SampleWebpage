@@ -18,6 +18,7 @@
                 <td> <label for="username">Username:</label> </td>
                 <td> <input type="text" name="username" value="" /> </td>
             </tr>
+
             <tr>
                 <td> <label for="email">Email:</label> </td>
                 <td> <input type="email" name="email" value="" /> </td>
@@ -25,6 +26,11 @@
             <tr>
                 <td> <label for="Phoneextention"> Phone Extention:</label> </td>
                 <td> <input type="phone extention" name="phone extention" value="" /> </td>
+
+            </tr>
+            <tr>
+                <td> <label for="password">Password</label> </td>
+                <td> </td><input type="password" name="password" value=""> </td>
 
             </tr>
             <div id="submitbutton">
