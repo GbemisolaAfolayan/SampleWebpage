@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,7 @@
 </head>
 <body>
 <h1> BUG TRACKING SYSTEM </h1>
-<form method="post" action="bughandler.php">
+<form method="post" action="login.php">
 <div id="loginbox">
         <legend>Login</legend>
         <table>
@@ -36,7 +39,7 @@
 </form>
 <div id="signup">
 
-    <p> New User ? <a href ="bugsignup.html"> Sign Up </a> </p>
+    <p> New User ? <a href ="bugsignup.php"> Sign Up </a> </p>
 </div>
 
 
@@ -45,7 +48,6 @@
 
 </html>
 
-
-
+?>
 
 
