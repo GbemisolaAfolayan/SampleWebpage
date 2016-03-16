@@ -52,4 +52,3 @@ if($query)
 </body>
 
 </html>
-
