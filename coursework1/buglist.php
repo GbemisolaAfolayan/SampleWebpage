@@ -21,6 +21,11 @@
         }
     ?>
         </div>
+    <div id="Newbug">
+
+        <p> New Bug ? <a href ="bughome.php"> Report A Bug </a> </p>
+
+    </div>
 
 
 
