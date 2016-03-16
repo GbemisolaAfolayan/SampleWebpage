@@ -7,16 +7,18 @@
  */
 
 include("connection.php");
-if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone extention"]))
+if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone extention"]) || empty($_POST["password"]))
 {
     echo "All fields are required.";
 }else
 {
     $username=$_POST['username'];
     $email=$_POST['email'];
-    $phoneextention=$_POST['phone extention']
+    $phoneextention=$_POST['phone extention'];
+    $password=$_POST['password']
 
-    $sql="SELECT * FROM users WHERE username='$username' and email='$email' and phone extention='$phoneextention'";
+
+    $sql="SELECT * FROM users WHERE username='$username' and email='$email' and phone extention='$phoneextention' and password='$password'";
 
     $result=mysqli_query($db,$sql);
 

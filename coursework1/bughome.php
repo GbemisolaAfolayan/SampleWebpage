@@ -10,7 +10,7 @@
 <body>
 <h1> BUG TRACKING SYSTEM </h1>
 <h3> Post New Bugs Here </h3>
-<form method="post" action="bughandler.php">
+<form method="post" action="buglist.php">
 <div id="Bug information">
     <fieldset>
 
