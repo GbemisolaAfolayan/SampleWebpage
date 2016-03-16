@@ -15,7 +15,7 @@ if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone ex
     $username=$_POST['username'];
     $email=$_POST['email'];
     $phoneextention=$_POST['phone extention'];
-    $password=$_POST['password']
+    $password=$_POST['password'];
 
 
     $sql="SELECT * FROM users WHERE username='$username' and email='$email' and phone extention='$phoneextention' and password='$password'";
