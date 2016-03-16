@@ -16,6 +16,8 @@
     $bugID =$_POST["bugID"];
 
     $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate, userID, bugID) VALUES ('$desc', '$postDate', '$userID', '$bugID')");
+
+    echo "Update Successful!";
 }
 
     //select everything from the bug table where the ID is right

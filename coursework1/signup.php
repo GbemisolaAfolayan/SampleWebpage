@@ -26,6 +26,11 @@
                 <td> <label for="Phoneextention"> Phone Extention:</label> </td>
                 <td> <input type="phone extention" name="phone extention" value="" /> </td>
             </tr>
+            <tr>
+                <td> <label for="password">Password</label> </td>
+                <td> </td><input type="password" name="password" value=""> </td>
+
+            </tr>
 
             <tr>
                 <td> <input type="submit" value="Sign Up"> </td>

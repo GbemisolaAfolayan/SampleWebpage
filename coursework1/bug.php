@@ -5,6 +5,7 @@
 <div id="content">
     <?php
     include("connection.php");
+    include("buglist.php");
 
     //select everything from the bug table where the ID is right
     $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["id"];
@@ -21,11 +22,28 @@
 
     echo "<h2>".$bugTitle."</h2>";
     echo "<p>".$bugDesc."</p>";
+    echo "<h2>".$bugTitle."</h2>";
+    echo "<p>".$bugDesc."</p>";
+
+    //select everything from our bugs where the ID is right
+    $sql="SELECT * FROM comments WHERE bugID=".$_GET["id"];
+
+    //fetch results from the database
+    $result=mysqli_query($db,$sql);
+    //we can scan through rach row in the response
+    while($row=mysqli_fetch_assoc($result)){
+        //get the title and id from the bug
+        $commentTitle = $row['title'];
+        $comment = $row['comment'];
+        //write the link to the page
+        echo '<h3>'.$commentTitle.'</h3>';
+        echo '<p>'.$comment.'</p>';
+    }
 
     ?>
 </div>
-     //after viewing the bug  description, you can add a comment if you want.
-<div id="Comment">
+
+<div id="Comment"> //after viewing the bug  description, you can add a comment if you want.
     <h3> Comment on this bug</h3>
     <form method="post" action="addcomment.php">
 

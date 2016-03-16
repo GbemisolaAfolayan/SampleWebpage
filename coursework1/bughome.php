@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1> BUG TRACKING SYSTEM </h1>
-<h3> Post New Bugs Here </h3>
+<h3> Report New Bugs Here </h3>
 <form method="post" action="buglist.php">
 <div id="Bug information">
     <fieldset>
@@ -20,8 +20,8 @@
                 <td> <input type="text" name="bugtitle" value="" required /> </td>
             </tr>
             <tr>
-                <td> <label for="bugdescription">Bug Description:</label> </td><br>
-                <td><textarea name="bugdescription" cols="40“ rows="2 required> </textarea></td>
+                <td> <label for="bugDesc">Bug Description:</label> </td><br>
+                <td><textarea name="bugDesc" cols="40“ rows="2 required> </textarea></td>
 
             </tr>
             <tr>
