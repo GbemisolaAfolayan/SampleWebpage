@@ -10,39 +10,38 @@ include("connection.php");
 
 echo "i am working";
 
-if(isset($_POST["submit"])) {
-    $name = $_POST["name"];
+if(isset($_POST["submit"]))
+{
+    $name = $_POST["username"];
     $email = $_POST["email"];
-    $phoneextention = $_POST["phoneextention"];
+    $phone= $_POST["phone"];
     $password = $_POST["password"];
 
-//if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone extention"]) || empty($_POST["password"]))
-//{
-}
-else {
-
+if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone"]) || empty($_POST["password"]))
+{
     echo "All fields are required.";
 }
-//else
-//{
+else
+{
 
-   /* $username=$_POST['username'];
+    $username=$_POST['username'];
     $email=$_POST['email'];
-    $phoneextention=$_POST['phone extention'];
+    $phone=$_POST['phone'];
     $password=$_POST['password'];
 
 
-    $sql="SELECT * FROM users WHERE username='$username' and email='$email' and phone extention='$phoneextention' and password='$password'";
+    $sql="SELECT * FROM users WHERE username='$username' and email='$email' and phone='$phone' and password='$password'";
 
     $result=mysqli_query($db,$sql);
 
     if(mysqli_num_rows($result) == 1)
     {
         header("location: buglist.php?username=".$username); // Redirecting To another Page
-    }else
+    }
+else
     {
         echo "Incorrect username or password.";
     }
-}
-*/
+
+
 ?>

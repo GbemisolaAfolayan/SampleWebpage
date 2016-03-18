@@ -25,8 +25,8 @@
                 <td> <input type="email" name="email" value="" /> </td>
             </tr>
             <tr>
-                <td> <label for="Phoneextention"> Phone Extention:</label> </td>
-                <td> <input type="phone extention" name="phone extention" value="" /> </td>
+                <td> <label for="Phone"> Phone Extention:</label> </td>
+                <td> <input type="text" name="phone" value="" /> </td>
 
             </tr>
             <tr>
