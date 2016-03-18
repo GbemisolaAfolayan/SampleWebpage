@@ -27,7 +27,7 @@ $fixed=$_POST["bugstatus"];
 $title= mysqli_real_escape_string($db,$title);
 $desc= mysqli_real_escape_string($db,$desc);
 $postDate= mysqli_real_escape_string($db,$postDate);
-$fixDate= mysqli_real_escape_string($db,$fixDate);
+//$fixDate= mysqli_real_escape_string($db,$fixDate);
 $fixed=mysqli_real_escape_string($db,$fixed);
 
 //$sql="SELECT email FROM users WHERE email='$email'";
