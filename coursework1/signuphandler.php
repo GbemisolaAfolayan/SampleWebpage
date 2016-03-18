@@ -19,7 +19,7 @@ include("connection.php");
     $phone=$_POST["phone"];
     $password=$_POST["password"];
 
-    {
+    //{
     //strip special characters
     $name= mysqli_real_escape_string($db,$name);
     $email= mysqli_real_escape_string($db,$email);
@@ -33,7 +33,7 @@ include("connection.php");
 
     $result=mysqli_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-}
+//}
 if(mysqli_num_rows($result)==1) {
     echo "Sorry...This email already exists...";
 }
