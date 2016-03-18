@@ -10,27 +10,31 @@
 <body>
 <h1> BUG TRACKING SYSTEM </h1>
 <h3> Report New Bugs Here </h3>
-<form method="post" action="buglist.php">
+<form method="post" action="bughandler.php">
 <div id="Bug information">
     <fieldset>
 
         <table>
             <tr>
-                <td> <label for="bugtitle">Bug Title:</label> </td>
-                <td> <input type="text" name="bugtitle" value="" required /> </td>
+                <td> <label for="title">Bug Title:</label> </td>
+                <td> <input type="text" name="title" value="" required /> </td>
             </tr>
             <tr>
-                <td> <label for="bugDesc">Bug Description:</label> </td><br>
-                <td><textarea name="bugDesc" cols="40“ rows="2 required> </textarea></td>
+                <td> <label for="desc">Bug Description:</label> </td><br>
+                <td><textarea name="desc" cols="40“ rows="2 required> </textarea></td>
 
             </tr>
             <tr>
-                <td> <label for="Username"> Username:</label> </td>
+                <td> <label for="username"> Username:</label> </td>
                 <td> <input type="text" name="username" value="" required/> </td>
             </tr>
             <tr>
-                <td> <label for="Dateposted"> Date Posted:</label> </td>
-                <td> <input type="date" name="dateposted" placeholder="dd/mm/yyyy" required /> </td>
+                <td> <label for="postDate"> Date Posted:</label> </td>
+                <td> <input type="date" name="postDate" placeholder="dd/mm/yyyy" required /> </td>
+            </tr>
+            <tr>
+                <td> <label for="fixDate"> Date Fixed:</label> </td>
+                <td> <input type="date" name="fixDate" placeholder="dd/mm/yyyy" required /> </td>
             </tr>
 
             <tr>
@@ -42,8 +46,8 @@
                 </select> </td>
             </tr>
             <tr>
-                <td> <label for="Datefixed"> Date Fixed:</label> </td>
-                <td> <input type="date" name="datefixed" value="dd/mm/yyyy" required /> </td>
+                <td> <label for="fixDate"> Date Fixed:</label> </td>
+                <td> <input type="date" name=fixDate" value="dd/mm/yyyy" required /> </td>
             </tr>
            <div id="bugfileupload">
                <tr>
