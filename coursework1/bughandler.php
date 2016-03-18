@@ -17,7 +17,7 @@ include("connection.php");
 $title=$_POST["title"];
 $desc=$_POST["desc"];
 $postDate=$_POST["postDate"];
-$fixDate=$_POST["fixDate"];
+//$fixDate=$_POST["fixDate"];
 $fixed=$_POST["bugstatus"];
 
 
