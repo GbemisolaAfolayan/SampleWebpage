@@ -28,7 +28,7 @@
             </tr>
             <tr>
                 <td> <label for="password">Password</label> </td>
-                <td> </td><input type="password" name="password" value=""> </td>
+                <td> <input type="password" name="password" value=""> </td>
 
             </tr>
 
