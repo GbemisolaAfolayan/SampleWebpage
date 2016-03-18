@@ -7,6 +7,8 @@
  */
 
 include("connection.php");
+
+echo "i am working";
 if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone extention"]) || empty($_POST["password"]))
 {
     echo "All fields are required.";
