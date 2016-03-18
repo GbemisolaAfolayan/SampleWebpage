@@ -5,7 +5,6 @@
 <div id="content">
     <?php
     include("connection.php");
-    include("buglist.php");
 
     //select everything from the bug table where the ID is right
     $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["id"];
@@ -42,8 +41,8 @@
 
     ?>
 </div>
-
-<div id="Comment"> //after viewing the bug  description, you can add a comment if you want.
+//after viewing the bug  description, you can add a comment if you want.
+<div id="Comment">
     <h3> Comment on this bug</h3>
     <form method="post" action="addcomment.php">
 
