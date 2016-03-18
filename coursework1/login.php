@@ -9,13 +9,14 @@
 include("connection.php");
 
 echo "i am working";
-
+/*
 if(isset($_POST["submit"]))
 {
     $name = $_POST["username"];
     $email = $_POST["email"];
     $phone= $_POST["phone"];
     $password = $_POST["password"];
+*/
 
 if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone"]) || empty($_POST["password"]))
 {
