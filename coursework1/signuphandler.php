@@ -1,4 +1,11 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up redirect</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
 
 <?php
 
@@ -10,7 +17,7 @@ include("connection.php");
     $email=$_POST["email"];
     $phone=$_POST["phone"];
     $password=$_POST["password"];
-*/
+
     {
     //strip special characters
     $name= mysqli_real_escape_string($db,$name);
@@ -22,9 +29,10 @@ include("connection.php");
     $sql="SELECT email FROM users WHERE email='$email'";
 
     //set a query to see if the entered email matches any email in the database
+*/
     $result=mysqli_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-}
+//}
 if(mysqli_num_rows($result)==1) {
     echo "Sorry...This email already exists...";
 }
@@ -41,5 +49,6 @@ if($query)
 
 ?>
 
-
+</body>
+</html>
 
