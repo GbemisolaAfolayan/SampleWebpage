@@ -9,8 +9,8 @@
 </head>
 <body>
 <h1> BUG TRACKING SYSTEM </h1>
-<h4> Sign Up </h4>
-<form method="post" action="buglist.php">
+<h3> Sign Up </h3>
+<form method="post" action="signuphandler.php">
     <fieldset>
         <legend>Register</legend>
         <table>
@@ -23,8 +23,8 @@
                 <td> <input type="email" name="email" value="" /> </td>
             </tr>
             <tr>
-                <td> <label for="Phoneextention"> Phone Extention:</label> </td>
-                <td> <input type="phone extention" name="phone extention" value="" /> </td>
+                <td> <label for="phone"> Phone Extention:</label> </td>
+                <td> <input type="text" name="phone" value="" /> </td>
             </tr>
             <tr>
                 <td> <label for="password">Password</label> </td>
