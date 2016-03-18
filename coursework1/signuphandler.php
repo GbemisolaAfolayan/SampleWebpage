@@ -29,9 +29,9 @@ if(isset($_POST["submit"]))
     $result=mysqli_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 }
-if(mysqli_num_rows($result)==1)
-{
-    $msg="Sorry...This email already exists...";
+if(mysqli_num_rows($result)==1) {
+    echo "Sorry...This email already exists...";
+}
 
 else{
     $query=mysqli_query($db,"INSERT INTO users(username, email, phone, password) VALUES ('$name','$email','$phone','$password')");
@@ -39,7 +39,7 @@ else{
 }
 if($query)
 {
-    $msg="Thank You! you are now registered.";
+    echo "Thank You! you are now registered.";
 }
 
 
