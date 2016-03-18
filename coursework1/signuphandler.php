@@ -4,13 +4,14 @@
 
 include("connection.php");
 
-if(isset($_POST["submit"]))
+/*if(isset($_POST["submit"]))
 {
     $name=$_POST["username"];
     $email=$_POST["email"];
     $phone=$_POST["phone"];
     $password=$_POST["password"];
-
+*/
+    {
     //strip special characters
     $name= mysqli_real_escape_string($db,$name);
     $email= mysqli_real_escape_string($db,$email);
