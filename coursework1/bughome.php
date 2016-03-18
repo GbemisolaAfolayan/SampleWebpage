@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <td> <label for="fixDate"> Date Fixed:</label> </td>
-                <td> <input type="date" name=fixDate" value="dd/mm/yyyy" required /> </td>
+                <td> <input type="date" name=fixDate" value="dd/mm/yyyy" /> </td>
             </tr>
            <div id="bugfileupload">
                <tr>
