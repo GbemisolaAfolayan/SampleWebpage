@@ -12,6 +12,7 @@
 <h1> BUG TRACKING SYSTEM </h1>
 <form method="post" action="login.php">
 <div id="loginbox">
+    <fieldset>
         <legend>Login</legend>
         <table>
             <tr>
@@ -40,6 +41,7 @@
             </div>
 
         </table>
+    </fieldset>
 </div>
 
 </form>
