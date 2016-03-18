@@ -25,18 +25,9 @@
 
             </tr>
             <tr>
-                <td> <label for="username"> Username:</label> </td>
-                <td> <input type="text" name="username" value="" required/> </td>
-            </tr>
-            <tr>
                 <td> <label for="postDate"> Date Posted:</label> </td>
                 <td> <input type="date" name="postDate" placeholder="dd/mm/yyyy" required /> </td>
             </tr>
-            <tr>
-                <td> <label for="fixDate"> Date Fixed:</label> </td>
-                <td> <input type="date" name="fixDate" placeholder="dd/mm/yyyy" required /> </td>
-            </tr>
-
             <tr>
                 <td> <label for="bugstatus">Bug Status:</label> </td>
                 <td> <select name="bugstatus" required>
