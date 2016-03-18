@@ -9,12 +9,24 @@
 include("connection.php");
 
 echo "i am working";
-if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone extention"]) || empty($_POST["password"]))
-{
+
+if(isset($_POST["submit"])) {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phoneextention = $_POST["phoneextention"];
+    $password = $_POST["password"];
+
+//if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone extention"]) || empty($_POST["password"]))
+//{
+}
+else {
+
     echo "All fields are required.";
-}else
-{
-    $username=$_POST['username'];
+}
+//else
+//{
+
+   /* $username=$_POST['username'];
     $email=$_POST['email'];
     $phoneextention=$_POST['phone extention'];
     $password=$_POST['password'];
@@ -32,5 +44,5 @@ if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone ex
         echo "Incorrect username or password.";
     }
 }
-
+*/
 ?>
