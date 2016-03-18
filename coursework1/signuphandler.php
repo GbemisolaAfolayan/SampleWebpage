@@ -1,9 +1,4 @@
-<html>
-<head>
-    <title>    </title>
 
-</head>
-<body>
 
 <?php
 
@@ -47,8 +42,3 @@ if($query)
 
 
 
-
-
-</body>
-
-</html>
