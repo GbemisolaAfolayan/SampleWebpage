@@ -1,5 +1,8 @@
 <html>
-<head>  </head>
+<head>
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
 
 <body>
 <div id="content">

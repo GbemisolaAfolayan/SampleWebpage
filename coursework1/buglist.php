@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bug List</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
     <h1> Bug List</h1>
