@@ -42,7 +42,7 @@ else{
 */
     $query=mysqli_query($db,"INSERT INTO users(username, email, phone, password) VALUES ('$name','$email','$phone','$password')");
 
-}
+//}
 if($query)
 {
     echo "Thank You! you are now registered.";
