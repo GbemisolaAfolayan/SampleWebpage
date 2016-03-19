@@ -19,7 +19,8 @@ $desc=$_POST["desc"];
 $postDate=$_POST["postDate"];
 //$fixDate=$_POST["fixDate"];
 $fixed=$_POST["bugstatus"];
-
+$bugfile=$_POST["bugfile"];
+$comment=$_POST["comment"];
 
 
 //{
@@ -44,7 +45,7 @@ if(mysqli_num_rows($result)==1) {
 else{
 */
     $query=mysqli_query($db,"INSERT INTO bugs(title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
-
+    $query2=mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$comment', '$postDate')");
 }
 if($query)
 {

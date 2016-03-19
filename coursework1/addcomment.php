@@ -12,10 +12,11 @@
 {
     $desc =$_POST["desc"];
     $postDate =$_POST["date"];
-    $userID =$_POST["userID"];
-    $bugID =$_POST["bugID"];
+   // $userID =$_POST["userID"];
+    //$bugID =$_POST["bugID"];
 
-    $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate, userID, bugID) VALUES ('$desc', '$postDate', '$userID', '$bugID')");
+   // $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate, userID, bugID) VALUES ('$desc', '$postDate', '$userID', '$bugID')");
+    $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$desc', '$postDate')");
 
     echo "Update Successful!";
 }
