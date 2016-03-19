@@ -20,7 +20,7 @@ $postDate=$_POST["postDate"];
 //$fixDate=$_POST["fixDate"];
 $fixed=$_POST["bugstatus"];
 $bugfile=$_POST["bugfile"];
-$comment=$_POST["comment"];
+
 
 
 //{
