@@ -45,9 +45,10 @@ if(mysqli_num_rows($result)==1) {
 else{
 */
     $query=mysqli_query($db,"INSERT INTO bugs(title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
-    $query2=mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$comment', '$postDate')");
-}
-if($query)
+
+    $query2=mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$comment','$postDate')");
+//}
+if($query) ($query2);
 {
     echo "<h3>" . "Thank You! you have successfully registered a bug." . "<h3>";
 }
