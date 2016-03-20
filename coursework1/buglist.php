@@ -20,7 +20,7 @@
         while($row=mysqli_fetch_assoc($result)){
             //get title and id from the bug
             $bugTitle=$row['title'];
-            $bugID=$row['ID'];
+            $bugID=$row['bugID'];
             echo $bugID;
 
             //write the link to the page
