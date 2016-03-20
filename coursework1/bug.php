@@ -13,7 +13,7 @@
     echo $bugID;
 
     //select everything from the bug table where the ID is right
-  /*  $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["id"];
+   $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["id"];
 
     //fetch result from the database
     $result=mysqli_query($db,$sql);
@@ -45,7 +45,7 @@
         //write the link to the page
         echo '<h3>'.$commentTitle.'</h3>';
         echo '<p>'.$comment.'</p>';
-    }*/
+    }
 
     ?>
 </div>
