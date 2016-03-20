@@ -24,8 +24,9 @@
             echo $bugID;
 
             //write the link to the page
-
+            header("location: bug.php?bugID=" . $bugID); // Redirecting To another Page
            echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
+           // echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
 
         }
     ?>
