@@ -6,6 +6,9 @@
 
 <body>
 <div id="content">
+
+    <h2 style="align center";>Bug Description </h2>
+
     <?php
     include("connection.php");
 
