@@ -9,6 +9,8 @@
     <?php
     include("connection.php");
 
+
+
     //select everything from the bug table where the ID is right
     $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["id"];
 
@@ -27,8 +29,11 @@
     echo "<h2>".$bugTitle."</h2>";
     echo "<p>".$bugDesc."</p>";
 
+
+    $bugID= $_GET["id"];
+    echo $bugID;
     //select everything from our bugs where the ID is right
-    $sql="SELECT * FROM comments WHERE bugID=".$_GET["id"];
+   /* $sql="SELECT * FROM comments WHERE bugID=".$_GET["id"];
 
     //fetch results from the database
     $result=mysqli_query($db,$sql);
@@ -40,7 +45,7 @@
         //write the link to the page
         echo '<h3>'.$commentTitle.'</h3>';
         echo '<p>'.$comment.'</p>';
-    }
+    }*/
 
     ?>
 </div>
