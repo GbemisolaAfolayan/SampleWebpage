@@ -25,10 +25,9 @@
     $bugID =$row['bugID'];
     $bugDesc =$row['desc'];
 
-    echo "<h2>".$bugTitle."</h2>";
+    echo "<h3>".$bugTitle."</h3>";
     echo "<p>".$bugDesc."</p>";
-    echo "<h2>".$bugTitle."</h2>";
-    echo "<p>".$bugDesc."</p>";
+
 
 
 
@@ -49,7 +48,7 @@
 
     ?>
 </div>
-//after viewing the bug  description, you can add a comment if you want.
+
 <div id="Comment">
     <h3> Comment on this bug</h3>
     <form method="post" action="addcomment.php">
