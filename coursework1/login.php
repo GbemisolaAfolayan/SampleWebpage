@@ -6,6 +6,8 @@
  * Time: 11:48
  */
 
+
+session_start();
 include("connection.php");
 
 echo "i am working";
@@ -33,6 +35,9 @@ else {
     $sql = "SELECT * FROM users WHERE username='$username' and email='$email' and phone='$phone' and password='$password'";
 
     $result = mysqli_query($db, $sql);
+    $_SESSION['username']=$row[2];
+    $_SESSION['userID']=$row[3];
+
 
     if (mysqli_num_rows($result) == 1) {
         header("location: buglist.php?username=" . $username); // Redirecting To another Page
