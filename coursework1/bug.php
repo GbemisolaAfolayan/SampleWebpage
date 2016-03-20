@@ -10,10 +10,10 @@
     include("connection.php");
 
     $bugID= $_GET["bugID"];
-    echo $bugID;
+    //echo $bugID;
 
     //select everything from the bug table where the ID is right
-   $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["bugID"];
+   $sql="SELECT *FROM bugs WHERE bugs.bugID=".$_GET["bugID"];
 
     //fetch result from the database
     $result=mysqli_query($db,$sql);
