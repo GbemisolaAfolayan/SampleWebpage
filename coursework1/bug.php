@@ -9,11 +9,11 @@
     <?php
     include("connection.php");
 
-    $bugID= $_GET["id"];
+    $bugID= $_GET["bugID"];
     echo $bugID;
 
     //select everything from the bug table where the ID is right
-   $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["id"];
+   $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["bugID"];
 
     //fetch result from the database
     $result=mysqli_query($db,$sql);
@@ -33,7 +33,7 @@
 
 
     //select everything from our bugs where the ID is right
-    $sql="SELECT * FROM comments WHERE bugID=".$_GET["id"];
+    $sql="SELECT * FROM comments WHERE bugID=".$_GET["bugID"];
 
     //fetch results from the database
     $result=mysqli_query($db,$sql);
