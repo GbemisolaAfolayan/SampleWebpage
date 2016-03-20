@@ -28,13 +28,13 @@
     $bugID =$row['bugID'];
     $bugDesc =$row['desc'];
     $postDate=$row['postDate'];
-    $fixDate=$fixDate['fixDate'];
+    $fixDate=$row['fixDate'];
 
 
     echo "<h4>".$bugTitle."</h4>";
     echo "<p>Bug Description:".$bugDesc."</p>";
-    echo "<p>Post Date:".$postdate."</p>";
-    echo "<p>Fix Date:".$postdate."</p>";
+    echo "<p>Post Date:".$postDate."</p>";
+    echo "<p>Fix Date:".$fixDate."</p>";
 
 
 
