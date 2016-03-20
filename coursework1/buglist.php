@@ -24,8 +24,8 @@
             echo $bugID;
 
             //write the link to the page
-           echo '<a href="bug.php?bugID=$bugID">'.$bugTitle.'</a></br>';
-            echo '<a href="bug.php?bugID="'. $bugID. '>'.$bugTitle.'</a></br>';
+
+           echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
 
         }
     ?>
