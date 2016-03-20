@@ -9,10 +9,11 @@
     <?php
     include("connection.php");
 
-
+    $bugID= $_GET["id"];
+    echo $bugID;
 
     //select everything from the bug table where the ID is right
-    $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["id"];
+  /*  $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["id"];
 
     //fetch result from the database
     $result=mysqli_query($db,$sql);
@@ -30,10 +31,9 @@
     echo "<p>".$bugDesc."</p>";
 
 
-    $bugID= $_GET["id"];
-    echo $bugID;
+
     //select everything from our bugs where the ID is right
-   /* $sql="SELECT * FROM comments WHERE bugID=".$_GET["id"];
+    $sql="SELECT * FROM comments WHERE bugID=".$_GET["id"];
 
     //fetch results from the database
     $result=mysqli_query($db,$sql);
