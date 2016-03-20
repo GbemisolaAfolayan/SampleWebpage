@@ -46,6 +46,7 @@ else{
 if($query)
 {
     echo "Thank You! you are now registered.";
+    header('Location: buglist.php');
 }
 
 
