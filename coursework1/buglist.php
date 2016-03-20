@@ -21,9 +21,10 @@
             //get title and id from the bug
             $bugTitle=$row['title'];
             $bugID=$row['ID'];
+            echo $bugID;
 
             //write the link to the page
-            echo '<a href="bug.php?id="'. $bugID.'>'.$bugTitle.'</a></br>';
+           // echo '<a href="bug.php?id="'. $bugID.'>'.$bugTitle.'</a></br>';
         }
     ?>
         </div>
