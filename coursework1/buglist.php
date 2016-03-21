@@ -14,8 +14,8 @@ include("connection.php");
 ?>
 
 <div id="content">
-    <h2 style="color: blueviolet"><b>Bug List</b></h2>
-    <p> <p style="font-size:xx-small> Click on the Bugs to view description </p>
+    <h2><b>Bug List</b></h2>
+    <p> <i style="font-size: xx-small"> Click on the Bugs to view description </i></p>
 
     <?php
     include("connection.php");
@@ -37,7 +37,7 @@ include("connection.php");
             //write the link to the page
             echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
             //header("location: bug.php?bugID=" . $bugID); // Redirecting To another Page
-            echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
+           // echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
 
         }
     ?>
