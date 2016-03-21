@@ -15,13 +15,14 @@ h1{text-align: center;
 
 h3 {font-family: SansSerif;
     font-size: x-large;
-    color: #a1a1a1;
+    margin-top:20px;
+    color: blueviolet;
     text-shadow: black;
     margin-left:450px
 }
 fieldset{margin-outside: 40px;
     position:relative;
-    margin-top:50px;
+    margin-top:15px;
     margin-right:150px;
     margin-left:450px;
     border:3px solid #a1a1a1;
