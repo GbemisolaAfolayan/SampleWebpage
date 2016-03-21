@@ -19,7 +19,7 @@ $desc=$_POST["desc"];
 $postDate=$_POST["postDate"];
 //$fixDate=$_POST["fixDate"];
 $fixed=$_POST["bugstatus"];
-$bugfile=$_POST["bugfile"];
+//$bugfile=$_POST["bugfile"];
 
 
 
