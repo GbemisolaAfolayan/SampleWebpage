@@ -7,16 +7,14 @@
 </head>
 <body>
     <div id="content">
-    <h3> Hello". " ". $_GET["username"]."</h3>"</h3>
+        echo"<h3> Hello". " ". $_GET["username"]."</h3>";
 
     <h2><b>Bug List</b></h2>
-    <p> <p style="text-align: justify";> <i> <b>Click on the Bugs to view description </b></i></p>
+    <p> <p style="text-align: justify";> <i> Click on the Bugs to view description </i></p>
 
 
         <?php
         include("connection.php");
-
-        echo"<h3> Hello". " ". $_GET["username"]."</h3>";
 
 
         //select everything from our bug table
@@ -38,10 +36,14 @@
 
         }
     ?>
-        </div>
+
     <div id="Newbug">
 
         <p> New Bug? <a href ="bughome.php"> Report A Bug! </a> </p>
+
+
+    </div>
+
 
     </div>
 
