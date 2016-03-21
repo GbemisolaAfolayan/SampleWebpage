@@ -10,11 +10,11 @@
 include("connection.php");
 
 
-        echo"<h4> Hello". " ". $_GET["username"]."</h4>";
+        echo"<h4 style='margin-left: 5%'> Hello". " ". $_GET["username"]."</h4>";
 ?>
 
 <div id="content">
-    <h2><b>Bug List</b></h2>
+    <h2 style="color: blueviolet"><b>Bug List</b></h2>
     <p> <p style="font-size: xx-small> <i> Click on the Bugs to view description </i></p>
 
     <?php
@@ -35,9 +35,9 @@ include("connection.php");
             echo $bugID;
 
             //write the link to the page
-            echo '<a href="bug.php?bugID= "'. $bugID.'>'.$bugTitle.'</a></br>';
+            echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
             //header("location: bug.php?bugID=" . $bugID); // Redirecting To another Page
-           // echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
+            echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
 
         }
     ?>
