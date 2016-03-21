@@ -19,6 +19,7 @@ h3 {font-family: SansSerif;
     text-shadow: black;
 }
 fieldset{margin-outside: 100;
+    position:relative;
     margin-top:100px;
     margin-right:150px;
     margin-left:450px;
