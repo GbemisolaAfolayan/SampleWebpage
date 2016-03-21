@@ -6,8 +6,13 @@
     <link rel="stylesheet" href="bug.css" type="text/css" />
 </head>
 <body>
-    <h1> Bug List</h1>
     <div id="content">
+    <h3> Hello". " ". $_GET["username"]."</h3>"</h3>
+
+    <h2><b>Bug List</b></h2>
+    <p> <p style="text-align: justify";> <i> <b>Click on the Bugs to view description </b></i></p>
+
+
         <?php
         include("connection.php");
 
@@ -27,8 +32,9 @@
             echo $bugID;
 
             //write the link to the page
-           // header("location: bug.php?bugID=" . $bugID); // Redirecting To another Page
+           //header("location: bug.php?bugID=" . $bugID); // Redirecting To another Page
            echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
+            header("location: bug.php?bugID=" . $bugID); // Redirecting To another Page
            // echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
 
         }
