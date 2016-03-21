@@ -11,14 +11,14 @@
 
 {
     $desc =$_POST["desc"];
-    $postDate =$_POST["date"];
+    $postDate =$_POST["postDate"];
    // $userID =$_POST["userID"];
     //$bugID =$_POST["bugID"];
 
    // $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate, userID, bugID) VALUES ('$desc', '$postDate', '$userID', '$bugID')");
     $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$desc', '$postDate')");
 
-    echo "Update Successful!";
+    echo "Comments added successfully";
 }
 
     //select everything from the bug table where the ID is right

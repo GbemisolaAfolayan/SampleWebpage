@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign up redirect</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="bug.css" type="text/css" />
 </head>
 <body>
 
@@ -17,7 +17,7 @@ include("connection.php");
 $title=$_POST["title"];
 $desc=$_POST["desc"];
 $postDate=$_POST["postDate"];
-//$fixDate=$_POST["fixDate"];
+$fixDate=$_POST["fixDate"];
 $fixed=$_POST["bugstatus"];
 //$bugfile=$_POST["bugfile"];
 
@@ -29,7 +29,7 @@ $fixed=$_POST["bugstatus"];
 $title= mysqli_real_escape_string($db,$title);
 $desc= mysqli_real_escape_string($db,$desc);
 $postDate= mysqli_real_escape_string($db,$postDate);
-//$fixDate= mysqli_real_escape_string($db,$fixDate);
+$fixDate= mysqli_real_escape_string($db,$fixDate);
 $fixed=mysqli_real_escape_string($db,$fixed);
 
 //$sql="SELECT email FROM users WHERE email='$email'";
@@ -48,7 +48,7 @@ else{
 
     $query=mysqli_query($db,"INSERT INTO bugs(title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
 
-    $query2=mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$comment','$postDate')");
+    //$query2=mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$comment','$postDate')");
 
 //}
 
