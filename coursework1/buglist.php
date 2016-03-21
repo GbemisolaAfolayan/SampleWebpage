@@ -10,13 +10,12 @@
 include("connection.php");
 
 
-        echo"<h3> Hello". " ". $_GET["username"]."</h3>";
+        echo"<h4> Hello". " ". $_GET["username"]."</h4>";
 ?>
 
-
-<div id="content">;
+<div id="content">
     <h2><b>Bug List</b></h2>
-    <p> <p style="text-align: justify";> <i> Click on the Bugs to view description </i></p>
+    <p> <p style="font-size: xx-small> <i> Click on the Bugs to view description </i></p>
 
     <?php
     include("connection.php");
