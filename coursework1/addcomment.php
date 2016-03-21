@@ -7,9 +7,8 @@
     include("connection.php");
     include("bug.php");
 
-    if(isset($_POST["submit"]));
+  //  if(isset($_POST["submit"]));
 
-{
     $desc =$_POST["desc"];
     $postDate =$_POST["postDate"];
    // $userID =$_POST["userID"];
@@ -19,7 +18,7 @@
     $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$desc', '$postDate')");
 
     echo "Comments added successfully";
-}
+
 
     //select everything from the bug table where the ID is right
    // $sql="SELECT *FROM bugs WHERE bugs.ID=".$_GET["id"];
