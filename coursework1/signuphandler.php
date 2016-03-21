@@ -11,9 +11,14 @@
 
 include("connection.php");
 
-if(isset($_POST["submit"]))
+if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone"]) || empty($_POST["password"]))
 {
-
+    echo "All fields are required.";
+}else
+{
+/*if(isset($_POST["submit"]))
+{
+*/
 
     $name=$_POST["username"];
     $email=$_POST["email"];
@@ -34,7 +39,7 @@ if(isset($_POST["submit"]))
 
     $result=mysqli_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-}
+//}
 if(mysqli_num_rows($result)==1) {
     echo "Sorry...This email already exists...";
 }
