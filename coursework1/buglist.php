@@ -11,6 +11,9 @@
         <?php
         include("connection.php");
 
+        echo"<h3> Hello". " ". $_GET["username"]."</h3>";
+
+
         //select everything from our bug table
         $sql="SELECT * FROM bugs";
 
