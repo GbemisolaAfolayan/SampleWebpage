@@ -6,18 +6,24 @@
     <link rel="stylesheet" href="bug.css" type="text/css" />
 </head>
 <body>
-    <div id="content">
-        echo"<h3> Hello". " ". $_GET["username"]."</h3>";
+<?php
+include("connection.php");
 
+
+        echo"<h3> Hello". " ". $_GET["username"]."</h3>";
+?>
+
+
+<div id="content">;
     <h2><b>Bug List</b></h2>
     <p> <p style="text-align: justify";> <i> Click on the Bugs to view description </i></p>
 
+    <?php
+    include("connection.php");
 
-        <?php
-        include("connection.php");
 
 
-        //select everything from our bug table
+    //select everything from our bug table
         $sql="SELECT * FROM bugs";
 
         //fetch result from the database
