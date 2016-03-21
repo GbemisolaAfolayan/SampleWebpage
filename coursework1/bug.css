@@ -20,7 +20,7 @@ h3 {font-family: SansSerif;
     text-shadow: black;
     margin-left:450px
 }
-fieldset{margin-outside: 40px;
+#signupbox{margin-outside: 40px;
     position:relative;
     margin-top:15px;
     margin-right:150px;
@@ -57,6 +57,9 @@ fieldset{margin-outside: 40px;
         margin-left:450px;
         margin-top: 1%;
 
+}
+
+#content{margin-left: 10%;
 
 }
 

@@ -11,7 +11,8 @@
 <h1> BUG TRACKING SYSTEM </h1>
 <h3> Sign Up </h3>
 <form method="post" action="signuphandler.php">
-    <fieldset>
+   <div id="signupbox">
+       <fieldset>
         <legend>Register</legend>
         <table>
             <tr>
@@ -38,6 +39,7 @@
         </table>
 
     </fieldset>
+       </div>
 </form>
 
 </body>
