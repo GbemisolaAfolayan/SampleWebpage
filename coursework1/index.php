@@ -47,7 +47,7 @@
 </form>
 <div id="signup">
 
-    <p> New User ? <a href ="signup.php"> Sign Up </a> </p>
+    <p> New User ? <a href ="signup.php"> Sign Up Here </a> </p>
 </div>
 
 
