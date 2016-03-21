@@ -11,9 +11,10 @@
 
 include("connection.php");
 
-/*if(isset($_POST["submit"]))
+if(isset($_POST["submit"]))
 {
-*/
+
+
     $name=$_POST["username"];
     $email=$_POST["email"];
     $phone=$_POST["phone"];
@@ -33,7 +34,7 @@ include("connection.php");
 
     $result=mysqli_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-//}
+}
 if(mysqli_num_rows($result)==1) {
     echo "Sorry...This email already exists...";
 }
