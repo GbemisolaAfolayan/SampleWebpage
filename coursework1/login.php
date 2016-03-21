@@ -40,7 +40,7 @@ else {
 
 
     if (mysqli_num_rows($result) == 1) {
-        header("location: buglist.php?username=" . $username); // Redirecting To another Page
+        header("location:buglist.php?username=" . $username); // Redirecting To another Page
     } else {
         echo "Incorrect username or password.";
     }
