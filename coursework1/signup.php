@@ -16,19 +16,19 @@
         <table>
             <tr>
                 <td> <label for="username">Username:</label> </td>
-                <td> <input type="text" name="username" value="" /> </td>
+                <td> <input type="text" name="username" value="" required/> </td>
             </tr>
             <tr>
                 <td> <label for="email">Email:</label> </td>
-                <td> <input type="email" name="email" value="" /> </td>
+                <td> <input type="email" name="email" value="" required/> </td>
             </tr>
             <tr>
                 <td> <label for="phone"> Phone Extention:</label> </td>
-                <td> <input type="text" name="phone" value="" /> </td>
+                <td> <input type="text" name="phone" value="" required/> </td>
             </tr>
             <tr>
                 <td> <label for="password">Password</label> </td>
-                <td> <input type="password" name="password" value=""> </td>
+                <td> <input type="password" name="password" value=""required> </td>
 
             </tr>
 
