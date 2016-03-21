@@ -18,7 +18,7 @@ h3 {font-family: SansSerif;
     color: crimson;
     text-shadow: black;
 }
-fieldset{margin-outside: 100;
+fieldset{margin-outside: 40px;
     position:relative;
     margin-top:100px;
     margin-right:150px;
