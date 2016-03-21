@@ -1,18 +1,16 @@
-* {background-color: lightpink;
+* {background-color: mintcream;
 
     font-style: oblique;
     font-family: "Comic Sans MS";
 }
 
-title{ position: absolute;
-    text-align: center;
-    padding: 14px 16px;
 
+h1{text-align: center;
+    padding-top: 10%;
 
 }
 
-
-h1, h3 {font-family: SansSerif;
+h3 {font-family: SansSerif;
     font-size: x-large;
     color: crimson;
     text-shadow: black;

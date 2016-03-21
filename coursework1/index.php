@@ -9,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="bug.css"/>
 </head>
 <body>
-<h1 style="text-align: center; padding-top: 20%;"> BUG TRACKING SYSTEM </h1>
+<h1> BUG TRACKING SYSTEM </h1>
 <form method="post" action="login.php">
 <div id="loginbox">
     <fieldset>
