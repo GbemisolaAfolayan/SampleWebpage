@@ -26,6 +26,7 @@ $bugattachmentURL=$_POST["URL"];
 //{
 
 //strip special characters
+/*
 $title= mysqli_real_escape_string($db,$title);
 $desc= mysqli_real_escape_string($db,$desc);
 $postDate= mysqli_real_escape_string($db,$postDate);
