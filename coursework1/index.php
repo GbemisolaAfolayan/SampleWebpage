@@ -16,21 +16,13 @@
         <legend>Login</legend>
         <table>
             <tr>
-                <td> <label for="username">Username:</label> </td>
+                <td> <label for="username">Username:</label></br></td>
                 <td> <input type="text" name="username" value="" /> </td>
             </tr>
 
-            <tr>
-                <td> <label for="email">Email:</label> </td>
-                <td> <input type="email" name="email" value="" /> </td>
-            </tr>
-            <tr>
-                <td> <label for="Phone"> Phone Extention:</label> </td>
-                <td> <input type="text" name="phone" value="" /> </td>
 
-            </tr>
             <tr>
-                <td> <label for="password">Password</label> </td>
+                <td> <label for="password">Password</label> </br> </td>
                 <td> <input type="password" name="password" value=""> </td>
 
             </tr>

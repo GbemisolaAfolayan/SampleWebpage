@@ -21,19 +21,19 @@ if(isset($_POST["submit"]))
     $password = $_POST["password"];
 */
 
-if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone"]) || empty($_POST["password"]))
+if(empty($_POST["username"]) || empty($_POST["password"]))
 {
-    echo "All fields are required.";
+    echo "Both fields are required.";
 }
 else {
 
     $username = $_POST['username'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
+   // $email = $_POST['email'];
+   // $phone = $_POST['phone'];
     $password = $_POST['password'];
 
 
-    $sql = "SELECT * FROM users WHERE username='$username' and email='$email' and phone='$phone' and password='$password'";
+    $sql = "SELECT * FROM users WHERE username='$username' and password='$password'";
 
     $result = mysqli_query($db, $sql);
     $_SESSION['username']=$row[2];
