@@ -16,13 +16,13 @@
         <legend>Login</legend>
         <table>
             <tr>
-                <td> <label for="username">Username:</label></br></td>
+                <td> <label for="username">Username:</label></td></br>
                 <td> <input type="text" name="username" value="" /> </td>
             </tr>
 
 
             <tr>
-                <td> <label for="password">Password</label> </br> </td>
+                <td> <label for="password">Password</label> </td></br>
                 <td> <input type="password" name="password" value=""> </td>
 
             </tr>
