@@ -7,7 +7,7 @@
 <body>
 <div id="content">
 
-    <h2 style="align center";>Bug Description </h2>
+    <h2 style="color: blueviolet">Bug Description </h2>
 
     <?php
     include("connection.php");
@@ -56,7 +56,7 @@
     }
 
     ?>
-</div>
+
 
 <div id="Comment">
     <h4> Comment on this bug</h4>
@@ -74,6 +74,6 @@
 </div>
     </form>
 
-
+</div>
 </body>
 </html>
