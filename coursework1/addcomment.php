@@ -9,13 +9,13 @@
 
   //  if(isset($_POST["submit"]));
 
-    $desc =$_POST["desc"];
+    $comment =$_POST["comment"];
     $postDate =$_POST["postDate"];
    // $userID =$_POST["userID"];
     //$bugID =$_POST["bugID"];
 
    // $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate, userID, bugID) VALUES ('$desc', '$postDate', '$userID', '$bugID')");
-    $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$desc', '$postDate')");
+    $query =  mysqli_query($db,"INSERT INTO comments (comment, postDate) VALUES ('$comment', '$postDate')");
 
     echo "Comments added successfully";
 
