@@ -54,7 +54,7 @@
         $comment = $row['comment'];
         //write the link to the page
         echo '<h3>'.$commentTitle.'</h3>';
-        echo '<p>'.$comment.'</p>';
+        echo '<p>Comments:'.$comment.'</p>';
     }
 
     ?>
