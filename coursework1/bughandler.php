@@ -53,7 +53,7 @@ else{
 
 //}
 
-if($query & $query2);
+if($query & $query2)
 {
     echo "<h4>" . "Thank You! you have successfully registered a bug." . "<h3>";
 }
