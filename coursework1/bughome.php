@@ -45,6 +45,12 @@ include("connection.php");
                 <td> <label for="fixDate"> Date Fixed:</label> </td>
                 <td> <input type="date" name=fixDate" value="dd/mm/yyyy" /> </td>
             </tr>
+
+            <tr>
+                <td> <label for="URL"> Bug Attachment URL:</label> </td>
+                <td> <input type="url" name="URL" value="" required /> </td>
+            </tr>
+
            <div id="bugfileupload">
                <tr>
                <td><input type="file" name="bugfile"> </td>
