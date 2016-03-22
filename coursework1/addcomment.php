@@ -17,7 +17,13 @@
    // $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate, userID, bugID) VALUES ('$desc', '$postDate', '$userID', '$bugID')");
     $query =  mysqli_query($db,"INSERT INTO comments (comment, postDate) VALUES ('$comment', '$postDate')");
 
-    echo "Comments added successfully";
+    if ($query);
+    {
+        echo "Comments added successfully";
+        header("location:buglist.php"); // Redirecting To another Page
+    }else{
+        echo "Unsuccessful...Please try again."};
+
 
 
     //select everything from the bug table where the ID is right
@@ -34,7 +40,6 @@
    // $bugID =$row['bugID'];
     //$bugDesc =$row['desc'];
 
-    echo "Comments added successfully";
 
     ?>
 </div>
