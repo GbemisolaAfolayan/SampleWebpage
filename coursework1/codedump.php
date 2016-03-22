@@ -17,3 +17,12 @@ fieldset {padding: 5%;
 
 
       background:#8000CC;
+
+
+ <div id="bugfileupload">
+               <tr>
+               <td><input type="file" name="bugfile"> </td>
+                   <td> <input type="submit" value="Upload Bug file"> </td>
+               </tr>
+           </div>
+

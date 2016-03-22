@@ -51,12 +51,6 @@ include("connection.php");
                 <td> <input type="url" name="URL" value="" required /> </td>
             </tr>
 
-           <div id="bugfileupload">
-               <tr>
-               <td><input type="file" name="bugfile"> </td>
-                   <td> <input type="submit" value="Upload Bug file"> </td>
-               </tr>
-           </div>
 
             <div id="submitbutton">
             <tr>
