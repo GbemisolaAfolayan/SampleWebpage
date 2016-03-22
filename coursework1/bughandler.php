@@ -46,6 +46,8 @@ if(mysqli_num_rows($result)==1) {
 
 else{
 */
+
+$bugattachmentURL= addslashes($bugattachmentURL);
     echo $desc;
 
     $query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
