@@ -20,7 +20,7 @@ include("connection.php");
     <?php
     include("connection.php");
    // include("check.php");
-    session_start();
+    //session_start();
 
 
 

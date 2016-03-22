@@ -12,7 +12,7 @@
     <?php
     include("connection.php");
     //include("check.php");
-    session_start();
+    //session_start();
 
     $bugID= $_GET["bugID"];
     //echo $bugID;
