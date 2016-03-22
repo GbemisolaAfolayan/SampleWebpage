@@ -21,9 +21,7 @@ $desc=$_POST["desc"];
 $postDate=$_POST["postDate"];
 $fixDate=$_POST["fixDate"];
 $fixed=$_POST["bugstatus"];
-//$bugfile=$_POST["bugfile"];
-
-
+$bugattachmentURL=$_POST["URL"];
 
 //{
 
@@ -33,6 +31,7 @@ $desc= mysqli_real_escape_string($db,$desc);
 $postDate= mysqli_real_escape_string($db,$postDate);
 $fixDate= mysqli_real_escape_string($db,$fixDate);
 $fixed=mysqli_real_escape_string($db,$fixed);
+$bugattachmentURL=mysqli_real_escape_string($db,$bugattachmentURL);
 
 //$sql="SELECT email FROM users WHERE email='$email'";
 
@@ -50,15 +49,18 @@ else{
 
     $query=mysqli_query($db,"INSERT INTO bugs(title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
 
-    //$query2=mysqli_query($db,"INSERT INTO comments (desc, postDate) VALUES ('$comment','$postDate')");
+    $query2=mysqli_query($db,"INSERT INTO attachments ( URL ) VALUES ('$bugattachmentURL')");
 
 //}
 
-if($query) ($query2);
+if($query & $query2);
 {
-    echo "<h3>" . "Thank You! you have successfully registered a bug." . "<h3>";
+    echo "<h4>" . "Thank You! you have successfully registered a bug." . "<h3>";
 }
+else{
+    echo "<h4>". "Bug Registration Unsuccessful" . "</h4>";
 
+}
 
 ?>
 
