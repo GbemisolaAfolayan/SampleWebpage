@@ -16,7 +16,7 @@ include("connection.php");
 <h1> BUG TRACKING SYSTEM </h1>
 <h3> Report New Bugs Here </h3>
 <form method="post" action="bughandler.php">
-<div id="Bug information">
+<div id="BugInformation">
     <fieldset>
 
         <table>

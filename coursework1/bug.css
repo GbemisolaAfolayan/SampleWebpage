@@ -65,6 +65,17 @@ h3 {font-family: SansSerif;
 }
 
 
+#BugInformation{margin-top:100px;
+    margin-right:150px;
+    margin-left:450px;
+    border:3px solid #a1a1a1;
+    padding:9px 35px;
+    background:darkviolet;
+    width:400px;
+    border-radius:20px;
+    box-shadow: 7px 7px 6px;
+
+}
 
 
 
