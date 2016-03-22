@@ -33,8 +33,8 @@
 
     echo "<p>"."<b>".$bugTitle."</b>"."</p>";
     echo "<p>Bug Description:".$bugDesc."</p>";
-    echo "</br>Post Date:".$postDate."</>";
-    echo "</br>Fix Date:".$fixDate."</>";
+    echo "<p>Post Date:".$postDate."</br>";
+    echo "</br>Fix Date:".$fixDate."</p>";
 
 
 
@@ -59,7 +59,7 @@
 
 
 <div id="Comment">
-    <h4 style="color=blueviolet"> Comment on this bug</h4>
+    <h4 style="color: blueviolet"> Comment on this bug</h4>
     <form method="post" action="addcomment.php">
 
     <tr>
