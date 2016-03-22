@@ -20,8 +20,9 @@
     if ($query);
     {
         echo "Comments added successfully";
-        header("location:buglist.php"); // Redirecting To another Page
-    }else{
+      //  header("location:buglist.php"); // Redirecting To another Page
+    }
+    else{
         echo "Unsuccessful...Please try again."};
 
 
