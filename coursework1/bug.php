@@ -59,7 +59,7 @@
 
 
 <div id="Comment">
-    <h4> Comment on this bug</h4>
+    <h4 style="color=blueviolet"> Comment on this bug</h4>
     <form method="post" action="addcomment.php">
 
     <tr>
