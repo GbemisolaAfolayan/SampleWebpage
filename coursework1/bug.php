@@ -31,10 +31,10 @@
     $fixDate=$row['fixDate'];
 
 
-    echo "<h4>".$bugTitle."</h4>";
+    echo "<p>"."<b>".$bugTitle."</b>"."</p>";
     echo "<p>Bug Description:".$bugDesc."</p>";
-    echo "<p>Post Date:".$postDate."</p>";
-    echo "<p>Fix Date:".$fixDate."</p>";
+    echo "</br>Post Date:".$postDate."</>";
+    echo "</br>Fix Date:".$fixDate."</>";
 
 
 
