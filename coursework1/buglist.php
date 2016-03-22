@@ -32,13 +32,13 @@ include("connection.php");
             //get title and id from the bug
             $bugTitle=$row['title'];
             $bugID=$row['bugID'];
-            echo $bugID;
+           // echo $bugID;
 
             //write the link to the page
             //echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
             //echo '<a href="bug.php?bugID = <?= "'.$bugID['bugID']. '>' . $bugTitle. '</a></br>';
             //header("location: bug.php?bugID=" . $bugID); // Redirecting To another Page
-           echo "<a href=bug.php?bugID=$bugID > .$bugTitle.</a></br>";
+           echo "<a href=bug.php?bugID=$bugID > $bugTitle </a></br>";
 
         }
     ?>
