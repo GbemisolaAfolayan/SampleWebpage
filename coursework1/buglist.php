@@ -14,7 +14,7 @@ include("connection.php");
 ?>
 
 <div id="content">
-    <h2><b>Bug List</b></h2>
+    <h2 style="color: blueviolet"><b>Bug List</b></h2>
     <p> <i style="font-size: small"> Click on the Bugs to view description </i></p>
 
     <?php
