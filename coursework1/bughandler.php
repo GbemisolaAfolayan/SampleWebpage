@@ -46,6 +46,7 @@ if(mysqli_num_rows($result)==1) {
 
 else{
 */
+    echo $desc;
 
     $query=mysqli_query($db,"INSERT INTO bugs(title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
 
