@@ -10,6 +10,7 @@
 <?php
 
 include("connection.php");
+include("check.php");
 
 if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["phone"]) || empty($_POST["password"]))
 {

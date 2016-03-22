@@ -10,6 +10,7 @@
 <?php
 
 include("connection.php");
+include("check.php");
 
 /*if(isset($_POST["submit"]))
 {

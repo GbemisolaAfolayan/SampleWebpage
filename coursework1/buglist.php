@@ -19,6 +19,7 @@ include("connection.php");
 
     <?php
     include("connection.php");
+    include("check.php");
 
 
 

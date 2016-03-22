@@ -9,6 +9,7 @@
 
 session_start();
 include("connection.php");
+include("check.php");
 
 echo "i am working";
 /*

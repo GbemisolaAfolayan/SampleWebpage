@@ -11,6 +11,7 @@
 
     <?php
     include("connection.php");
+    include("check.php");
 
     $bugID= $_GET["bugID"];
     //echo $bugID;
