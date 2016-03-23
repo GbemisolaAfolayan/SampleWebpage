@@ -25,8 +25,8 @@ include("connection.php");
                 <td> <input type="text" name="title" value="" required /> </td>
             </tr>
             <tr>
-                <td> <label for="desc">Bug Description:</label> </td><br>
-                <td><textarea name="desc" cols="40“ rows="4 required> </textarea></td>
+                <td> <label for="descr">Bug Description:</label> </td><br>
+                <td><textarea name="descr" cols="40“ rows="4 required> </textarea></td>
 
             </tr>
             <tr>

@@ -19,7 +19,7 @@ include("check.php");
 {
 */
 $title=$_POST["title"];
-$desc=$_POST["desc"];
+$descr=$_POST["descr"];
 $postDate=$_POST["postDate"];
 $fixDate='';
 $fixed=0;
@@ -52,7 +52,7 @@ else{
 */
 
 //$bugattachmentURL= addslashes($bugattachmentURL);
-    echo $desc;
+    echo $descr;
     echo $title;
 echo $postDate;
 echo $fixDate;
@@ -64,9 +64,9 @@ echo $userID;
   //  $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
 //}
 //else
-
+$sql="INSERT INTO bugs(title, descr, postDate, fixDate, fixed, usedID) VALUES ('$title', '$descr', '$postDate', '$fixDate', '$fixed', '$userID')";
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
-$sql = "INSERT INTO bugs". " (title, desc, postDate, fixDate, fixed, userID)" . " VALUES ('$title','$desc','$postDate','$fixDate','$fixed', '$userID')";
+//$sql = "INSERT INTO bugs". " (title, descr, postDate, fixDate, fixed, userID)" . " VALUES ('$title','$descr','$postDate','$fixDate','$fixed', '$userID')";
    // $query=mysqli_query($sql,$db);
 
    // $getBugID=mysqli_insert_id ($db); //get bugID for the new bug
