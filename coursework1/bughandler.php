@@ -21,10 +21,10 @@ include("check.php");
 */
 $title=$_POST["title"];
 $desc=$_POST["desc"];
-$postDate=$_POST[""];
-$fixDate=$_POST[""];
+$postDate=$_POST["postDate"];
+$fixDate='';
 $fixed=0;
-$userID=$_SESSION['userID'];
+$userID=$_SESSION['username'];
 //$bugfile=$_POST["file"];
 
 //{
