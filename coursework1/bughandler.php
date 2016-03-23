@@ -25,7 +25,7 @@ $descr=$_POST["descr"];
 //$fixed=0;
 $userID=$_SESSION['userID'];
 
-$user=$_SESSION["username"];
+$user=$_SESSION['username'];
 //$bugfile=$_POST["file"];
 
 //{
