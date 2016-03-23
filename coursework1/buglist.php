@@ -1,3 +1,8 @@
+<?php
+
+include ("check.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +11,9 @@
     <link rel="stylesheet" href="bug.css" type="text/css" />
 </head>
 <body>
-<?php
 
-include ("check.php");
-
-
-        echo"<h4 style='margin-left: 5%'> Hello". " ". $_GET["username"]."</h4>";
-?>
+<h1 class="hello">Hello, <em><?php echo $login_user;?>!</em></h1>
+<br><br><br>
 
 <div id="content">
     <h2 style="color: blueviolet"><b>Bug List</b></h2>

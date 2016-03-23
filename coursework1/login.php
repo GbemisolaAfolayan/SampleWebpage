@@ -1,27 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Oluwagbemisola
- * Date: 16/03/2016
- * Time: 11:48
- */
-
-
 session_start();
-include("connection.php"); //connection to database
+include("connection.php"); //Establishing connection with our database
 
 $error = ""; //Variable for storing our errors.
-
 if(isset($_POST["submit"]))
 {
     if(empty($_POST["username"]) || empty($_POST["password"]))
     {
-        $error= "Both fields are required.";
-    }
-    else {
-        //define username and password
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $error = "Both fields are required.";
+    }else
+    {
+        // Define $username and $password
+        $username=$_POST['username'];
+        $password=$_POST['password'];
 
         // To protect from MySQL injection
         $username = stripslashes($username);
@@ -30,9 +21,9 @@ if(isset($_POST["submit"]))
         $password = mysqli_real_escape_string($db, $password);
         $password = md5($password);
 
-        //check username and password from database
-        $sql = "SELECT userID FROM users WHERE username='$username' and password='$password'";
-        $result = mysqli_query($db, $sql);
+        //Check username and password from database
+        $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
+        $result=mysqli_query($db,$sql);
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
 
         //If username and password exist in our database then create a session.
@@ -46,8 +37,6 @@ if(isset($_POST["submit"]))
         {
             $error = "Incorrect username or password.";
         }
-
-
 
     }
 }
