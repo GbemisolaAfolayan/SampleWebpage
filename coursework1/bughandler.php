@@ -8,8 +8,9 @@
 <body>
 
 <?php
-
+session_start();
 include("connection.php");
+include("check.php");
 
 
 //include("check.php");
