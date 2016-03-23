@@ -1,6 +1,7 @@
 <?php
 
 include ("check.php");
+include ("connection.php");
 ?>
 
 <!DOCTYPE html>
