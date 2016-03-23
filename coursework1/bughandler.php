@@ -24,6 +24,7 @@ $desc=$_POST["desc"];
 $postDate=$_POST[""];
 $fixDate=$_POST[""];
 $fixed=0;
+$userID=$_POST["session.userID"];
 //$bugfile=$_POST["file"];
 
 //{
@@ -60,7 +61,7 @@ else{
 //else
 
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
-    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc',CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP (),'$fixed')");
+    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed, userID) VALUES ('$title','$desc',CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP (),'$fixed', '$userID')");
 
    // $getBugID=mysqli_insert_id ($db); //get bugID for the new bug
 
