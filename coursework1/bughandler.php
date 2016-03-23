@@ -23,7 +23,7 @@ $title=$_POST["title"];
 $desc=$_POST["desc"];
 $postDate=$_POST[""];
 $fixDate=$_POST[""];
-$fixed=NULL;
+$fixed=0;
 //$bugfile=$_POST["file"];
 
 //{
