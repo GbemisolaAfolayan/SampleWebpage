@@ -10,8 +10,10 @@
 <?php
 
 include("connection.php");
+?>
+
 //include("check.php");
-session_start();
+//session_start();
 
 /*if(isset($_POST["submit"]))
 {
@@ -50,11 +52,11 @@ else{
 
 //$bugattachmentURL= addslashes($bugattachmentURL);
     echo $desc;
-if (empty($_POST["file"])
-{
-    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
-}
-else
+//if (empty($_POST["file"])
+//{
+  //  $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
+//}
+//else
 
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
     $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
@@ -75,7 +77,7 @@ else{
 
 }
 
-?>
+
 
 </body>
 </html>
