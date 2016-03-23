@@ -24,7 +24,7 @@ $desc=$_POST["desc"];
 $postDate=$_POST["postDate"];
 $fixDate="";
 $fixed=0;
-$bugfile=$_POST["file"];
+//$bugfile=$_POST["file"];
 
 //{
 
@@ -35,7 +35,7 @@ $desc= mysqli_real_escape_string($db,$desc);
 $postDate= mysqli_real_escape_string($db,$postDate);
 $fixDate= mysqli_real_escape_string($db,$fixDate);
 $fixed=mysqli_real_escape_string($db,$fixed);
-$bugfile=mysqli_real_escape_string($db,$bugfile);
+//$bugfile=mysqli_real_escape_string($db,$bugfile);
 
 //$sql="SELECT email FROM users WHERE email='$email'";
 
@@ -64,7 +64,7 @@ else{
 
    // $getBugID=mysqli_insert_id ($db); //get bugID for the new bug
 
-   $query2=mysqli_query($db,"INSERT INTO attachments ( URL ) VALUES ('$bugfile')");
+  // $query2=mysqli_query($db,"INSERT INTO attachments ( URL ) VALUES ('$bugfile')");
 
 //}
 

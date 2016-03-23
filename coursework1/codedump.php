@@ -46,3 +46,11 @@ fieldset {padding: 5%;
      <tr>
                 <td style="color: blueviolet"> <input type="submit" value="Sign Up"> </td>
             </tr>
+
+
+
+
+            <tr>
+                <td> <label for="file"> Bug Attachment URL:</label> </td>
+                <td> <input type="file" name="file" value="" required /> </td>
+            </tr>
