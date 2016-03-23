@@ -1,12 +1,12 @@
 
 <?php
-/*
+
 include("login.php"); //include Login script
 if ((isset($_SESSION['username']) !=''))
 {
     header('location: buglist.php');
 }
-*/
+
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +18,7 @@ if ((isset($_SESSION['username']) !=''))
 </head>
 <body>
 <h1> BUG TRACKING SYSTEM </h1>
+<div>
 <form method="post" action="login.php">
 <div id="loginbox">
     <fieldset>
@@ -49,7 +50,7 @@ if ((isset($_SESSION['username']) !=''))
 
     <p> New User ? <a href ="signup.php"> Sign Up Here </a> </p>
 </div>
-
+</div>
 
 </body>
 
