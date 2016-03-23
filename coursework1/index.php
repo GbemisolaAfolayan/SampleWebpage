@@ -15,7 +15,7 @@ if ((isset($_SESSION['username']) !=''))
 </head>
 <body>
 <h1> BUG TRACKING SYSTEM </h1>
-<form method="post" action="login.php">
+<form method="post" action="buglist.php">
 <div id="loginbox">
     <fieldset>
         <legend>Login</legend>
