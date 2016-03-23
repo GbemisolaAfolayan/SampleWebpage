@@ -4,7 +4,7 @@ include("login.php"); //include Login script
 session_start();
 if (isset($_SESSION['username']))
 {
-    header('location: buglist.php');
+    //header('location: buglist.php');
 }
 
 
