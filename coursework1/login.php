@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("connection.php"); //Establishing connection with our database
+include ("check.php");
 
 $error = ""; //Variable for storing our errors.
 if(isset($_POST["submit"]))
@@ -31,7 +32,7 @@ if(isset($_POST["submit"]))
 
         if(mysqli_num_rows($result) == 1)
         {
-            $_SESSION['username'] = $username; // Initializing Session
+           // $_SESSION['username'] = $username; // Initializing Session
             header("location: buglist.php"); // Redirecting To Other Page
         }else
         {
