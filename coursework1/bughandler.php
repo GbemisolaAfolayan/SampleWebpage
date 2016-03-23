@@ -68,7 +68,7 @@ echo $userID;
 
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
 $sql = "INSERT INTO bugs (title, desc, postDate, fixDate, fixed, userID) VALUES ('$title','$desc','$postDate','$fixDate','$fixed', '$userID')";
-    $query=mysqli_query($db,$sql);
+   // $query=mysqli_query($sql,$db);
 
    // $getBugID=mysqli_insert_id ($db); //get bugID for the new bug
 
@@ -77,7 +77,7 @@ $sql = "INSERT INTO bugs (title, desc, postDate, fixDate, fixed, userID) VALUES 
 //}
 
 
-if($query)
+if(mysqli_query($db,$sql))
 {
     echo "<h4>" . "Thank You! you have successfully registered a bug." . "<h3>";
 }
