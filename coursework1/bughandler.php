@@ -22,8 +22,8 @@ include("check.php");
 $title=$_POST["title"];
 $desc=$_POST["desc"];
 $postDate=$_POST[""];
-$fixDate="NULL";
-$fixed=0;
+$fixDate=NULL;
+$fixed=NULL;
 //$bugfile=$_POST["file"];
 
 //{
