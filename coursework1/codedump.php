@@ -26,3 +26,17 @@ fieldset {padding: 5%;
                </tr>
            </div>
 
+
+  BUG HOME
+<tr>
+                <td> <label for="bugstatus">Bug Status:</label> </td>
+                <td> <select name="bugstatus" required>
+                    <option value="">Select BugStatus</option>
+                    <option value="fixed">Fixed</option>
+                    <option value="unfixed">Unfixed</option>
+                </select> </td>
+            </tr>
+            <tr>
+                <td> <label for="fixDate"> Date Fixed:</label> </td>
+                <td> <input type="date" name=fixDate" value="dd/mm/yyyy" /> </td>
+            </tr>

@@ -19,9 +19,9 @@ session_start();
 $title=$_POST["title"];
 $desc=$_POST["desc"];
 $postDate=$_POST["postDate"];
-$fixDate=$_POST["fixDate"];
-$fixed=$_POST["bugstatus"];
-$bugattachmentURL=$_POST["URL"];
+$fixDate="";
+$fixed=0;
+$bugattachment=$_POST["file"];
 
 //{
 
@@ -32,7 +32,7 @@ $desc= mysqli_real_escape_string($db,$desc);
 $postDate= mysqli_real_escape_string($db,$postDate);
 $fixDate= mysqli_real_escape_string($db,$fixDate);
 $fixed=mysqli_real_escape_string($db,$fixed);
-$bugattachmentURL=mysqli_real_escape_string($db,$bugattachmentURL);
+$bugattachment=mysqli_real_escape_string($db,$bugattachment);
 
 //$sql="SELECT email FROM users WHERE email='$email'";
 
@@ -48,8 +48,13 @@ if(mysqli_num_rows($result)==1) {
 else{
 */
 
-$bugattachmentURL= addslashes($bugattachmentURL);
+//$bugattachmentURL= addslashes($bugattachmentURL);
     echo $desc;
+if (empty($_POST["file"])
+{
+    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
+}
+else
 
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
     $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");

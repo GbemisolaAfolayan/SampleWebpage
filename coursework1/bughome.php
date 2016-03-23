@@ -26,29 +26,17 @@ include("connection.php");
             </tr>
             <tr>
                 <td> <label for="desc">Bug Description:</label> </td><br>
-                <td><textarea name="desc" cols="40“ rows="2 required> </textarea></td>
+                <td><textarea name="desc" cols="40“ rows="4 required> </textarea></td>
 
             </tr>
             <tr>
                 <td> <label for="postDate"> Date Posted:</label> </td>
-                <td> <input type="date" name="postDate" placeholder="dd/mm/yyyy" required /> </td>
-            </tr>
-            <tr>
-                <td> <label for="bugstatus">Bug Status:</label> </td>
-                <td> <select name="bugstatus" required>
-                    <option value="">Select BugStatus</option>
-                    <option value="fixed">Fixed</option>
-                    <option value="unfixed">Unfixed</option>
-                </select> </td>
-            </tr>
-            <tr>
-                <td> <label for="fixDate"> Date Fixed:</label> </td>
-                <td> <input type="date" name=fixDate" value="dd/mm/yyyy" /> </td>
+                <td> <input type="date" name="postDate" <? echo date(d/m/y)?>; readonly /> </td>
             </tr>
 
             <tr>
-                <td> <label for="URL"> Bug Attachment URL:</label> </td>
-                <td> <input type="url" name="URL" value="" required /> </td>
+                <td> <label for="file"> Bug Attachment URL:</label> </td>
+                <td> <input type="file" name="file" value="" required /> </td>
             </tr>
 
 
