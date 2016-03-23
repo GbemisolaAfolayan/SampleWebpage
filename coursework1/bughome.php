@@ -2,8 +2,6 @@
 session_start();
 include("connection.php");
 include("check.php");
-include("bughandler.php");
-
 
 
 ?>
@@ -19,7 +17,7 @@ include("bughandler.php");
 <h1> BUG TRACKING SYSTEM </h1>
 <h3> Report New Bugs Here </h3>
 
-<form method="post" action="">
+<form method="post" action="bughandler.php">;
 <div id="BugInformation">
     <fieldset>
 
