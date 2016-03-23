@@ -23,7 +23,10 @@ include("bug.php");
     $bugID= $_GET["bugID"];
    // $userID =$_POST["userID"];
     //$bugID =$_POST["bugID"];
-
+    echo $comment;
+    echo $postDate;
+    echo $userID;
+    echo $bugID;
    // $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate, userID, bugID) VALUES ('$desc', '$postDate', '$userID', '$bugID')");
     $query =  mysqli_query($db,"INSERT INTO comments VALUES ('','$comment', '$postDate', '$userID', '$bugID')");
 
