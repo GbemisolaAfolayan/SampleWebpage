@@ -40,3 +40,9 @@ fieldset {padding: 5%;
                 <td> <label for="fixDate"> Date Fixed:</label> </td>
                 <td> <input type="date" name=fixDate" value="dd/mm/yyyy" /> </td>
             </tr>
+
+
+             signup submit
+     <tr>
+                <td style="color: blueviolet"> <input type="submit" value="Sign Up"> </td>
+            </tr>
