@@ -29,7 +29,7 @@ $userID=$_SESSION['userID'];
 //{
 
 //strip special characters
-
+echo date('d/m/y');
 $title= mysqli_real_escape_string($db,$title);
 $desc= mysqli_real_escape_string($db,$desc);
 $postDate= mysqli_real_escape_string($db,$postDate);
