@@ -15,7 +15,7 @@ include("bug.php");
     //include("connection.php");
    // include("bug.php");
 
-   //if(isset($_POST["submit"]));
+   if(isset($_POST["submit"]));
 
     $comment =$_POST["comment"];
     $postDate = date('d/m/y');

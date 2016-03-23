@@ -33,7 +33,7 @@ include("check.php");
     //get the title and ID from the bug
     $bugTitle =$row['title'];
     $bugID =$row['bugID'];
-    $bugDesc =$row['desc'];
+    $bugDesc =$row['descr'];
     $postDate=$row['postDate'];
     $fixDate=$row['fixDate'];
 
@@ -76,7 +76,7 @@ include("check.php");
 </div>
 <div id="submitbutton">
     <tr>
-        <td> <input type="submit" value="Submit"> </td>
+        <td> <input name="submit" type="submit" value="Submit"> </td>
     </tr>
 </div>
     </form>
