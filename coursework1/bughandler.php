@@ -54,6 +54,12 @@ else{
 
 //$bugattachmentURL= addslashes($bugattachmentURL);
     echo $desc;
+    echo $title;
+echo $postDate;
+echo $fixDate;
+echo $fixed;
+echo $userID;
+
 //if (empty($_POST["file"])
 //{
   //  $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
