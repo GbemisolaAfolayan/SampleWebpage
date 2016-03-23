@@ -25,7 +25,7 @@ $descr=$_POST["descr"];
 //$fixed=0;
 $userID=$_SESSION['userID'];
 
-$user=["username"];
+$user=$_SESSION["username"];
 //$bugfile=$_POST["file"];
 
 //{
@@ -56,10 +56,11 @@ else{
 //$bugattachmentURL= addslashes($bugattachmentURL);
     echo $descr;
     echo $title;
-echo $postDate;
-echo $fixDate;
-echo $fixed;
+//echo $postDate;
+//echo $fixDate;
+//echo $fixed;
 echo $userID;
+echo $user;
 
 //if (empty($_POST["file"])
 //{
