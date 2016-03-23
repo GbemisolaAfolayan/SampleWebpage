@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign up redirect</title>
+    <title> Register Bug </title>
     <link rel="stylesheet" href="bug.css" type="text/css" />
 </head>
 <body>
