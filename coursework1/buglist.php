@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php
-include("connection.php");
+
 include ("check.php");
 
 
