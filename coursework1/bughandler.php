@@ -64,7 +64,7 @@ echo $userID;
   //  $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
 //}
 //else
-$sql="INSERT INTO bugs(title, descr, postDate, fixDate, fixed, usedID) VALUES ('$title', '$descr', '$postDate', '$fixDate', '$fixed', '$userID')";
+$sql="INSERT INTO bugs(title, descr, postDate, usedID) VALUES ('$title', '$descr', now(), '$userID')";
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
 //$sql = "INSERT INTO bugs". " (title, descr, postDate, fixDate, fixed, userID)" . " VALUES ('$title','$descr','$postDate','$fixDate','$fixed', '$userID')";
    // $query=mysqli_query($sql,$db);
