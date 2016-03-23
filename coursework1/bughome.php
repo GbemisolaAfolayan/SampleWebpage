@@ -38,7 +38,7 @@ include("connection.php");
 
             <div id="submitbutton">
             <tr>
-                <td> <input type="submit" value="Submit"> </td>
+                <td> <input type="submit" name="submit" value="Submit"> </td>
             </tr>
             </div>
 
