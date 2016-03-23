@@ -22,7 +22,7 @@ if(isset($_POST["submit"]))
 
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {
-    echo "Both fields are required.";
+    $error= "Both fields are required.";
 }
 else {
 

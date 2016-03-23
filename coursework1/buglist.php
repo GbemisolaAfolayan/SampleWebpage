@@ -8,6 +8,7 @@
 <body>
 <?php
 include("connection.php");
+include ("check.php");
 
 
         echo"<h4 style='margin-left: 5%'> Hello". " ". $_GET["username"]."</h4>";
