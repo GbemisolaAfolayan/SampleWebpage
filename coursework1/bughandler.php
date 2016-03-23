@@ -20,10 +20,12 @@ include("check.php");
 */
 $title=$_POST["title"];
 $descr=$_POST["descr"];
-$postDate=$_POST["postDate"];
-$fixDate='';
-$fixed=0;
+//$postDate=$_POST["postDate"];
+//$fixDate='';
+//$fixed=0;
 $userID=$_SESSION['userID'];
+
+$user=["username"];
 //$bugfile=$_POST["file"];
 
 //{
@@ -64,6 +66,15 @@ echo $userID;
   //  $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
 //}
 //else
+$query2 = mysqli_query($db, "SELECT * FROM users WHERE username = '$user'") or die (mysqli_error($db));
+
+while ($rows = mysqli_fetch_array($query2)) {
+    $xname = $rows['username'];
+    $xid = $rows['userID'];
+    echo "The username selected is = $xname<br>";
+    echo "The userID is = $xid<br>";
+}
+
 $sql="INSERT INTO bugs(title, descr, postDate, usedID) VALUES ('$title', '$descr', now(), '$userID')";
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
 //$sql = "INSERT INTO bugs". " (title, descr, postDate, fixDate, fixed, userID)" . " VALUES ('$title','$descr','$postDate','$fixDate','$fixed', '$userID')";
