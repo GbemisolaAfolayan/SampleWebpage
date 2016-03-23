@@ -54,3 +54,5 @@ fieldset {padding: 5%;
                 <td> <label for="file"> Bug Attachment URL:</label> </td>
                 <td> <input type="file" name="file" value="" required /> </td>
             </tr>
+
+             value="<?php echo date('d/m/y');?>"
