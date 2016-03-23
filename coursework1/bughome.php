@@ -31,7 +31,7 @@ include("connection.php");
             </tr>
             <tr>
                 <td> <label for="postDate"> Date Posted:</label> </td>
-                <td> <input type="date" name="postDate" value=" <?php echo date('d/m/y');?> " readonly /> </td>
+                <td> <input type="date" name="postDate" value=" <?php  echo date('d/m/y'); ?> " readonly /> </td>
             </tr>
             <br>
 
