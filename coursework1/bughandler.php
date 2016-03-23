@@ -88,7 +88,7 @@ echo $userID;
 //}
 
 
-if(mysqli_query($db,$sql))
+if ($sql) //(mysqli_query($db,$sql))
 {
     echo "<h4>" . "Thank You! you have successfully registered a bug." . "<h3>";
 }
