@@ -60,7 +60,7 @@ else{
 //else
 
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
-    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc',now(),now(),'$fixed')");
+    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc',CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP (),'$fixed')");
 
    // $getBugID=mysqli_insert_id ($db); //get bugID for the new bug
 
