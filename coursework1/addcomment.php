@@ -20,7 +20,7 @@ include("bug.php");
     $comment =$_POST["comment"];
     $postDate = date('d/m/y');
     $userID=$_SESSION['userID'];
-    $bugID= $_GET["bugID"];
+    $bugID= $_SESSION["bugID"];
    // $userID =$_POST["userID"];
     //$bugID =$_POST["bugID"];
     echo $comment;
