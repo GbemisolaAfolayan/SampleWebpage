@@ -25,7 +25,7 @@ include("bug.php");
     //$bugID =$_POST["bugID"];
 
    // $query =  mysqli_query($db,"INSERT INTO comments (desc, postDate, userID, bugID) VALUES ('$desc', '$postDate', '$userID', '$bugID')");
-    $query =  mysqli_query($db,"INSERT INTO comments (commentID, comment, postDate, userID, bugID ) VALUES ('','$comment', '$postDate', '$userID', '$bugID')");
+    $query =  mysqli_query($db,"INSERT INTO comments VALUES ('','$comment', '$postDate', '$userID', '$bugID')");
 
     if ($query)
     {
