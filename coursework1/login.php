@@ -34,7 +34,8 @@ echo "running";
 
         if(mysqli_num_rows($result) == 1)
         {
-            $_SESSION['username'] = $username; // Initializing Session
+            $_SESSION['username'] = $username;// Initializing Session
+            $_SESSION['userID'] = $row['userID'];
             header("location: buglist.php"); // Redirecting To Other Page
         }else
         {

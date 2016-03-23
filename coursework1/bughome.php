@@ -33,11 +33,7 @@ include("connection.php");
                 <td> <label for="postDate"> Date Posted:</label> </td>
                 <td> <input type="date" name="postDate" value="<?php echo date('d/m/y');?>" readonly /> </td>
             </tr>
-
-            <tr>
-                <td> <label for="file"> Bug Attachment URL:</label> </td>
-                <td> <input type="file" name="file" value="" required /> </td>
-            </tr>
+            <br>
 
 
             <div id="submitbutton">

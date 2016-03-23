@@ -2,8 +2,8 @@
 session_start();
 include ("check.php");
 include ("connection.php");
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +21,7 @@ include ("connection.php");
     <i style="font-size: small"> Click on the Bugs to view description </i>
     <br>
 
-<?php
+    <?php
     include("connection.php");
     include("check.php");
     session_start();
@@ -38,7 +38,7 @@ include ("connection.php");
             //get title and id from the bug
             $bugTitle=$row['title'];
             $bugID=$row['bugID'];
-           // echo $bugID;
+           echo $bugID;
 
             //write the link to the page
             //echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
@@ -63,4 +63,3 @@ include ("connection.php");
 
 </body>
 </html>
-?>

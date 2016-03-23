@@ -8,9 +8,9 @@
 <body>
 
 <?php
-
+session_start();
 include("connection.php");
-
+include("check.php");
 
 //include("check.php");
 //session_start();
@@ -21,9 +21,10 @@ include("connection.php");
 $title=$_POST["title"];
 $desc=$_POST["desc"];
 $postDate=$_POST["postDate"];
-$fixDate="";
+$fixDate='';
 $fixed=0;
-$bugattachment=$_POST["file"];
+$userID=$_SESSION['userID'];
+//$bugfile=$_POST["file"];
 
 //{
 
@@ -34,7 +35,7 @@ $desc= mysqli_real_escape_string($db,$desc);
 $postDate= mysqli_real_escape_string($db,$postDate);
 $fixDate= mysqli_real_escape_string($db,$fixDate);
 $fixed=mysqli_real_escape_string($db,$fixed);
-$bugattachment=mysqli_real_escape_string($db,$bugattachment);
+//$bugfile=mysqli_real_escape_string($db,$bugfile);
 
 //$sql="SELECT email FROM users WHERE email='$email'";
 
@@ -52,6 +53,12 @@ else{
 
 //$bugattachmentURL= addslashes($bugattachmentURL);
     echo $desc;
+    echo $title;
+echo $postDate;
+echo $fixDate;
+echo $fixed;
+echo $userID;
+
 //if (empty($_POST["file"])
 //{
   //  $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
@@ -59,16 +66,17 @@ else{
 //else
 
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
-    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
+$sql = "INSERT INTO bugs". " (title, desc, postDate, fixDate, fixed, userID)" . " VALUES ('$title','$desc','$postDate','$fixDate','$fixed', '$userID')";
+   // $query=mysqli_query($sql,$db);
 
    // $getBugID=mysqli_insert_id ($db); //get bugID for the new bug
 
-   $query2=mysqli_query($db,"INSERT INTO attachments ( URL ) VALUES ('$bugattachmentURL')");
-
+  // $query2=mysqli_query($db,"INSERT INTO attachments ( URL ) VALUES ('$bugfile')"
+echo $userID;
 //}
 
 
-if($query)
+if(mysqli_query($db,$sql))
 {
     echo "<h4>" . "Thank You! you have successfully registered a bug." . "<h3>";
 }
