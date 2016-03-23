@@ -22,9 +22,9 @@ include ("connection.php");
     <br>
 
     <?php
-    //include("connection.php");
-    //include("check.php");
-    //session_start();
+    include("connection.php");
+    include("check.php");
+    session_start();
 
 
 
