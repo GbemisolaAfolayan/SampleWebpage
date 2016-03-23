@@ -55,7 +55,7 @@ include("connection.php");
 
     </div>
 
-
+<a href="logout.php" style="font-size:18px">Logout?</a>
 
 </body>
 </html>
