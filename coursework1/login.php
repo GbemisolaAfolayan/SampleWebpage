@@ -10,7 +10,7 @@
 session_start();
 include("connection.php"); //connection to database
 
-//$error = ""; //Variable for storing our errors.
+$error = ""; //Variable for storing our errors.
 
 if(isset($_POST["submit"]))
 {
