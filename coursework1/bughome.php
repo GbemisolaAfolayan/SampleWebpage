@@ -1,7 +1,8 @@
 <?php
+session_start();
 include("connection.php");
-//include("check.php");
-//session_start();
+include("check.php");
+
 
 ?>
 
