@@ -5,8 +5,8 @@ include("connection.php"); //Establishing connection with our database
 
 $error = ""; //Variable for storing our errors.
 echo "running";
-if(isset($_POST["submit"]))
-{
+//if(isset($_POST["submit"]))
+//{
     if(empty($_POST["username"]) || empty($_POST["password"]))
     {
         $error = "Both fields are required.";
@@ -42,7 +42,7 @@ if(isset($_POST["submit"]))
             echo $error;
         }
 
-    }
+    //}
 }
 
 ?>
