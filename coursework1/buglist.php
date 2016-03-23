@@ -1,8 +1,4 @@
-<?php
 
-include ("check.php");
-include ("connection.php");
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,13 +14,13 @@ include ("connection.php");
 
 <div id="content">
     <h2 style="color: blueviolet"><b>Bug List</b></h2>
-    <br> <i style="font-size: small"> Click on the Bugs to view description </i>
+    <i style="font-size: small"> Click on the Bugs to view description </i>
     <br>
 
     <?php
     include("connection.php");
-   // include("check.php");
-    //session_start();
+    include("check.php");
+    session_start();
 
 
 
