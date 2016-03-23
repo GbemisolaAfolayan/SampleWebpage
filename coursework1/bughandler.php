@@ -10,7 +10,7 @@
 <?php
 
 include("connection.php");
-?>
+
 
 //include("check.php");
 //session_start();
@@ -67,6 +67,7 @@ else{
 
 //}
 
+?>
 if($query)
 {
     echo "<h4>" . "Thank You! you have successfully registered a bug." . "<h3>";
