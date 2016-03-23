@@ -32,7 +32,7 @@ if(isset($_POST["submit"]))
 
         if(mysqli_num_rows($result) == 1)
         {
-           // $_SESSION['username'] = $username; // Initializing Session
+            $_SESSION['username'] = $username; // Initializing Session
             header("location: buglist.php"); // Redirecting To Other Page
         }else
         {
