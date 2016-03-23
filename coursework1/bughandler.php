@@ -24,7 +24,7 @@ $desc=$_POST["desc"];
 $postDate=$_POST["postDate"];
 $fixDate='';
 $fixed=0;
-$userID=$_SESSION['username'];
+$userID=$_SESSION['userID'];
 //$bugfile=$_POST["file"];
 
 //{
