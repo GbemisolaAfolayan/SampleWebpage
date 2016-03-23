@@ -22,7 +22,7 @@ include("check.php");
 $title=$_POST["title"];
 $desc=$_POST["desc"];
 $postDate=$_POST[""];
-$fixDate=NULL;
+$fixDate=$_POST[""];
 $fixed=NULL;
 //$bugfile=$_POST["file"];
 
@@ -60,7 +60,7 @@ else{
 //else
 
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
-    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc',now(),'$fixDate','$fixed')");
+    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc',now(),now(),'$fixed')");
 
    // $getBugID=mysqli_insert_id ($db); //get bugID for the new bug
 
