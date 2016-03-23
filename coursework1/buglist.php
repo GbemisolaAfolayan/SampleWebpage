@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+include ("check.php");
+include ("connection.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,9 +22,9 @@
     <br>
 
     <?php
-    include("connection.php");
-    include("check.php");
-    session_start();
+    //include("connection.php");
+    //include("check.php");
+    //session_start();
 
 
 
