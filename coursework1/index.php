@@ -38,7 +38,7 @@ if (isset($_SESSION['username']))
             </tr>
             <div id="submitbutton">
             <tr>
-                <td> <input type="submit" value="Login"> </td>
+                <td> <input name ="submit" type="submit" value="Login"> </td>
             </tr>
             </div>
 
