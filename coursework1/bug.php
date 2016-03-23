@@ -16,8 +16,8 @@ include("check.php");
 
     <?php
     include("connection.php");
-    //include("check.php");
-    //session_start();
+    include("check.php");
+    session_start();
 
     $bugID= $_GET["bugID"];
     //echo $bugID;
