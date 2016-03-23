@@ -73,7 +73,7 @@ $sql = "INSERT INTO bugs (title, desc, postDate, fixDate, fixed, userID) VALUES 
    // $getBugID=mysqli_insert_id ($db); //get bugID for the new bug
 
   // $query2=mysqli_query($db,"INSERT INTO attachments ( URL ) VALUES ('$bugfile')"
-
+echo $userID;
 //}
 
 
