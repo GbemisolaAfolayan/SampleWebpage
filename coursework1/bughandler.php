@@ -51,11 +51,12 @@ else{
 $bugattachmentURL= addslashes($bugattachmentURL);
     echo $desc;
 
-    $query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
+    //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
+    $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
 
    // $getBugID=mysqli_insert_id ($db); //get bugID for the new bug
 
-   // $query2=mysqli_query($db,"INSERT INTO attachments ( URL ) VALUES ('$bugattachmentURL')");
+   $query2=mysqli_query($db,"INSERT INTO attachments ( URL ) VALUES ('$bugattachmentURL')");
 
 //}
 
