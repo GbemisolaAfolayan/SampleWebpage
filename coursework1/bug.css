@@ -131,6 +131,6 @@ nav li a:hover:not(.active) {
 
 footer p {
     text-align: center;
-    clear: both;
+    font-size: x-small;
 
 }
