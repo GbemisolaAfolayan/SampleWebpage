@@ -11,6 +11,7 @@
 session_start();
 include("connection.php");
 include("check.php");
+include("buglist.php");
 
 //include("check.php");
 //session_start();
@@ -31,7 +32,7 @@ $user=$_SESSION['username'];
 //{
 
 //strip special characters
-echo date('d/m/y');
+//echo date('d/m/y');
 $title= mysqli_real_escape_string($db,$title);
 $desc= mysqli_real_escape_string($db,$desc);
 $postDate= mysqli_real_escape_string($db,$postDate);
@@ -54,13 +55,13 @@ else{
 */
 
 //$bugattachmentURL= addslashes($bugattachmentURL);
-    echo $descr;
-    echo $title;
+   // echo $descr;
+  //  echo $title;
 //echo $postDate;
 //echo $fixDate;
 //echo $fixed;
-echo $userID;
-echo $user;
+//echo $userID;
+//echo $user;
 
 //if (empty($_POST["file"])
 //{

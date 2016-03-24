@@ -53,13 +53,17 @@ include("check.php");
     //fetch results from the database
     $result=mysqli_query($db,$sql);
     //we can scan through rach row in the response
-    while($row=mysqli_fetch_assoc($result)){
+    while($row=mysqli_fetch_assoc($result) & $row2=mysqli_fetch_array($db,$sql) ){
         //get the title and id from the bug
-        $commentTitle = $row['title'];
+        //$commentTitle = $row['title'];
         $comment = $row['comment'];
+        $postDate=$row2['postDate'];
+        $userID=$row2['userID'];
         //write the link to the page
-        echo '<h3>'.$commentTitle.'</h3>';
-        echo '<p>Comments:'.$comment.'</p>';
+        //echo '<h3>'.$commentTitle.'</h3>';
+        echo '<br>'."Comments: ".$comment.' ';
+        echo '<br>'. "PostDate: ". $postDate. ' ' ;
+        echo '<br>'. "Posted by User" . $userID. ' ';
     }
 
     ?>
