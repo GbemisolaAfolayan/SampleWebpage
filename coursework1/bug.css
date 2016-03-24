@@ -53,9 +53,7 @@ h3 {font-family: SansSerif;
         font-weight:bold;
         font-size:20px }
 
-#signup{position: relative;
-        text-align: center;
-        float: inherit;
+#signup{text-align: center;
         margin-right:150px;
         margin-left:500px;
         margin-top: 1%;
