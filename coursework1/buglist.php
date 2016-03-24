@@ -15,7 +15,7 @@ include ("connection.php");
 
 <div id=buglistcontent>
     <header>
-        <h1 style="font-family: 'Bradley Hand ITC'"><b>Bug List</b></h1>
+        <h1 style="font-family: 'Bradley Hand ITC'"><b>Bugs List</b></h1>
 
         <nav>
             <ul>
