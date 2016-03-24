@@ -20,7 +20,7 @@ include ("connection.php");
         <nav>
             <ul>
                 <li><a href="bughome.php">Report New Bug</a></li>
-                <li><a href="logout.php" >Logout</a></li>
+                <li style="float:right"><a class="active" href="logout.php" >Logout</a></li>
 
             </ul>
         </nav>
