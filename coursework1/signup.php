@@ -49,11 +49,13 @@
 
         </table>
 
+           <div id=loginlink>
            <a href="index.php" style="font-size:18px">Login </a>
+           </div>
 
     </fieldset>
 
-       <a href="index.php" style="font-size:18px">Login </a>
+
 
        </div>
 </form>
