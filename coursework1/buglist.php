@@ -13,7 +13,7 @@ include ("connection.php");
 </head>
 <body>
 <div id=buglistcontent>
-<h1 style="color: blueviolet"><b>Bug List</b></h1>
+<h1 style="font-family: 'Bradley Hand ITC'"><b>Bug List</b></h1>
 
 <br><br>
 
