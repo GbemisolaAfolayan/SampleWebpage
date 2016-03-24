@@ -23,7 +23,7 @@ $descr=$_POST["descr"];
 //$postDate=$_POST["postDate"];
 //$fixDate='';
 //$fixed=0;
-$userID=$_SESSION['userID'];
+//$userID=$_SESSION['userID'];
 
 $user=$_SESSION['username'];
 //$bugfile=$_POST["file"];
@@ -76,7 +76,7 @@ while ($rows = mysqli_fetch_array($query2)) {
     echo "The userID is = $xid<br>";
 }
 
-$sql="INSERT INTO bugs(title, descr, postDate, usedID) VALUES ('$title', '$descr', now(), '$xid')";
+$sql=mysqli_query($db, "INSERT INTO bugs(title, descr, postDate, usedID) VALUES ('$title', '$descr', now(), '$xid')";
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
 //$sql = "INSERT INTO bugs". " (title, descr, postDate, fixDate, fixed, userID)" . " VALUES ('$title','$descr','$postDate','$fixDate','$fixed', '$userID')";
    // $query=mysqli_query($sql,$db);
