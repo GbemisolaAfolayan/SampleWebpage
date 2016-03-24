@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1> BUG TRACKING SYSTEM </h1>
-<h2 style="margin-left: 500px"> Sign Up </h2>
+<h2 style="margin-left: 600px"> Sign Up </h2>
 <form method="post" action="">
    <div id="signupbox">
        <fieldset>
