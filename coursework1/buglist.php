@@ -55,7 +55,7 @@ include ("connection.php");
             //echo '<a href="bug.php?bugID="'. $bugID.'>'.$bugTitle.'</a></br>';
             //echo '<a href="bug.php?bugID = <?= "'.$bugID['bugID']. '>' . $bugTitle. '</a></br>';
             //header("location: bug.php?bugID=" . $bugID); // Redirecting To another Page
-           echo "<li><a href=bug.php?bugID=$bugID >$bugTitle </a></li></br>";
+           echo "<br><li><a href=bug.php?bugID=$bugID >$bugTitle </a></li>";
 
         }
     ?>
