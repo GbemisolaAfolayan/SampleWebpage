@@ -98,6 +98,7 @@ include("buglist.php");
     //echo $fixed;
     //echo $userID;
     //echo $user;
+    echo $bugID;
 
     //if (empty($_POST["file"])
     //{
