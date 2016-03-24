@@ -63,7 +63,7 @@ include("buglist.php");
     //$fixed=0;
     $userID=$_SESSION['userID'];
     //$bugID=$_GET['bugID'];
-    $bugID=$_POST['bugID'];
+    $bugID=$_GET['bugID'];
     //$bugfile=$_POST["file"];
 
     //{
