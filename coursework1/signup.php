@@ -49,6 +49,8 @@
 
         </table>
 
+           <a href="index.php" style="font-size:18px">Login </a>
+
     </fieldset>
 
        <a href="index.php" style="font-size:18px">Login </a>
