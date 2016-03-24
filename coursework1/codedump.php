@@ -61,3 +61,12 @@ fieldset {padding: 5%;
     <td> <label for="postDate"> Date Posted:</label> </td>
     <td> <input type="date" name="postDate" value=" <?php echo date('d/m/y');?> " readonly /> </td>
 </tr>
+
+<div id="Newbug">
+
+    <p> New Bug? <a href ="bughome.php"> Report A Bug! </a> </p>
+
+
+</div>
+
+<a href="logout.php" style="font-size:18px">Logout?</a>
