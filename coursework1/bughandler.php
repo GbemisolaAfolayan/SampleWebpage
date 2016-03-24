@@ -76,9 +76,7 @@ while ($rows = mysqli_fetch_array($query2)) {
     echo "The userID is = $xid<br>";
 }
 
-$sql = mysqli_query ($db, "INSERT INTO bugs (title, descr, postDate, usedID) VALUES ('$title', '$descr', now(), '$xid')");
-
-// or die(mysqli_error($db);
+$sql = mysqli_query ($db, "INSERT INTO bugs (title, descr, postDate, usedID) VALUES ('$title', '$descr', now(), '$xid')") or die(mysqli_error($db));
 
 
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
