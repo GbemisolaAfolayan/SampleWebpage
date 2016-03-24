@@ -13,13 +13,13 @@ include ("connection.php");
 </head>
 <body>
 <div id=buglistcontent>
-<h1>style="color: blueviolet"><b>Bug List</b></h1>
-<h1 class="hello">Hello, <em><?php echo $login_user;?>!</em></h1>
-<br><br><br>
+<h1 style="color: blueviolet"><b>Bug List</b></h1>
+
+<br><br>
 
 <div id="content">
     <h2 class="hello">Hello, <em><?php echo $login_user;?>!</em></h2>
-    <h2 style="color: blueviolet"><b>Bug List</b></h2>
+
     <i style="font-size: small"> Click on the Bugs to view description </i>
     <br>
 
