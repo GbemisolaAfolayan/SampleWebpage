@@ -12,6 +12,17 @@ include ("connection.php");
     <link rel="stylesheet" href="bug.css" type="text/css" />
 </head>
 <body>
+<header>
+    <h1 style="font-family: 'Bradley Hand ITC'"><b>Bug List</b></h1>
+
+    <nav>
+        <ul>
+            <li><a href="href ="bughome.php">Report New Bug</a></li>
+            <li><a href="logout.php" >Logout</a></li>
+
+        </ul>
+    </nav>
+</header>
 <div id=buglistcontent>
 <h1 style="font-family: 'Bradley Hand ITC'"><b>Bug List</b></h1>
 
