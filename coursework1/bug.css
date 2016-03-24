@@ -102,7 +102,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:lavenderblush;
+    background-color:lavender;
 }
 
 nav li {
@@ -118,7 +118,7 @@ nav li a {
 }
 
 nav li a:hover:not(.active) {
-    background-color: whitesmoke;
+    background-color: blueviolet;
 }
 
 .active {
