@@ -86,8 +86,9 @@ h2{color: blueviolet;
     text-align: right;
 }
 #buglistcontent {margin-top: 5%;
-    margin-right:5%;
-    margin-left:450px;
+    margin-right:2%;
+    margin-left:5%;
+    position: absolute;
     border:3px solid #a1a1a1;
     padding:9px 50px;
     background-color: whitesmoke;
