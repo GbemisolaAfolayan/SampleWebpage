@@ -125,3 +125,12 @@ nav li a:hover:not(.active) {
 .active {
     background-color: blueviolet;
 }
+
+
+
+
+footer p {
+    text-align: center;
+    clear: both;
+
+}

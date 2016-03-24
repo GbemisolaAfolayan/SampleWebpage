@@ -60,7 +60,9 @@ include ("connection.php");
         }
     ?>
 
-
+    <footer>
+        <p>(c) 2016 1515251_CMM503 Web Design</p>
+    </footer>
 
 
     </div>
