@@ -19,7 +19,7 @@ include ("connection.php");
 
         <nav>
             <ul>
-                <li><a href="href ="bughome.php">Report New Bug</a></li>
+                <li><a href="bughome.php">Report New Bug</a></li>
                 <li><a href="logout.php" >Logout</a></li>
 
             </ul>
