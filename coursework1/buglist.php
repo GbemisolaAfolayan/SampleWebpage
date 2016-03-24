@@ -8,7 +8,7 @@ include ("connection.php");
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bug List</title>
+    <title>Welcome - Bug List</title>
     <link rel="stylesheet" href="bug.css" type="text/css" />
 </head>
 <body>
