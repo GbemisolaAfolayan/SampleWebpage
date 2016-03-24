@@ -26,8 +26,6 @@ include ("connection.php");
         </nav>
     </header>
 
-<br><br>
-
 <div id="content">
     <h2 class="hello">Hello, <em><?php echo $login_user;?>!</em></h2>
 
