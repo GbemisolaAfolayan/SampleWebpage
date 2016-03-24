@@ -97,12 +97,12 @@ h2{color: blueviolet;
 
 }
 
-ul {
+ul {color: #9688B2;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #0066FF;
+
 }
 
 nav li {
