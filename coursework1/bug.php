@@ -74,7 +74,7 @@ include("check.php");
 
 <div id="Comment">
     <h4 style="color: blueviolet"> Comment on this bug</h4>
-    <form method="post" action="addcomment.php?bugID=$bugID">
+    <form method="post" action="addcomment.php">
 
     <tr>
         <td><label for="comment">Comment: </label> </td>
@@ -82,7 +82,7 @@ include("check.php");
     </tr>
 </div>
 <div id="submitbutton">
-    <tr>
+    <tr><td> <input type="text" value="<?php $bugID?>;" </td>
         <td> <input name="submit" type="submit" value="Submit"> </td>
     </tr>
 </div>
