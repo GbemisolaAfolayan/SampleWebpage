@@ -49,7 +49,7 @@ include("check.php");
     $fixDate=$row['fixDate'];
 
     //displays the bug description, post date and fix date
-    echo "<p>"."<b>".$bugTitle."</b>";
+    echo "<p style='color: blueviolet'>"."<b>".$bugTitle."</b>";
     echo "</br> Bug Description:".$bugDesc."</p>";
     echo "<p>Post Date:".$postDate."</br>";
     echo "Fix Date:".$fixDate."</p>";
@@ -58,7 +58,7 @@ include("check.php");
     $bugID= $_GET["bugID"];
 
     //select everything from our bugs where the ID is right
-    $sql2="SELECT * FROM comments WHERE bugID=".$_GET["bugID"]. "ORDER BY commentID DESC" or die(mysql_error());;
+    $sql2="SELECT * FROM comments WHERE bugID=".$_GET["bugID"]. "ORDER BY commentID DESC" or die(mysql_error());
 
     //fetch results from the database
     $result2=mysqli_query($db,$sql2);
