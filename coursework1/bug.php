@@ -71,7 +71,7 @@ include("check.php");
        $userID = $row2['userID'];
 
        //displays the bug comment, post date and user that posted the comment
-       echo '<br>' . "Comments: " . $comment . ' ';
+       echo '<br>' . "Comment: " . $comment . ' ';
        echo '<br>' . "PostDate: " . $postDate . ' ';
        echo '<br>' . "Posted by User" . $userID . ' ';
        echo '<br>';
