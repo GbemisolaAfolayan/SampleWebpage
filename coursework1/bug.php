@@ -39,7 +39,7 @@ include("check.php");
 
 
     echo "<p>"."<b>".$bugTitle."</b>";
-    echo "Bug Description:".$bugDesc."</p>";
+    echo "</br> Bug Description:".$bugDesc."</p>";
     echo "<p>Post Date:".$postDate."</br>";
     echo "Fix Date:".$fixDate."</p>";
 
