@@ -64,9 +64,9 @@ fieldset {padding: 5%;
 
 <div id="Newbug">
 
-    <p> New Bug? <a href ="bughome.php"> Report A Bug! </a> </p>
+    <p> New Bug? <a href ="../coursework1/bughome.php"> Report A Bug! </a> </p>
 
 
 </div>
 
-<a href="logout.php" style="font-size:18px">Logout?</a>
+<a href="../coursework1/logout.php" style="font-size:18px">Logout?</a>

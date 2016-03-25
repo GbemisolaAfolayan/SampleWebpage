@@ -7,6 +7,7 @@ if(isset($_POST["submit"]))
     $phone = $_POST["phone"];
     $password = $_POST["password"];
 
+    // To protect from MySQL injection
     $username = mysqli_real_escape_string($db, $username);
     $email = mysqli_real_escape_string($db, $email);
     $password = mysqli_real_escape_string($db, $password);
