@@ -38,10 +38,10 @@ include("check.php");
     $fixDate=$row['fixDate'];
 
 
-    echo "<p>"."<b>".$bugTitle."</b>"."</p>";
-    echo "<p>Bug Description:".$bugDesc."</p>";
+    echo "<p>"."<b>".$bugTitle."</b>";
+    echo "Bug Description:".$bugDesc."</p>";
     echo "<p>Post Date:".$postDate."</br>";
-    echo "</br>Fix Date:".$fixDate."</p>";
+    echo "Fix Date:".$fixDate."</p>";
 
 
 
