@@ -27,13 +27,13 @@ if (isset($_SESSION['username']))
         <table>
             <tr>
                 <td> <label for="username">Username:</label><br></td>
-                <td> <input type="text" name="username" value="" /><br> </td>
+                <td> <input type="text" name="username" value="" required /><br> </td>
             </tr>
 
 
             <tr>
                 <td> <label for="password">Password:</label><br> </td>
-                <td> <input type="password" name="password" value=""> </td>
+                <td> <input type="password" name="password" value="" required> </td>
 
             </tr>
             <div id="submitbutton">
