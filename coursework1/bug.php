@@ -89,6 +89,10 @@ include("check.php");
         <p> <a href="buglist.php"> Back to Bugs List</a></p>
 
     </div>
+
+    <footer>
+        <p>(c) 2016 1515251_CMM503 Web Design</p>
+    </footer>
 </div>
 </body>
 </html>
