@@ -67,8 +67,8 @@ include("check.php");
     }
 
         //echo "a href='bug.php?id=$bugID'></a>";
-        echo "a href=addcomment.php?bugID=$bugID></a>";
-    //echo "<br><li><a href=bug.php?bugID=$bugID >$bugTitle </a></li>";
+       //echo "<a href=addcomment.php?bugID=$bugID></a>";
+       echo "<a href=addcomment.php?bugID=$bugID ></a>";
     ?>
 
 
