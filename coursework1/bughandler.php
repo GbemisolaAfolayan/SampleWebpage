@@ -27,8 +27,9 @@ $descr=$_POST["descr"];
 //$userID=$_SESSION['userID'];
 
 $user=$_SESSION['username'];
-//$bugfile=$_POST["file"];
+$bugfile=$_POST["file"];
 
+echo $bugfile;
 //{
 
 //strip special characters
@@ -100,6 +101,7 @@ else{
     echo "<h4>". "Bug Registration Unsuccessful" . "</h4>";
 
 }
+
 
 ?>
 
