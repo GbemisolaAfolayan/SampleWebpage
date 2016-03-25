@@ -11,8 +11,19 @@ include("check.php");
 
 <body>
 <div id="contentbug">
+    <header>
+        <h2 style="color: blueviolet">Bug Description </h2>
 
-    <h2 style="color: blueviolet">Bug Description </h2>
+        <nav>
+            <ul>
+                <li><a href="buglist.php">Bugs List</a></li>
+                <li><a href="bughome.php">Report New Bug</a></li>
+                <li style="float:right"><a href="logout.php" >Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
 
     <?php
     include("connection.php");
