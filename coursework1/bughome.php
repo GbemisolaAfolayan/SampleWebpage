@@ -34,7 +34,7 @@ include("check.php");
 
             <tr>
                 <td> <label for="file"> Bug Attachment URL:</label> </td>
-                <td> <input type="file" name="file" value=""  /> </td>
+                <td> <input type="url" name="file" value=""  /> </td>
             </tr>
 
 
