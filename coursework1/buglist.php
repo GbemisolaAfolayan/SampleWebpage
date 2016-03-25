@@ -52,6 +52,7 @@ include ("connection.php");
             //write the link to the page
            echo "<br><li><a href=bug.php?bugID=$bugID >$bugTitle </a></li>";
 
+
         }
     ?>
 
