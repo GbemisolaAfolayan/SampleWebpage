@@ -34,7 +34,7 @@ include("bug.php");
     //else
   //  $query2 = mysqli_query($db, "SELECT * FROM bugs WHERE bugID = '$bugID'") or die (mysqli_error($db));
 
-    while ($rows = mysqli_fetch_array($query2)) {
+    while ($rows = mysqli_fetch_array($sql2)) {
         //$xname = $rows['username'];
        // $xid = $rows['userID'];
 
