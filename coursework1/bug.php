@@ -66,6 +66,8 @@ include("check.php");
         echo '<br>'. "Posted by User" . $userID. ' ';
     }
 
+        //echo "a href='bug.php?id=$bugID'></a>";
+        echo "a href=bug.php?bugID=$bugID></a>";
     ?>
 
 
