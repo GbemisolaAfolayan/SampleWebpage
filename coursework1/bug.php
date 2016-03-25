@@ -47,7 +47,7 @@ include("check.php");
     $bugID= $_GET["bugID"];
 
     //select everything from our bugs where the ID is right
-    $sql2="SELECT * FROM comments WHERE bugID=".$_GET["bugID"];
+    $sql2="SELECT * FROM comments WHERE bugID=".$_GET["bugID"]. "ORDER BY commentID DESC";
 
     //fetch results from the database
     $result2=mysqli_query($db,$sql2);
