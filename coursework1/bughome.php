@@ -51,6 +51,9 @@ include("check.php");
 
 </div>
     </form>
+<div id="signup">
 
+    <a href ="buglist.php"> Back to Buglist </a>
+</div>
 </body>
 </html>
