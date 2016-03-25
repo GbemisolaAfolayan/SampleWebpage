@@ -68,13 +68,13 @@ include("check.php");
 
         //echo "a href='bug.php?id=$bugID'></a>";
        //echo "<a href=addcomment.php?bugID=$bugID></a>";
-       echo "<a href=addcomment.php?bugID=$bugID ></a>";
+       echo "<a href=addcomment.php?bugID=$bugID></a>";
     ?>
 
 
 <div id="Comment">
     <h4 style="color: blueviolet"> Comment on this bug</h4>
-    <form method="post" action="addcomment.php">
+    <form method="post" action="addcomment.php?bugID=$bugID">
 
     <tr>
         <td><label for="comment">Comment: </label> </td>
