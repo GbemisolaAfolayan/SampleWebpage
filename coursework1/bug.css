@@ -134,3 +134,16 @@ footer p {
     font-size: x-small;
 
 }
+
+#content {margin-top: 5%;
+    margin-right:5%;
+    margin-left:5%;
+    margin-bottom:1%;
+    position: absolute;
+    border:3px solid #a1a1a1;
+    padding:9px 50px;
+    background-color: whitesmoke;
+    width:80%;
+    border-radius:20px;
+
+}
