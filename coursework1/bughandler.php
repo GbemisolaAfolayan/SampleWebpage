@@ -27,9 +27,9 @@ $descr=$_POST["descr"];
 //$userID=$_SESSION['userID'];
 
 $user=$_SESSION['username'];
-$bugfile=$_POST["file"];
+$file_name=$_POST["file"];
 
-echo $bugfile;
+echo $file_name;
 //{
 
 //strip special characters
@@ -69,6 +69,7 @@ else{
   //  $query=mysqli_query($db,"INSERT INTO bugs (title, desc, postDate, fixDate, fixed) VALUES ('$title','$desc','$postDate','$fixDate','$fixed')");
 //}
 //else
+
 $query2 = mysqli_query($db, "SELECT * FROM users WHERE username = '$user'") or die (mysqli_error($db));
 
 while ($rows = mysqli_fetch_array($query2)) {
@@ -78,9 +79,35 @@ while ($rows = mysqli_fetch_array($query2)) {
     echo "The userID is = $xid<br>";
 }
 
+$file_name = $_FILES['image']['name'];
+$dir = $_FILES['image']['tmp_name'];
+$location = "uploads/";
+$fp = fopen($dir, 'r');
+$content = fread($fp, filesize($dir));
+$content = addslashes($content);
+fclose($fp);
+move_uploaded_file($dir, $location.$file_name);
+
 $sql = mysqli_query ($db, "INSERT INTO bugs (title, descr, postDate, userID) VALUES ('$title', '$descr', now(), '$xid')") or die(mysqli_error($db));
 
 
+
+$sql1 = mysqli_query($db, "select * from bugs where title = '$Bugtitle'");
+
+while ($runsql = mysqli_fetch_array($sql1)) {
+    $newbugid = $runsql ['bugID'];
+}
+
+
+$query1 = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$content', '$xid', '$newbugid')");
+//$result = mysqli_query($query1);
+if($query1) {
+    echo "<br/>Image Uploaded.";
+}
+else
+{
+    echo "<br/>Image Not Uploaded.";
+}
     //$query=mysqli_query($db,"INSERT INTO bugs, attachments (title, desc, postDate, fixDate, fixed) (URL) VALUES ('$title','$desc','$postDate','$fixDate','$fixed') ('$bugattachmentURL')");
 //$sql = "INSERT INTO bugs". " (title, descr, postDate, fixDate, fixed, userID)" . " VALUES ('$title','$descr','$postDate','$fixDate','$fixed', '$userID')";
    // $query=mysqli_query($sql,$db);
