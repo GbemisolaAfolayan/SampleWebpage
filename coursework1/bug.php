@@ -63,7 +63,7 @@ include("check.php");
     //fetch results from the database
     $result2=mysqli_query($db,$sql2);
     //we can scan through each row in the response
-    $row2=mysqli_fetch_assoc($result2);
+   while ($row2=mysqli_fetch_assoc($result2));
       //get the title and id from the bug
       //$commentTitle = $row['title'];
     $comment = $row2['comment'];
