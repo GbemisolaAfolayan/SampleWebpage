@@ -34,15 +34,15 @@ include("bug.php");
     //else
   //  $query2 = mysqli_query($db, "SELECT * FROM bugs WHERE bugID = '$bugID'") or die (mysqli_error($db));
 
-    while ($rows = mysqli_fetch_array($sql2)) {
+   // while ($rows = mysqli_fetch_array($sql2)) {
         //$xname = $rows['username'];
        // $xid = $rows['userID'];
 
-        $bugID= $row['bugID'];
+       // $bugID= $row['bugID'];
         $userID= $_SESSION['userID'];
         echo "The userID of the person who posted the comment = $userID<br>";
         echo "The bugID is = $bugID<br>";
-    }
+    //}
 
     $sql = mysqli_query ($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bugID')") or die(mysqli_error($db));
 
