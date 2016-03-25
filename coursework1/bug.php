@@ -85,6 +85,10 @@ include("check.php");
 </div>
     </form>
 
+    <div id="buglist">
+        <p> <a href="buglist.php"> Back to Bugs List</a></p>
+
+    </div>
 </div>
 </body>
 </html>

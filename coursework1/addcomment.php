@@ -2,7 +2,7 @@
 session_start();
 include("connection.php");
 include("check.php");
-include("buglist.php");
+include("bug.php");
 
 ?>
 
