@@ -17,7 +17,7 @@ include("bug.php");
     $comment=$_POST["comment"];
     $user=$_SESSION['username'];
     $userID=$_SESSION['userID'];
-    $bugID=$_POST['bugID'];
+   // $bugID=$_POST['bugID'];
     $bugID=$_GET['bugID'];
     //$bugfile=$_POST["file"];
 
