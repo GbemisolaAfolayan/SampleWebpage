@@ -10,7 +10,7 @@ include("check.php");
 </head>
 
 <body>
-<div id="content">
+<div id="contentbug">
 
     <h2 style="color: blueviolet">Bug Description </h2>
 
