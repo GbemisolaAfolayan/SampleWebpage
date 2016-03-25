@@ -49,6 +49,7 @@ include("check.php");
     //select everything from our bugs where the ID is right
     $sql2="SELECT * FROM comments WHERE bugID=".$_GET["bugID"];
 
+    foreach($sql2 as $result2){
     //fetch results from the database
     $result2=mysqli_query($db,$sql2);
     //we can scan through each row in the response
@@ -64,7 +65,7 @@ include("check.php");
         echo '<br>'. "PostDate: ". $postDate. ' ' ;
         echo '<br>'. "Posted by User" . $userID. ' ';
 
-
+    }
 
     ?>
 
