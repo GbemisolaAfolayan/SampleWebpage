@@ -74,7 +74,7 @@ include("check.php");
 
 <div id="Comment">
     <h4 style="color: blueviolet"> Comment on this bug</h4>
-    <form action="addcomment.php?bugID=<?php echo $_POST['bugID'];?>"  method="POST">
+    <form action="addcomment.php?bugID=<?php echo $_GET['bugID'];?>"  method="POST">
 
     <tr>
         <td><label for="comment">Comment: </label> </td>
