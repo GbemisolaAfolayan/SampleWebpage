@@ -49,11 +49,10 @@ include("check.php");
     //select everything from our bugs where the ID is right
     $sql2="SELECT * FROM comments WHERE bugID=".$_GET["bugID"];
 
-    foreach($sql2 as $result2){
     //fetch results from the database
     $result2=mysqli_query($db,$sql2);
     //we can scan through each row in the response
-    $row2=mysqli_fetch_assoc($result2);
+   while ($row2=mysqli_fetch_array($result2, MYSQLI_ASSOC));{
         //get the title and id from the bug
         //$commentTitle = $row['title'];
         $comment = $row2['comment'];
