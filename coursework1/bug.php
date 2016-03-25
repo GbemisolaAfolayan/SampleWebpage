@@ -47,24 +47,24 @@ include("check.php");
     $bugID= $_GET["bugID"];
 
     //select everything from our bugs where the ID is right
-    $sql2="SELECT * FROM comments WHERE bugID=".$_GET["bugID"]. "ORDER BY commentID DESC";
+    $sql2="SELECT * FROM comments WHERE bugID=".$_GET["bugID"]. "ORDER BY commentID DESC" or die(mysql_error());;
 
     //fetch results from the database
     $result2=mysqli_query($db,$sql2);
     //we can scan through each row in the response
-  while ($row2=mysqli_fetch_array ($result2, MYSQLI_ASSOC));
-        //get the title and id from the bug
-        //$commentTitle = $row['title'];
-        $comment = $row2['comment'];
-        $postDate=$row2['postDate'];
-        $userID=$row2['userID'];
+  while ($row2=mysqli_fetch_assoc($result2)){
+      //get the title and id from the bug
+      //$commentTitle = $row['title'];
+    $comment = $row2['comment'];
+    $postDate = $row2['postDate'];
+    $userID = $row2['userID'];
 
     //displays the bug comment, post date and user that posted the comment
-        echo '<br>'."Comments: ".$comment.' ';
-        echo '<br>'. "PostDate: ". $postDate. ' ' ;
-        echo '<br>'. "Posted by User" . $userID. ' ';
+    echo '<br>' . "Comments: " . $comment . ' ';
+    echo '<br>' . "PostDate: " . $postDate . ' ';
+    echo '<br>' . "Posted by User" . $userID . ' ';
 
-
+    }
 
     ?>
 
