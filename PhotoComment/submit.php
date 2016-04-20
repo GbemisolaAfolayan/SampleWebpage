@@ -1,4 +1,6 @@
 <?php
+include ("connection.php");
+
 $msg = "";
 if(isset($_POST["submit"]))
 {
@@ -18,6 +20,11 @@ if(isset($_POST["submit"]))
     else
     {
         //echo $name." ".$email." ".$password;
+        $query = $conn->prepare ("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+        $query->bind_param("sss", $username, $email, $password);
+        $query->execute();
+
+
         $query = mysqli_query($db, "INSERT INTO users (username, email, password) VALUES ('$name', '$email', '$password')")or die(mysqli_error($db));
         if($query)
         {
