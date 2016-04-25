@@ -35,7 +35,7 @@
 
 			//Execute
 
-			$stmt->execute();
+			$stmt->fetch();
 			//	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
             if($result->num_rows == 1)
 
