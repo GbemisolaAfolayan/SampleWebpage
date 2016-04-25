@@ -8,7 +8,13 @@ if(isset($_POST["submit"]))
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-
+    $username = stripslashes($username);
+    $email = stripslashes($email);
+    $password = stripslashes($password);
+    $username = mysqli_real_escape_string($db, $username);
+    $email = mysqli_real_escape_string($db, $email);
+    $password = mysqli_real_escape_string($db, $password);
+    $password = md5($password);
 
     $sql="SELECT email FROM users WHERE email='$email'";
     $result=mysqli_query($db,$sql);
