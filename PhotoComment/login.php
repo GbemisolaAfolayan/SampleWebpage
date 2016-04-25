@@ -22,23 +22,23 @@
 			$password = md5($password);
 			*/
 
-			/* Prepare statement, stage 1: prepare */
+			/* Prepare statement, stage 1: prepare
 			if (!($stmt = $mysqli->prepare("INSERT INTO test(id) VALUES (?)"))) {
 				echo "Prepare failed: (" .  $mysqli->errno . ") " . $mysqli->error;
 			}
 
-			/*Prepared statement, stage 2: bind and execute */
+			/*Prepared statement, stage 2: bind and execute
 			$id = 1;
 			if (!$stmt->bind_param("i", $id)) {
 				echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 			}
 
-			/*Execute */
+			/*Execute
 
 			if (!$stmt->execute()) {
 				echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 			}
-
+			*/
 
 			//Check username and password from database
 			$sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
