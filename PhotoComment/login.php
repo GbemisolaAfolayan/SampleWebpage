@@ -14,13 +14,13 @@
 			$username=$_POST['username'];
 			$password=$_POST['password'];
 
-			/*
+
 			$username = stripslashes($username);
 			$password = stripslashes($password);
 			$username = mysqli_real_escape_string($db, $username);
 			$password = mysqli_real_escape_string($db, $password);
 			$password = md5($password);
-			*/
+
 
 			/* Prepare statement, stage 1: prepare
 			if (!($stmt = $mysqli->prepare("INSERT INTO test(id) VALUES (?)"))) {
