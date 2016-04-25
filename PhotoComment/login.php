@@ -23,13 +23,13 @@
 
 
 			// Prepare statement, stage 1: prepare
-			if (!($stmt = $mysqli->prepare("INSERT INTO test(id) VALUES (?)"))) {
+			if (!($stmt = $mysqli->prepare("SELECT FROM users(userID) VALUES (?)"))) {
 				echo "Prepare failed: (" .  $mysqli->errno . ") " . $mysqli->error;
 			}
 
 			//Prepared statement, stage 2: bind and execute
 			$id = 1;
-			if (!$stmt->bind_param("i", $id)) {
+			if (!$stmt->bind_param("i", $result)) {
 				echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 			}
 
@@ -37,7 +37,7 @@
 
 			$stmt->execute();
 			//	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
-            if($stmt->num_rows == 1)
+            if($result->num_rows == 1)
 
 
 			/* //Check username and password from database
