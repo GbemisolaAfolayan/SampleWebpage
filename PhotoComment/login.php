@@ -37,7 +37,7 @@
 
             //Execute
 
-            if ($stmt->execute())
+            if (($stmt->execute())== 1 )
                 //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                 //if($result->num_rows == 1)
 
