@@ -36,6 +36,7 @@
             //	echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 
             //Execute
+            echo " userID is: " . $stmt. " .Thanks!" ;
 
             if (($stmt->execute())== 1 )
                 //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
