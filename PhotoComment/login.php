@@ -2,7 +2,7 @@
 	session_start();
 	include("connection.php"); //Establishing connection with our database
 	
-	//$error = ""; //Variable for storing our errors.
+	$error = ""; //Variable for storing our errors.
 	if(isset($_POST["submit"])) {
         if (empty($_POST["username"]) || empty($_POST["password"])) {
             $error = "Both fields are required.";
@@ -22,8 +22,10 @@
 
             // Prepare statement, stage 1: prepare and Check username and password from database
             //if (!
-            $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
-           // {
+            //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
+            $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ");
+
+            // {
                 //echo "Prepare failed: (" .  $mysqli->errno . ") " . $mysqli->error;
            // }
 
@@ -38,12 +40,15 @@
 
             //Execute
            // $query = $stmt->execute(array('username' => $username, 'password' => $password));
-            $stmt->execute(array('username' => $username, 'password' => $password));
+           // $stmt->execute(array('username' => $username, 'password' => $password));
+            $stmt->execute(array($username, $password));
             //echo " userID is: " . $stmt. " .Thanks!" ;
 
            // if ($stmt->execute()== 1)
-                if ($stmt->execute(array('username' => $username, 'password' => $password)) == 1)
-                //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+              //  if ($stmt->execute(array('username' => $username, 'password' => $password)) == 1)
+                if ($stmt->execute(array($username, $password)) == 1)
+
+            //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                 //if($result->num_rows == 1)
 
 
