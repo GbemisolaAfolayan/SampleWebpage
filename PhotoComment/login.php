@@ -39,7 +39,7 @@
             $stmt->execute();
             echo " userID is: " . $stmt. " .Thanks!" ;
 
-            if (($stmt->execute())== 1 )
+            //if (($stmt->execute())== 1 )
                 //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                 //if($result->num_rows == 1)
 
