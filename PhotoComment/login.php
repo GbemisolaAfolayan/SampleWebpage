@@ -25,6 +25,17 @@
             //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
             $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ");
 
+
+            $stmt->bind_param('is', $_POST['username'], $_POST['password']);
+            $stmt->execute();
+            $stmt->bind_result($userID, $username);
+            $stmt->fetch();
+            $stmt->close();
+            echo "userID";
+            echo $username;
+        }
+
+
             // {
                 //echo "Prepare failed: (" .  $mysqli->errno . ") " . $mysqli->error;
            // }
@@ -34,19 +45,19 @@
             $id2 = 1;*/
 
             //if (!
-            $stmt->bind_param('ss', $username, $password );
+           // $stmt->bind_param('ss', $username, $password );
             //$stmt->bind_param("v", $id2);
             //	echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 
             //Execute
            // $query = $stmt->execute(array('username' => $username, 'password' => $password));
            // $stmt->execute(array('username' => $username, 'password' => $password));
-            $stmt->execute();
+           // $stmt->execute();
             //echo " userID is: " . $stmt. " .Thanks!" ;
 
            // if ($stmt->execute()== 1)
               //  if ($stmt->execute(array('username' => $username, 'password' => $password)) == 1)
-                if ($stmt->execute() == 1)
+            //    if ($stmt->execute() == 1)
 
             //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                 //if($result->num_rows == 1)
@@ -61,7 +72,7 @@
                 //Otherwise echo error.
 
                 if(mysqli_num_rows($result) == 1)*/
-            {
+          /*  {
                 echo "success";
 
                 $_SESSION['username'] = $username; // Initializing Session
@@ -74,7 +85,8 @@
                 }
 
             }
-        }
+        } */
 
     }
+
 ?>
