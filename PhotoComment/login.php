@@ -52,6 +52,8 @@
 
                 if(mysqli_num_rows($result) == 1)*/
             {
+                echo "success";
+
                 $_SESSION['username'] = $username; // Initializing Session
                 header("location: photos.php"); // Redirecting To Other Page
             } else {
