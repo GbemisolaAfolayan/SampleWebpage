@@ -28,9 +28,9 @@
 
             $stmt->bind_param('ss', $username, $password);
             $stmt->execute();
-            $stmt->bind_result($username, $password);
-            $stmt->fetch();
-             $stmt->close();
+           // $stmt->bind_result($username, $password);
+           // $stmt->fetch();
+            // $stmt->close();
             echo "userID";
             // echo $username;
         }
