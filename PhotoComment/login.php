@@ -11,7 +11,7 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
             $error = "Incorrect username or password.";
-            //escape functions
+            //escape function
             $username = stripslashes($username);
             $password = stripslashes($password);
             $username = mysqli_real_escape_string($db, $username);
