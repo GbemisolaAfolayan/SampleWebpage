@@ -17,7 +17,7 @@
             $username = mysqli_real_escape_string($db, $username);
             $password = mysqli_real_escape_string($db, $password);
             $password = md5($password);
-
+            //prepare
 
             // Prepare statement, stage 1: prepare and Check username and password from database
             //if (!
