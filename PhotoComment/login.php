@@ -23,18 +23,18 @@
             // Prepare statement, stage 1: prepare and Check username and password from database
             //if (!
             //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
-           $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ")
-
+            $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ");
 
 
             $stmt->bind_param('ss', $username, $password);
             $stmt->execute();
-            //$stmt->bind_result($userID, $username);
-           // $stmt->fetch();
-           // $stmt->close();
+            $stmt->bind_result($username, $password);
+            $stmt->fetch();
+             $stmt->close();
             echo "userID";
-           // echo $username;
+            // echo $username;
         }
+
 
 
             // {
