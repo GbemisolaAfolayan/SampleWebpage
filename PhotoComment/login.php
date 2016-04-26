@@ -20,7 +20,7 @@
             $password = md5($password);
             //prepare
 
-            /* // Prepare statement, stage 1: prepare and Check username and password from database
+             // Prepare statement, stage 1: prepare and Check username and password from database
              //if (!
              //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
              $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ");
@@ -28,12 +28,12 @@
 
              $stmt->bind_param('ss', $username, $password);
              $stmt->execute();
-            // $stmt->bind_result($username, $password);
-            // $stmt->fetch();
-             // $stmt->close();
+             $stmt->bind_result($username, $password);
+             $stmt->fetch();
+             //$stmt->close();
              echo "userID";
-             // echo $username;
-         }*/
+             echo $username;
+         }
 
 
             // {
@@ -55,7 +55,7 @@
             // $stmt->execute();
             //echo " userID is: " . $stmt. " .Thanks!" ;
 
-            // if ($stmt->execute()== 1)
+            if ($stmt->execute()== 1) {
             //  if ($stmt->execute(array('username' => $username, 'password' => $password)) == 1)
             //    if ($stmt->execute() == 1)
 
@@ -64,14 +64,14 @@
 
 
             //Check username and password from database
-            $sql = "SELECT userID FROM users WHERE username='$username' and password='$password'";
-            $result = mysqli_query($db, $sql);
-            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+           // $sql = "SELECT userID FROM users WHERE username='$username' and password='$password'";
+            //$result = mysqli_query($db, $sql);
+           // $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
             //If username and password exist in our database then create a session.
             //Otherwise echo error.
 
-            if (mysqli_num_rows($result) == 1) {
+           // if (mysqli_num_rows($result) == 1) {
                 echo "success";
 
                 $_SESSION['username'] = $username; // Initializing Session
@@ -86,7 +86,7 @@
             }
 
 
-        }
+
     }
 
 ?>
