@@ -20,60 +20,58 @@
             $password = md5($password);
             //prepare
 
-           /* // Prepare statement, stage 1: prepare and Check username and password from database
-            //if (!
-            //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
-            $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ");
+            /* // Prepare statement, stage 1: prepare and Check username and password from database
+             //if (!
+             //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
+             $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ");
 
 
-            $stmt->bind_param('ss', $username, $password);
-            $stmt->execute();
-           // $stmt->bind_result($username, $password);
-           // $stmt->fetch();
-            // $stmt->close();
-            echo "userID";
-            // echo $username;
-        }*/
-
+             $stmt->bind_param('ss', $username, $password);
+             $stmt->execute();
+            // $stmt->bind_result($username, $password);
+            // $stmt->fetch();
+             // $stmt->close();
+             echo "userID";
+             // echo $username;
+         }*/
 
 
             // {
-                //echo "Prepare failed: (" .  $mysqli->errno . ") " . $mysqli->error;
-           // }
+            //echo "Prepare failed: (" .  $mysqli->errno . ") " . $mysqli->error;
+            // }
 
             //Prepared statement, stage 2: bind and execute
             /*$id = 1;
             $id2 = 1;*/
 
             //if (!
-           // $stmt->bind_param('ss', $username, $password );
+            // $stmt->bind_param('ss', $username, $password );
             //$stmt->bind_param("v", $id2);
             //	echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 
             //Execute
-           // $query = $stmt->execute(array('username' => $username, 'password' => $password));
-           // $stmt->execute(array('username' => $username, 'password' => $password));
-           // $stmt->execute();
+            // $query = $stmt->execute(array('username' => $username, 'password' => $password));
+            // $stmt->execute(array('username' => $username, 'password' => $password));
+            // $stmt->execute();
             //echo " userID is: " . $stmt. " .Thanks!" ;
 
-           // if ($stmt->execute()== 1)
-              //  if ($stmt->execute(array('username' => $username, 'password' => $password)) == 1)
+            // if ($stmt->execute()== 1)
+            //  if ($stmt->execute(array('username' => $username, 'password' => $password)) == 1)
             //    if ($stmt->execute() == 1)
 
             //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
-                //if($result->num_rows == 1)
+            //if($result->num_rows == 1)
 
 
-                //Check username and password from database
-                $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
-                $result=mysqli_query($db,$sql);
-                $row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
+            //Check username and password from database
+            $sql = "SELECT userID FROM users WHERE username='$username' and password='$password'";
+            $result = mysqli_query($db, $sql);
+            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-                //If username and password exist in our database then create a session.
-                //Otherwise echo error.
+            //If username and password exist in our database then create a session.
+            //Otherwise echo error.
 
-                if(mysqli_num_rows($result) == 1)
-           {
+            if (mysqli_num_rows($result) == 1) {
                 echo "success";
 
                 $_SESSION['username'] = $username; // Initializing Session
@@ -88,6 +86,7 @@
             }
 
 
+        }
     }
 
 ?>
