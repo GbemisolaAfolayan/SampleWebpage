@@ -31,22 +31,22 @@
 
             //Prepared statement, stage 2: bind and execute
             /*$id = 1;
-            $id2 = 1;
+            $id2 = 1;*/
 
             //if (!
-            $stmt->bind_param("u", $id);
-            $stmt->bind_param("v", $id2); */
+            $stmt->bind_param('ss', $username, $password );
+            //$stmt->bind_param("v", $id2);
             //	echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 
             //Execute
            // $query = $stmt->execute(array('username' => $username, 'password' => $password));
            // $stmt->execute(array('username' => $username, 'password' => $password));
-            $stmt->execute(array($username, $password));
+            $stmt->execute();
             //echo " userID is: " . $stmt. " .Thanks!" ;
 
            // if ($stmt->execute()== 1)
               //  if ($stmt->execute(array('username' => $username, 'password' => $password)) == 1)
-                if ($stmt->execute(array($username, $password)) == 1)
+                if ($stmt->execute() == 1)
 
             //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                 //if($result->num_rows == 1)
