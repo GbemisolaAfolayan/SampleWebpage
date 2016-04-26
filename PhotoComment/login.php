@@ -11,6 +11,7 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
             $error = "Incorrect username or password.";
+
             //escape function
             $username = stripslashes($username);
             $password = stripslashes($password);
@@ -36,8 +37,8 @@
             //	echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 
             //Execute
-            //$stmt->execute();
-           // echo " userID is: " . $stmt. " .Thanks!" ;
+            $stmt->execute();
+            echo " userID is: " . $stmt. " .Thanks!" ;
 
             if ($stmt->execute()== 1)
                 //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
