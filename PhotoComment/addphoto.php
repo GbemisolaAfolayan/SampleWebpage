@@ -10,36 +10,75 @@ if(isset($_POST["submit"]))
     $url = "test";
     $name = $_SESSION["username"];
 
+    $title = stripslashes($title);
+    $desc = stripslashes($desc);
+    $title = mysqli_real_escape_string($db, $title);
+    $desc = mysqli_real_escape_string($db, $desc);
+
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     $uploadOk = 1;
+    $imageNOK = "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
+    $imageNotUploaded = "Sorry, your file was not uploaded.";
+    $imageUploaded = "The file" . basename($_FILES["fileToUpload"]["name"]) . "had been uploaded";
+    $imageUploadError = "Sorry, there was an error uploading your file";
+    $msg = "You need to login first";
 
-    $sql="SELECT userID FROM users WHERE username='$name'";
-    $result=mysqli_query($db,$sql);
-    $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+    if($imageFileType !="jpg"&& $imageFileType !="png"&& $imageFileType !="jpeg"&& $imageFileType !="gif")
 
-    if(mysqli_num_rows($result) == 1) {
-        //$timestamp = time();
-        //$target_file = $target_file.$timestamp;
-        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            $id = $row['userID'];
-            $addsql = "INSERT INTO photos (title, description, postDate, url, userID) VALUES ('$title','$desc',now(),'$target_file','$id')";
-            $query = mysqli_query($db, $addsql) or die(mysqli_error($db));
-            if ($query) {
-                $msg = "Thank You! The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. click <a href='photos.php'>here</a> to go back";
+    { function xecho($imageNOK){echo xssafe($imageNOK);}
+        $uploadOk = 0;
+    }
+        if ($uploadOk == 0) {
+            function xecho($imageNotUploaded)
+            {
+                echo xssafe($imageNotUploaded);
+            } }
+
+        else {
+                //do the upload
+                if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                    $id = $row['userID'];
+                }
             }
 
-        } else {
-            $msg = "Sorry, there was an error uploading your file.";
-        }
-        //echo $name." ".$email." ".$password;
+            $sql = "SELECT userID FROM users WHERE username='$name'";
+            $result = mysqli_query($db, $sql);
+            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+            if (mysqli_num_rows($result) == 1) {
+                //$timestamp = time();
+                //$target_file = $target_file.$timestamp;
+                if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                    $id = $row['userID'];
+                    $addsql = "INSERT INTO photos (title, description, postDate, url, userID) VALUES ('$title','$desc',now(),'$target_file','$id')";
+                    $query = mysqli_query($db, $addsql) or die(mysqli_error($db));
+                    if ($query) {
+                        //$msg = "Thank You! The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. click <a href='photos.php'>here</a> to go back";
+                        function xecho($imageUploaded)
+                        {
+                            echo xssafe($imageUploaded);
+                        }
+                    }
+
+                } else {
+                    //  $msg = "Sorry, there was an error uploading your file.";
+                    function xecho($imageUploadError)
+                    {
+                        echo xssafe($imageUploadError);
+                    }
+                }
+                //echo $name." ".$email." ".$password;
 
 
+            } else {
+                // $msg = "You need to login first";
+                function xecho($msg)
+                {
+                    echo xssafe($msg);
+                }
+            }
     }
-    else{
-        $msg = "You need to login first";
-    }
-}
 
 ?>
