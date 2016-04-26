@@ -37,10 +37,11 @@
             //	echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 
             //Execute
-            $stmt->execute(array('username' => $username, 'password' => $password));
+            $query = $stmt->execute(array('username' => $username, 'password' => $password));
             //echo " userID is: " . $stmt. " .Thanks!" ;
 
-            if ($stmt->execute()== 1)
+           // if ($stmt->execute()== 1)
+                if ($query == 1)
                 //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                 //if($result->num_rows == 1)
 
