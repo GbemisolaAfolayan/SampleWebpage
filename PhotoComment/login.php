@@ -37,8 +37,8 @@
             //	echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 
             //Execute
-            $stmt->execute(array('username' => $username, 'password' => $pass));
-            echo " userID is: " . $stmt. " .Thanks!" ;
+            $stmt->execute(array('username' => $username, 'password' => $password));
+            //echo " userID is: " . $stmt. " .Thanks!" ;
 
             if ($stmt->execute()== 1)
                 //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
