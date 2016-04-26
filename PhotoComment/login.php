@@ -21,18 +21,18 @@
 
             // Prepare statement, stage 1: prepare and Check username and password from database
             //if (!
-            $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ? and password = ? ");
+            $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ? AND password = ? ");
             {
                 //echo "Prepare failed: (" .  $mysqli->errno . ") " . $mysqli->error;
             }
 
             //Prepared statement, stage 2: bind and execute
-            $id = 1;
+            /*$id = 1;
             $id2 = 1;
 
             //if (!
             $stmt->bind_param("u", $id);
-            $stmt->bind_param("v", $id2);
+            $stmt->bind_param("v", $id2); */
             //	echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 
             //Execute
