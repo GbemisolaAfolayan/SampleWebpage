@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include("connection.php"); //Establishing connection with our database
-    include('check.php'); // Include session & timeout
+  //  include('check.php'); // Include session & timeout
 	$error = ""; //Variable for storing our errors.
 	if(isset($_POST["submit"])) {
         if (empty($_POST["username"]) || empty($_POST["password"])) {
