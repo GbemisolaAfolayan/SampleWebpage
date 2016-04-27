@@ -14,7 +14,7 @@
             $error = "Incorrect username or password.";
             $success = "success";
 
-           //prevents xss
+            //prevents xss
             $username = htmlspecialchars($_POST['username']);
             $password = htmlspecialchars($_POST['password']);
 
@@ -26,20 +26,39 @@
             $password = md5($password);
             //prepare
 
-             // Prepare statement, stage 1: prepare and Check username and password from database
-             //if (!
-             //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
-             //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ");
+            // Prepare statement, stage 1: prepare and Check username and password from database
+            //if (!
+            //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
+            $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ");
+            $stmt->bind_param('ss', $username, $password);
+            $stmt->execute();
+            //$stmt->bind_result($username, $password);
+            $row = $stmt->fetch();
+
+            if ($stmt->rowcount() == 1) {
+
+                function xecho($success)
+                {
+                    echo xssafe($success);
+                }
+
+                $_SESSION['username'] = $username;// Initializing Session
+                $_SESSION['start'] = time(); // Taking now logged in time.
+                // Ending a session in 10 minutes from the starting time.
+                $_SESSION['expire'] = $_SESSION['start'] + (10 * 60);
+                header("location: photos.php"); // Redirecting To Other Page
+            } else {
+                function xecho($error)
+                {
+                    echo xssafe($error);
 
 
-             //$stmt->bind_param('ss', $username, $password);
-            // $stmt->execute();
-             //$stmt->bind_result($username, $password);
-            // $stmt->fetch();
-             //$stmt->close();
-            // echo "userID";
-            // echo $username;
-         }
+                }
+
+                //$stmt->close();
+                // echo "userID";
+                // echo $username;
+            }
 
 
             // {
@@ -61,14 +80,14 @@
             // $stmt->execute();
             //echo " userID is: " . $stmt. " .Thanks!" ;
 
-           // if ($stmt->execute()== 1) {
+            // if ($stmt->execute()== 1) {
             //  if ($stmt->execute(array('username' => $username, 'password' => $password)) == 1)
             //    if ($stmt->execute() == 1)
 
             //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
             //if($result->num_rows == 1)
 
-
+            /*
             //Check username and password from database
             $sql = "SELECT userID FROM users WHERE username='$username' and password='$password'";
             $result = mysqli_query($db, $sql);
@@ -97,8 +116,8 @@
 
             }
 
+*/
 
-
+        }
     }
-
 ?>
