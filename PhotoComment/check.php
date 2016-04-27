@@ -38,7 +38,7 @@ if (isset($_SESSION['timeout'])) {
 
 }
 else {
-    //$_SESSION['timeout'] = time();
+    $_SESSION['timeout'] = time();
 }
 
 ?>
