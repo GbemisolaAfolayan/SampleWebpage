@@ -26,10 +26,10 @@
 
 <div id="photolist">
 	<?php
-	function xecho($resultText1) {
+	/*function xecho($resultText1) {
 		echo xssafe($resultText1);
-	}
-	//echo $resultText;?>
+	}*/
+	echo $resultText;?>
 </div>
 
 	</div>

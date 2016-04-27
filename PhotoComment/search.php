@@ -31,19 +31,19 @@ if(isset($_POST["submit"]))
         }
         else{
             //xss safe echo
-            function xecho ($resultText1) {
-                echo xssafe ($resultText1);
-            }
-            //$resultText = "no photos by user";
+           // function xecho ($resultText1) {
+            //    echo xssafe ($resultText1);
+            //}
+            $resultText = "no photos by user";
         }
     }
     else
     {
         //xss safe echo
-        function xecho ($resultText2) {
-            echo xssafe ($resultText2);
-        }
-        //$resultText = "no user with that username";
+        //function xecho ($resultText2) {
+           // echo xssafe ($resultText2);
+        //}
+        $resultText = "no user with that username";
 
     }
 }
