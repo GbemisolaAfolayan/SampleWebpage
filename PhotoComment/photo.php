@@ -1,4 +1,5 @@
 <?php
+    session_start();
 	include("check.php");
     include("connection.php");
 ?>

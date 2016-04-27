@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $resultText = "";
 if(isset($_POST["submit"]))
 {
