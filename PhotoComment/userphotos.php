@@ -3,6 +3,8 @@ $resultText = "";
 if(isset($_SESSION['username']))
 {
     $name = $_SESSION["username"];
+    $resultText1 = "no photos by you!";
+    $resultText2 = "no user with that username";
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
@@ -20,12 +22,21 @@ if(isset($_SESSION['username']))
             }
         }
         else{
+            /*xss safe echo
+            function xecho ($resultText1) {
+                echo xssafe ($resultText1);
+            }*/
             $resultText = "no photos by you!";
         }
     }
     else
     {
-        $resultText = "no user with that username";
+        /*xss safe echo
+        function xecho ($resultText2)
+        {
+            echo xssafe($resultText2);
+        }*/
+            $resultText = "no user with that username";
 
     }
 }

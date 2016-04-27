@@ -7,6 +7,8 @@ if(isset($_POST["submit"]))
     $name = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["password"];
+    $msg1 = "Sorry...This email already exists...";
+    $msg2 = "Thank You! you are now registered. click <a href='index.php'>here</a> to login";
 
     $username = stripslashes($username);
     $email = stripslashes($email);
@@ -20,7 +22,10 @@ if(isset($_POST["submit"]))
     $result=mysqli_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
     if(mysqli_num_rows($result) == 1)
-    {
+    {   /*xss afe echo
+        function xecho($msg1) {
+        echo xssafe($msg1);
+        }*/
         $msg = "Sorry...This email already exists...";
     }
     else
@@ -33,7 +38,10 @@ if(isset($_POST["submit"]))
 
         $query = mysqli_query($db, "INSERT INTO users (username, email, password) VALUES ('$name', '$email', '$password')")or die(mysqli_error($db));
         if($query)
-        {
+        {   /*xss safe echo
+            function xecho($msg2) {
+                echo xssafe($msg2);
+            }*/
             $msg = "Thank You! you are now registered. click <a href='index.php'>here</a> to login";
         }
 

@@ -15,26 +15,27 @@ if(isset($_POST["submit"]))
     $desc = mysqli_real_escape_string($db, $desc);
     $photoID = mysqli_real_escape_string($db, $photoID);
 
+
     /* create a prepared statement */
-    if ($sql = $mysqli->prepare("SELECT userID FROM users WHERE username='$name'")) {
+   // if ($sql = $mysqli->prepare("SELECT userID FROM users WHERE username='$name'")) {
 
         /* bind parameters for markers */
-        $sql->bind_param("s", $name);
+    //    $sql->bind_param("s", $name);
 
         /* execute query */
-        $sql->execute();
+     //   $sql->execute();
 
         /* bind result variables */
-        $sql->bind_result($district);
+     //   $sql->bind_result($district);
 
         /* fetch value */
-        $sql->fetch();
+     //   $sql->fetch();
 
         //printf("%s is in district %s\n", $city, $district);
 
         /* close statement */
-        $sql ->close();
-    }
+    //    $sql ->close();
+
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
@@ -45,7 +46,7 @@ if(isset($_POST["submit"]))
         $id = $row['userID'];
 
        /* $addsql=$conn->prepare("INSERT INTO comments (description, postDate,photoID, userID) VALUES (?, ?, ?, ?)");
-        $addsql->bind_param("sss",$desc, 'now()', $photoID. $id);
+        $addsql->bind_param("ssss",$desc, 'now()', $photoID. $id);
         $addsql->execute();
 
         if ($addsql) {

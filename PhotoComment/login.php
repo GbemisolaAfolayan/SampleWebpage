@@ -11,6 +11,7 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
             $error = "Incorrect username or password.";
+            $success = "success";
 
             //escape function
             $username = stripslashes($username);
@@ -72,7 +73,10 @@
             //Otherwise echo error.
 
            if (mysqli_num_rows($result) == 1) {
-                echo "success";
+
+               function xecho($success){
+               echo xssafe($success);
+               }
 
                 $_SESSION['username'] = $username; // Initializing Session
                 header("location: photos.php"); // Redirecting To Other Page

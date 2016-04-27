@@ -25,7 +25,11 @@
 </div>
 
 <div id="photolist">
-	<?php echo $resultText;?>
+	<?php
+	function xecho($resultText1) {
+		echo xssafe($resultText1);
+	}
+	//echo $resultText;?>
 </div>
 
 	</div>

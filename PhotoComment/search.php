@@ -3,6 +3,12 @@ $resultText = "";
 if(isset($_POST["submit"]))
 {
     $name = $_POST["username"];
+    $resultText1 = "no photos by you!";
+    $resultText2 = "no user with that username";
+
+
+    $name = stripslashes($name);
+    $name = mysqli_real_escape_string($db, $name);
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
@@ -20,12 +26,20 @@ if(isset($_POST["submit"]))
             }
         }
         else{
-            $resultText = "no photos by user";
+            //xss safe echo
+            function xecho ($resultText1) {
+                echo xssafe ($resultText1);
+            }
+            //$resultText = "no photos by user";
         }
     }
     else
     {
-        $resultText = "no user with that username";
+        //xss safe echo
+        function xecho ($resultText2) {
+            echo xssafe ($resultText2);
+        }
+        //$resultText = "no user with that username";
 
     }
 }
