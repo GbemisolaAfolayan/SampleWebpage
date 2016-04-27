@@ -16,6 +16,7 @@ if(!isset($user_check))
 {
 header("Location: index.php");
 }
+/*
 //session time out
 if (!isset($_SESSION['username'])) {
     echo "Please Login again";
@@ -32,5 +33,5 @@ else {
     if ($now > $_SESSION['expire']) {
         session_destroy();
         echo "Your session has expired! <a href='login.php'>Login here</a>";
-    }
+    } */
 ?>
