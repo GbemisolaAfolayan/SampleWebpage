@@ -34,7 +34,7 @@ if(isset($_POST["submit"]))
 
     { function xecho($imageNOK){echo xssafe($imageNOK);}
         $uploadOk = 0;
-    }
+
     if ($uploadOk == 0) {
         function xecho($imageNotUploaded)
         {
@@ -47,7 +47,7 @@ if(isset($_POST["submit"]))
             $id = $row['userID'];
             echo $id;
         }
-    }
+    } }
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
