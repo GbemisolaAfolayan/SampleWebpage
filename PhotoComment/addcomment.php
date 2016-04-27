@@ -44,9 +44,9 @@ if(isset($_POST["submit"]))
         //echo $name." ".$email." ".$password;
 
         $id = $row['userID'];
-
+        /*
         $addsql=$conn->prepare("INSERT INTO comments (description, postDate,photoID, userID) VALUES (?, ?, ?, ?)");
-        $addsql->bind_param("sdii",$desc, now(), $photoID, $id);
+        $addsql->bind_param("ssss",$desc, now(), $photoID, $id);
         $addsql->execute();
 
         if ($addsql) {
@@ -56,7 +56,7 @@ if(isset($_POST["submit"]))
     else{
         $msg = "You need to login first";
     }
-       /*
+       */
 
 
         $addsql = "INSERT INTO comments (description, postDate,photoID,userID) VALUES ('$desc',now(),'$photoID','$id')";
@@ -67,7 +67,7 @@ if(isset($_POST["submit"]))
     }
     else{
         $msg = "You need to login first";
-    }*/
+    }
 }
 
 ?>
