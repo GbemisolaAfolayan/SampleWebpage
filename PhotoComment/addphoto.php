@@ -24,6 +24,30 @@ if(isset($_POST["submit"]))
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     $uploadOk = 1;
+    $imageNOK = "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
+    $imageNotUploaded = "Sorry, your file was not uploaded.";
+    // $imageUploaded = "Thank You! The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. click <a href='photos.php'>here</a> to go back";
+    //  $imageUploadError = "Sorry, there was an error uploading your file";
+    //  $msg = "You need to login first";
+
+    if($imageFileType !="jpg"&& $imageFileType !="png"&& $imageFileType !="jpeg"&& $imageFileType !="gif")
+
+    { function xecho($imageNOK){echo xssafe($imageNOK);}
+        $uploadOk = 0;
+    }
+    if ($uploadOk == 0) {
+        function xecho($imageNotUploaded)
+        {
+            echo xssafe($imageNotUploaded);
+        } }
+
+    else {
+        //do the upload
+        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            $id = $row['userID'];
+            echo $id;
+        }
+    }
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
