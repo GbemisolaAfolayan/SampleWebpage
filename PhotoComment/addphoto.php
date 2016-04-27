@@ -26,7 +26,7 @@ if(isset($_POST["submit"]))
     $uploadOk = 1;
     $imageNOK = "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
     $imageNotUploaded = "Sorry, your file was not uploaded.";
-    $imageUploaded = "The file" . basename($_FILES["fileToUpload"]["name"]) . "had been uploaded";
+    $imageUploaded = "Thank You! The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. click <a href='photos.php'>here</a> to go back";
     $imageUploadError = "Sorry, there was an error uploading your file";
     $msg = "You need to login first";
 
@@ -53,8 +53,31 @@ if(isset($_POST["submit"]))
             $result = mysqli_query($db, $sql);
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-             echo $sql;
+
             if (mysqli_num_rows($result) == 1) {
+               /*
+                if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                    $id = $row['userID'];
+                    $addsql = "INSERT INTO photos (title, description, postDate, url, userID) VALUES ('$title','$desc',now(),'$target_file','$id')";
+                    $query = mysqli_query($db, $addsql) or die(mysqli_error($db));
+                    if ($query) {
+                        $msg = "Thank You! The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. click <a href='photos.php'>here</a> to go back";
+                    }
+
+                } else {
+                    $msg = "Sorry, there was an error uploading your file.";
+                }
+                //echo $name." ".$email." ".$password;
+
+
+            }
+            else{
+                $msg = "You need to login first";
+            }
+                */
+
+
+
                 //$timestamp = time();
                 //$target_file = $target_file.$timestamp;
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
