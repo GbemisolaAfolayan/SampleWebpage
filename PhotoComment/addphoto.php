@@ -2,7 +2,7 @@
 session_start();
 include("connection.php"); //Establishing connection with our database
 include('check.php'); // Include session & timeout
-//$msg = ""; //Variable for storing our errors.
+$msg = ""; //Variable for storing our errors.
 if(isset($_POST["submit"]))
 {
     $title = $_POST["title"];
@@ -55,7 +55,7 @@ if(isset($_POST["submit"]))
 
 
             if (mysqli_num_rows($result) == 1) {
-               /*
+
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                     $id = $row['userID'];
                     $addsql = "INSERT INTO photos (title, description, postDate, url, userID) VALUES ('$title','$desc',now(),'$target_file','$id')";
@@ -74,7 +74,7 @@ if(isset($_POST["submit"]))
             else{
                 $msg = "You need to login first";
             }
-                */
+                /*
 
 
 
@@ -106,7 +106,7 @@ if(isset($_POST["submit"]))
                 {
                     echo xssafe($msg);
                 }*/
-            }
+
     }
 
 ?>
