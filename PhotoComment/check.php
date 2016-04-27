@@ -28,7 +28,7 @@ if (isset($_SESSION['timeout'])) {
 
     //if($time_diff > 10)
 
-        if ($timein + 60 < time())
+        if ($timein + 10 < time())
     {
         //session expire
         session_unset();
