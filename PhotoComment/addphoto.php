@@ -2,7 +2,7 @@
 session_start();
 include("connection.php"); //Establishing connection with our database
 include('check.php'); // Include session & timeout
-$msg = ""; //Variable for storing our errors.
+//$msg = ""; //Variable for storing our errors.
 if(isset($_POST["submit"]))
 {
     $title = $_POST["title"];
