@@ -26,9 +26,9 @@ if(isset($_POST["submit"]))
     $uploadOk = 1;
     $imageNOK = "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
     $imageNotUploaded = "Sorry, your file was not uploaded.";
-    $imageUploaded = "Thank You! The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. click <a href='photos.php'>here</a> to go back";
-    $imageUploadError = "Sorry, there was an error uploading your file";
-    $msg = "You need to login first";
+   // $imageUploaded = "Thank You! The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. click <a href='photos.php'>here</a> to go back";
+  //  $imageUploadError = "Sorry, there was an error uploading your file";
+  //  $msg = "You need to login first";
 
     if($imageFileType !="jpg"&& $imageFileType !="png"&& $imageFileType !="jpeg"&& $imageFileType !="gif")
 
@@ -89,21 +89,18 @@ if(isset($_POST["submit"]))
                     }
 
                 } else {
-                    //  $msg = "Sorry, there was an error uploading your file.";
-                    function xecho($imageUploadError)
-                    {
-                        echo xssafe($imageUploadError);
-                    }
+                     $msg = "Sorry, there was an error uploading your file.";
+
                 }
                 //echo $name." ".$email." ".$password;
 
 
             } else {
-                // $msg = "You need to login first";
-                function xecho($msg)
+                $msg = "You need to login first";
+              /*  function xecho($msg)
                 {
                     echo xssafe($msg);
-                }
+                }*/
             }
     }
 
