@@ -43,9 +43,9 @@
                 }
 
                 $_SESSION['username'] = $username;// Initializing Session
-                $_SESSION['start'] = time(); // Taking now logged in time.
+               // $_SESSION['start'] = time(); // Taking now logged in time.
                 // Ending a session in 10 minutes from the starting time.
-                $_SESSION['expire'] = $_SESSION['start'] + (2 * 60);
+                //$_SESSION['expire'] = $_SESSION['start'] + (2 * 60);
                 header("location: photos.php"); // Redirecting To Other Page
             } else {
                 function xecho($error)
