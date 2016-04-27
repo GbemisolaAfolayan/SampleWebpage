@@ -41,13 +41,15 @@ if(isset($_POST["submit"]))
             echo xssafe($imageNotUploaded);
         } }
 
-    else {
+
+
+
         //do the upload
-        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            $id = $row['userID'];
-            echo $id;
+        //if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+          //  $id = $row['userID'];
+          //  echo $id;
         }
-    } }
+
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);

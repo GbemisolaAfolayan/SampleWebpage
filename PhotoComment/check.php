@@ -3,6 +3,7 @@ include('connection.php');
 session_start();
 $user_check=$_SESSION['username'];
 $_SESSION['timeout'] = time();
+$IP = getenv ( "REMOTE_ADDR" );
 
 $ses_sql = mysqli_query($db,"SELECT username, admin FROM users WHERE username='$user_check' ");
 
