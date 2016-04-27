@@ -61,8 +61,6 @@ if(isset($_POST["submit"]))
 
                     echo $title;
                     echo $desc;
-                    echo now();
-                    echo $target_file;
                     echo $id;
 
                     $addsql = "INSERT INTO photos (title, description, postDate, url, userID) VALUES ('$title','$desc',now(),'$target_file','$id')";
