@@ -42,15 +42,9 @@ if(isset($_POST["submit"]))
         } }
 
 
+       }
 
-
-        //do the upload
-        //if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-          //  $id = $row['userID'];
-          //  echo $id;
-        }
-
-
+    //do the upload
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
