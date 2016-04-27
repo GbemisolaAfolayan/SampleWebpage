@@ -1,6 +1,7 @@
 <?php
+
 	include('login.php'); // Include Login Script
-    include('check.php'); // Include session & timeout
+    session_start();
 	if ((isset($_SESSION['username']) != '')) 
 	{
 		header('Location: photos.php');
