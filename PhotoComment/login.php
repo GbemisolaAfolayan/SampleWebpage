@@ -26,7 +26,7 @@
             $password = md5($password);
             //prepare
 
-            /* Prepare statement, stage 1: prepare and Check username and password from database
+            // Prepare statement, stage 1: prepare and Check username and password from database
             //if (!
             //$stmt = $mysqli->prepare("SELECT userID FROM users WHERE username =:username  AND password =:password ");
             $stmt = $mysqli->prepare("SELECT userID FROM users WHERE username = ?  AND password = ? ");
@@ -59,7 +59,7 @@
                 // echo "userID";
                 // echo $username;
             }
-            */
+
 
             // {
             //echo "Prepare failed: (" .  $mysqli->errno . ") " . $mysqli->error;
@@ -87,7 +87,7 @@
             //	echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
             //if($result->num_rows == 1)
 
-
+            /*
             //Check username and password from database
             $sql = "SELECT userID FROM users WHERE username='$username' and password='$password'";
             $result = mysqli_query($db, $sql);
@@ -118,6 +118,7 @@
             }
 
 
+        }*/
         }
     }
 ?>
