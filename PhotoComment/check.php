@@ -26,19 +26,26 @@ if (isset($_SESSION['timeout'])) {
 
     $time_diff = time() - $timein;
 
-    if($time_diff > 10)
+    //if($time_diff > 10)
+
+        if ($timein + 60 < time())
     {
+        //session expire
         session_unset();
         session_destroy();
         header("Location: index.php");
     }
-    else{
-        $_SESSION['timeout'] = time();
+        if ($timein + 30*60 < time()) {
+            //session timeout
+            session_destroy();
+            header("Location: index.php");
+       // $_SESSION['timeout'] = time();
     }
 
 }
 else {
     $_SESSION['timeout'] = time();
+
 }
 
 ?>
