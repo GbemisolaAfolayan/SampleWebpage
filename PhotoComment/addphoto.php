@@ -48,7 +48,7 @@ if(isset($_POST["submit"]))
                     echo $id;
                 }
             }
-        /*
+
             $sql = "SELECT userID FROM users WHERE username='$name'";
             $result = mysqli_query($db, $sql);
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -84,7 +84,7 @@ if(isset($_POST["submit"]))
                 {
                     echo xssafe($msg);
                 }
-            }*/
+            }
     }
 
 ?>
