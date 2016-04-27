@@ -82,6 +82,11 @@ if(isset($_POST["submit"]))
                 //$target_file = $target_file.$timestamp;
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                     $id = $row['userID'];
+                    echo $title;
+                    echo $desc;
+                    echo now();
+                    echo $target_file;
+                    echo $id;
                     $addsql = "INSERT INTO photos (title, description, postDate, url, userID) VALUES ('$title','$desc',now(),'$target_file','$id')";
                     $query = mysqli_query($db, $addsql) or die(mysqli_error($db));
                     if ($query) {
