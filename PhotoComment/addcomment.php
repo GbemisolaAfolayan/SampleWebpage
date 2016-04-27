@@ -46,7 +46,7 @@ if(isset($_POST["submit"]))
         $id = $row['userID'];
 
         $addsql=$conn->prepare("INSERT INTO comments (description, postDate,photoID, userID) VALUES (?, ?, ?, ?)");
-        $addsql->bind_param("ssss",$desc, now(), $photoID, $id);
+        $addsql->bind_param("sdii",$desc, now(), $photoID, $id);
         $addsql->execute();
 
         if ($addsql) {
