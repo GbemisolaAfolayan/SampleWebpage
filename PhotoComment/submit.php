@@ -10,6 +10,12 @@ if(isset($_POST["submit"]))
     $msg1 = "Sorry...This email already exists...";
     $msg2 = "Thank You! you are now registered. click <a href='index.php'>here</a> to login";
 
+    //prevents xss
+    $name = htmlspecialchars($_POST["username"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $password = htmlspecialchars($_POST["password"]);
+
+    // strips special charachers
     $username = stripslashes($username);
     $email = stripslashes($email);
     $password = stripslashes($password);

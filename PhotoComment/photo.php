@@ -16,6 +16,11 @@
     <?php
         if(isset($_GET['id'])){
             $photoID = $_GET['id'];
+
+            $photoID = htmlspecialchars($_GET['id']);
+            $photoID = stripslashes($photoID);
+            $photoID = mysqli_real_escape_string($db, $photoID);
+
             $photoSql="SELECT * FROM photos WHERE photoID='$photoID'";
             $photoresult=mysqli_query($db,$photoSql) or die(mysqli_error($db));
             if(mysqli_num_rows($photoresult)==1){

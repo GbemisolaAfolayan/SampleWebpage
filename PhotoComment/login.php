@@ -10,8 +10,13 @@
             // Define $username and $password
             $username = $_POST['username'];
             $password = $_POST['password'];
+
             $error = "Incorrect username or password.";
             $success = "success";
+
+           //prevents xss
+            $username = htmlspecialchars($_POST['username']);
+            $password = htmlspecialchars($_POST['password']);
 
             //escape function
             $username = stripslashes($username);
@@ -78,8 +83,11 @@
                echo xssafe($success);
                }
 
-                $_SESSION['username'] = $username; // Initializing Session
-                header("location: photos.php"); // Redirecting To Other Page
+                $_SESSION['username'] = $username;// Initializing Session
+               $_SESSION['start'] = time(); // Taking now logged in time.
+               // Ending a session in 10 minutes from the starting time.
+               $_SESSION['expire'] = $_SESSION['start'] + (10 * 60);
+               header("location: photos.php"); // Redirecting To Other Page
             } else {
                 function xecho($error)
                 {

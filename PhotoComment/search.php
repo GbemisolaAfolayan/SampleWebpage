@@ -6,9 +6,11 @@ if(isset($_POST["submit"]))
     $resultText1 = "no photos by you!";
     $resultText2 = "no user with that username";
 
-
+    //escapes nd strip special characters
     $name = stripslashes($name);
     $name = mysqli_real_escape_string($db, $name);
+    //prevents xss
+    $name = htmlspecialchars($_POST["username"]);
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);

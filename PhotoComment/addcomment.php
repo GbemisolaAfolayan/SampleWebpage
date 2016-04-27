@@ -10,11 +10,15 @@ if(isset($_POST["submit"]))
     $photoID = $_POST["photoID"];
     $name = $_SESSION["username"];
 
+    // escape
     $desc = stripslashes($desc);
     $photoID = stripslashes($photoID);
     $desc = mysqli_real_escape_string($db, $desc);
     $photoID = mysqli_real_escape_string($db, $photoID);
 
+    //prevents xss
+    $desc = htmlspecialchars($_POST["desc"]);
+    $photoID = htmlspecialchars($_POST["photoID"]);
 
     /* create a prepared statement */
    // if ($sql = $mysqli->prepare("SELECT userID FROM users WHERE username='$name'")) {

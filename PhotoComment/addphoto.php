@@ -10,10 +10,15 @@ if(isset($_POST["submit"]))
     $url = "test";
     $name = $_SESSION["username"];
 
+    //escapes & strip special characters
     $title = stripslashes($title);
     $desc = stripslashes($desc);
     $title = mysqli_real_escape_string($db, $title);
     $desc = mysqli_real_escape_string($db, $desc);
+
+    // prevents xss
+    $title = htmlspecialchars($_POST["title"]);
+    $desc = htmlspecialchars($_POST["desc"]);
 
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
