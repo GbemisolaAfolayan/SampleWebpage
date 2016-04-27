@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("connection.php"); //Establishing connection with our database
-include('check.php'); // Include session & timeout
+//include('check.php'); // Include session & timeout
 $msg = ""; //Variable for storing our errors.
 if(isset($_POST["submit"]))
 {
@@ -57,6 +57,7 @@ if(isset($_POST["submit"]))
             if (mysqli_num_rows($result) == 1) {
 
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+
                     $id = $row['userID'];
 
                     echo $title;
