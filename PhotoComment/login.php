@@ -4,6 +4,8 @@
   //  include('check.php'); // Include session & timeout
 	$error = ""; //Variable for storing our errors.
 	if(isset($_POST["submit"])) {
+        //Check Anti-CRSF token
+       // checkToken($_REQUEST['user_token'], $_SESSION['session_token'], 'index.php');
         if (empty($_POST["username"]) || empty($_POST["password"])) {
             $error = "Both fields are required.";
         } else {
@@ -104,9 +106,9 @@
                 }
 
                 $_SESSION['username'] = $username;// Initializing Session
-                //$_SESSION['start'] = time(); // Taking now logged in time.
+                /*$_SESSION['start'] = time(); // Taking now logged in time.
                 // Ending a session in 10 minutes from the starting time.
-                //$_SESSION['expire'] = $_SESSION['start'] + (10 * 60);
+                //$_SESSION['expire'] = $_SESSION['start'] + (10 * 60); */
                 header("location: photos.php"); // Redirecting To Other Page
             } else {
                 function xecho($error)
@@ -121,4 +123,6 @@
 
         }
     }
+
+
 ?>
