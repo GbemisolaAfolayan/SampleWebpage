@@ -31,12 +31,12 @@ if (isset($_SESSION['timeout'])) {
     $timein = $_SESSION['timeout'];
 
     $time_diff = time() - $timein;
-
+    echo $time_diff;
     //if($time_diff > 10)
 
         if ($time_diff >= 30)
     {
-        echo $time_diff;
+
         //session expire
         session_unset();
         session_destroy();
