@@ -5,11 +5,11 @@ $user_check=$_SESSION['username'];
 $_SESSION['timeout'] = time();
 $IP = getenv ( "REMOTE_ADDR" );
 
-const LOCK_TRIES = 3;
-const LOCK_TIME = 1;
+//const LOCK_TRIES = 3;
+//const LOCK_TIME = 1;
 
-$_SESSION['lock-tries'];
-$_SESSION['lock-time'];
+//$_SESSION['lock-tries'];
+//$_SESSION['lock-time'];
 
 $ses_sql = mysqli_query($db,"SELECT username, admin FROM users WHERE username='$user_check' ");
 
@@ -34,18 +34,18 @@ if (isset($_SESSION['timeout'])) {
 
     //if($time_diff > 10)
 
-        if ($timein + 10 < time())
+        if ($time_diff >= 30)
     {
         //session expire
         session_unset();
         session_destroy();
         header("Location: index.php");
     }
-        if ($timein + 30*60 < time()) {
+        else {
             //session timeout
-            session_destroy();
-            header("Location: index.php");
-       // $_SESSION['timeout'] = time();
+            //session_destroy();
+            //header("Location: index.php");
+        $_SESSION['timeout'] = time();
     }
 
 }
