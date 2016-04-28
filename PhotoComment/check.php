@@ -36,6 +36,7 @@ if (isset($_SESSION['timeout'])) {
 
         if ($time_diff >= 30)
     {
+        echo $time_diff;
         //session expire
         session_unset();
         session_destroy();
