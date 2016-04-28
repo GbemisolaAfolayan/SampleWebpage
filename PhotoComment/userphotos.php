@@ -1,4 +1,6 @@
 <?php
+//session_start();
+include("check.php");
 $resultText = "";
 if(isset($_SESSION['username']))
 {
