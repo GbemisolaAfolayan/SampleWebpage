@@ -3,7 +3,7 @@ include('connection.php');
 session_start();
 $user_check=$_SESSION['username'];
 //$_SESSION['timeout'] = time();
-$IP = getenv ( "REMOTE_ADDR" );
+//$IP = getenv ( "REMOTE_ADDR" );
 
 //const LOCK_TRIES = 3;
 //const LOCK_TIME = 1;
@@ -28,7 +28,7 @@ header("Location: index.php");
 $IP = getenv ( "REMOTE_ADDR" );
 $_SESSION['IP'] = $IP;
 if (isset ($_SESSION['IP'])){
-echo $IP;
+//echo $IP;
 
     if (!$_SESSION['IP'] == getenv('REMOTE_ADDR'))
     {
@@ -43,7 +43,7 @@ if (isset($_SESSION['timeout'])) {
     $timein = $_SESSION['timeout'];
 
     $time_diff = time() - $timein;
-    echo $time_diff;
+    //echo $time_diff;
    // echo ($_SESSION['timeout']);
     //if($time_diff > 10)
 
