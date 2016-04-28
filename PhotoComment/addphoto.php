@@ -32,14 +32,19 @@ if(isset($_POST["submit"]))
 
     if($imageFileType !="jpg"&& $imageFileType !="png"&& $imageFileType !="jpeg"&& $imageFileType !="gif")
 
-    { function xecho($imageNOK){echo xssafe($imageNOK);}
+    { //function xecho($imageNOK){echo xssafe($imageNOK);}
+        echo "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
         $uploadOk = 0;
 
     if ($uploadOk == 0) {
-        function xecho($imageNotUploaded)
+
+        echo "Sorry, your file was not uploaded.";
+
+        /*function xecho($imageNotUploaded)
         {
             echo xssafe($imageNotUploaded);
-        } }
+        } */
+    }
 
 
        }

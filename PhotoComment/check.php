@@ -5,6 +5,12 @@ $user_check=$_SESSION['username'];
 $_SESSION['timeout'] = time();
 $IP = getenv ( "REMOTE_ADDR" );
 
+const LOCK_TRIES = 3;
+const LOCK_TIME = 1;
+
+$_SESSION['lock-tries'];
+$_SESSION['lock-time'];
+
 $ses_sql = mysqli_query($db,"SELECT username, admin FROM users WHERE username='$user_check' ");
 
 $row=mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
