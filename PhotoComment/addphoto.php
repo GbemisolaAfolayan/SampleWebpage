@@ -30,7 +30,7 @@ if(isset($_POST["submit"])) {
     //  $msg = "You need to login first";
 
     if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") { //function xecho($imageNOK){echo xssafe($imageNOK);}
-        echo "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
+       $msg = "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
         $uploadOk = 0;
     } else {
         //do the upload
