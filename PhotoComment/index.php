@@ -1,4 +1,30 @@
 <?php
+//session_start();
+/*
+if(!$_SESSION['protect']){$_SESSION['protect']=0;}
+if($_SESSION['protect']>3){
+
+    die ('Please enter valid credentials');
+    echo "Please enter valid credentials";
+
+}
+if(isset($_REQUEST['checkpass']))
+{
+    $_SESSION['protect']++;
+    $password=md5($_REQUEST['password']);
+    $username=$_REQUEST['username'];
+    if($password=="e10adc3949ba59abbe56e057f20f883e")  // pass: 123456
+    {
+        $_SESSION['khalil']=$username; // assign session for logged user
+    } // end password check
+}
+
+
+$login_attempt = $_SESSION['protect']++;
+
+    // $login_trial= 3;
+    // $login_attempt="";
+*/
 
 	include('login.php');// Include Login Script
    // include("check.php");
@@ -6,7 +32,11 @@
 	if ((isset($_SESSION['username']) != '')) 
 	{
 		header('Location: photos.php');
-	}	
+	}
+
+
+
+
 ?>
 
 <!doctype html>
