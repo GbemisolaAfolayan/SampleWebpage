@@ -27,20 +27,21 @@ if(isset($_POST["submit"])) {
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
     $uploadOk = 1;
-    $imageNOK = "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
-    $imageNotUploaded = "Sorry, your file was not uploaded.";
-   // $file_exist= file_exists($target_file);
+    // $file_exist= file_exists($target_file);
     //$imagesize = getimagesize($_FILES["fileToUpload"]["name"]);
 
-    $check=getimagesize($_FILES ["fileToUpload"]["tmp_name"]);
+    $check=getimagesize($_FILES ["fileToUpload"]["tmp_name"]); //checks if file is an image
     if ($check == true) {
 
-        if (file_exists($target_file)) {
-            echo "Sorry, file already exist.";
+        if (file_exists($target_file))  //checks if file already exists
+        {
+            $msg= "Sorry, file already exist.";
         }else {
-            if ($_FILES["fileToUpload"]["size"] > 100000) {
-                echo "Sorry, your picture is too large.";
+            if ($_FILES["fileToUpload"]["size"] > 100000) //checks if file size is greater than 100kb
+                {
+                $msg= "Sorry, your picture is too large.";
                 } else {
+                    //checks if file s the acceptable format
                     if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") { //function xecho($imageNOK){echo xssafe($imageNOK);}
                     $msg = "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
                     $uploadOk = 0;
@@ -78,7 +79,7 @@ if(isset($_POST["submit"])) {
 
 
     }else {
-        echo "File is not an image. ";
+        $msg = "File is not an image. ";
     }
 
 
