@@ -1,7 +1,8 @@
 <?php
 session_start();
 include ("connection.php");
-
+//xss safe output - sanitizing output
+function xecho($msg){echo xssafe($msg);}
 $msg = "";
 if(isset($_POST["submit"]))
 {

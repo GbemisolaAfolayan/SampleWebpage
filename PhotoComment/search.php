@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+//xss safe output - sanitizing output
+function xecho($resultText){echo xssafe($resultText);}
 $resultText = "";
 if(isset($_POST["submit"]))
 {
