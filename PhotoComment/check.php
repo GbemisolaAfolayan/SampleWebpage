@@ -47,7 +47,7 @@ if (isset($_SESSION['timeout'])) {
    // echo ($_SESSION['timeout']);
     //if($time_diff > 10)
 
-        if ($time_diff >= 30)
+        if ($time_diff >= 600)
     {
 
         //session expire
