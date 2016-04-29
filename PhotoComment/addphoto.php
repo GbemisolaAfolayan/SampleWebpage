@@ -2,6 +2,10 @@
 session_start();
 include("connection.php"); //Establishing connection with our database
 //include('check.php'); // Include session & timeout
+
+//xss safe output - sanitizing output
+function xecho($msg){echo xssafe($msg);}
+
 $msg = ""; //Variable for storing our errors.
 if(isset($_POST["submit"])) {
     $title = $_POST["title"];
@@ -9,15 +13,15 @@ if(isset($_POST["submit"])) {
     $url = "test";
     $name = $_SESSION["username"];
 
-    //escapes & strip special characters
-    $title = stripslashes($title);
-    $desc = stripslashes($desc);
-    $title = mysqli_real_escape_string($db, $title);
+    //escapes & strip special characters against SQL injection
+       $title = mysqli_real_escape_string($db, $title);
     $desc = mysqli_real_escape_string($db, $desc);
 
     // prevents xss
     $title = htmlspecialchars($_POST["title"]);
     $desc = htmlspecialchars($_POST["desc"]);
+    $title = stripslashes($title);
+    $desc = stripslashes($desc);
 
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -27,14 +31,6 @@ if(isset($_POST["submit"])) {
     $imageNotUploaded = "Sorry, your file was not uploaded.";
    // $file_exist= file_exists($target_file);
     //$imagesize = getimagesize($_FILES["fileToUpload"]["name"]);
-
-    /*if ((strtolower($file_ext) == 'jpg' || strtolower($file_ext) == 'jpeg' || strtolower($file_ext) == 'png' ||strtolower($file_ext) == 'gif' ) &&
-        ($imagesize < 100000) &&
-        ($file_type == 'image/jpg' || $file_type == 'image/jpeg' || $file_type == 'image/png' || $file_type == 'image/gif') &&
-        getimagesize($_FILES["fileToUpload"]["name"]) &&
-        file_exists($_FILES["fileToUpload"]["name"]) ){
-
-            }*/
 
     $check=getimagesize($_FILES ["fileToUpload"]["tmp_name"]);
     if ($check == true) {
