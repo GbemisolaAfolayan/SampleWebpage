@@ -25,10 +25,8 @@ if(isset($_POST["submit"])) {
     $uploadOk = 1;
     $imageNOK = "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
     $imageNotUploaded = "Sorry, your file was not uploaded.";
-    // $imageUploaded = "Thank You! The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. click <a href='photos.php'>here</a> to go back";
-    //  $imageUploadError = "Sorry, there was an error uploading your file";
-    //  $msg = "You need to login first";
 
+    //specfy the accepted files and reports and error message if another file type is uploaded.
     if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") { //function xecho($imageNOK){echo xssafe($imageNOK);}
        $msg = "Sorry, only JPG, PNG, JPEG and GIF files are allowed";
         $uploadOk = 0;
