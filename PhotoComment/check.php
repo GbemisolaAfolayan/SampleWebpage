@@ -21,7 +21,7 @@ if (isset($_SESSION['timeout']))
     { $timein = $_SESSION['timeout'];
     $time_diff = time() - $timein;
 
-        if ($time_diff >= 10)
+        if ($time_diff >= 300)
     { //session expire
         session_unset();
         session_destroy();
