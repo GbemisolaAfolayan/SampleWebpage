@@ -2,13 +2,31 @@
 session_start();
 include("connection.php"); //Establishing connection with our database
 
+//xss safe output - sanitizing output
+function xecho($error){ echo xssafe($error);}
 $msg = ""; //Variable for storing our errors.
+
 if(isset($_POST["submit"]))
 {
 
     $desc = ($_POST["desc"]);
     $photoID =($_POST["photoID"]);
     $name = $_SESSION["username"];
+
+    //get input nd trim
+    $desc = trim( $desc );
+    $photoID = trim($photoID );
+
+    // escape special characters
+    $desc = stripslashes($desc);
+    $photoID = stripslashes($photoID);
+    $desc = mysqli_real_escape_string($db, $desc);
+    $photoID = mysqli_real_escape_string($db, $photoID);
+
+    //prevents xss
+    $desc = htmlspecialchars($_POST["desc"]);
+    $photoID = htmlspecialchars($_POST["photoID"]);
+
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
