@@ -15,24 +15,20 @@ if(!isset($user_check))
 {
 header("Location: index.php");
 }
-//$current_time=time();
+
 //session time out
 if (isset($_SESSION['timeout']))
     { $timein = $_SESSION['timeout'];
     $time_diff = time() - $timein;
-    //echo $time_diff;
-   // echo ($_SESSION['timeout']);
-    //if($time_diff > 10)
+
         if ($time_diff >= 10)
     { //session expire
         session_unset();
         session_destroy();
         header("Location: index.php");
     }
-        else {//session timeout
-            //session_destroy();
-            //header("Location: index.php");
-        $_SESSION['timeout'] = time(); }
+       // else {
+      //  $_SESSION['timeout'] = time(); }
 }
 else {
     $_SESSION['timeout'] = time();
