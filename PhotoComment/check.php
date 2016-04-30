@@ -15,7 +15,17 @@ if(!isset($user_check))
 {
 header("Location: index.php");
 }
+//Session IP bind
+$IP = getenv ( "REMOTE_ADDR" );
+$_SESSION['IP'] = $IP;
+if (isset ($_SESSION['IP'])){
+//echo $IP;
 
+    if (!$_SESSION['IP'] == getenv('REMOTE_ADDR'))
+    {
+        header("Location: index.php");
+    }
+}
 //session time out
 if (isset($_SESSION['timeout']))
     { $timein = $_SESSION['timeout'];
