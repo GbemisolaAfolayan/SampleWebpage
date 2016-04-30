@@ -3,6 +3,7 @@ include('connection.php');
 session_start();
 $user_check=$_SESSION['username'];
 
+
 $ses_sql = mysqli_query($db,"SELECT username, admin FROM users WHERE username='$user_check' ");
 $row=mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
 
@@ -14,17 +15,7 @@ if(!isset($user_check))
 {
 header("Location: index.php");
 }
-//Session IP bind
-$IP = getenv ( "REMOTE_ADDR" );
-$_SESSION['IP'] = $IP;
-if (isset ($_SESSION['IP'])){
-//echo $IP;
-
-    if (!$_SESSION['IP'] == getenv('REMOTE_ADDR'))
-    {
-        header("Location: index.php");
-    }
-}
+//$current_time=time();
 //session time out
 if (isset($_SESSION['timeout']))
     { $timein = $_SESSION['timeout'];
@@ -32,7 +23,7 @@ if (isset($_SESSION['timeout']))
     //echo $time_diff;
    // echo ($_SESSION['timeout']);
     //if($time_diff > 10)
-        if ($time_diff >= 600)
+        if ($time_diff >= 10)
     { //session expire
         session_unset();
         session_destroy();
