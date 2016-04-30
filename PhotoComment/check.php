@@ -15,6 +15,7 @@ if(!isset($user_check))
 {
 header("Location: index.php");
 }
+
 //Session IP bind
 $IP = getenv ( "REMOTE_ADDR" );
 $_SESSION['IP'] = $IP;
