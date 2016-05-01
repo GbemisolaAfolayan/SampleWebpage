@@ -16,10 +16,10 @@ if(isset($_POST["submit"]))
     //escapes nd strip special characters
     $name = stripslashes($name);
     $name = mysqli_real_escape_string($db, $name);
-    $name = xss_erase($name);
+
     //prevents xss
     $name = htmlspecialchars($_POST["username"]);
-
+    //$name = xss_erase($name);
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
