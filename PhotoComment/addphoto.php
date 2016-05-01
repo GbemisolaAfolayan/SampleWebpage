@@ -31,7 +31,9 @@ if(isset($_POST["submit"])) {
     //$imagesize = getimagesize($_FILES["fileToUpload"]["name"]);
 
     $check=getimagesize($_FILES ["fileToUpload"]["tmp_name"]); //checks if file is an image
-    if ($check == true) {
+    if ($check !== false) {
+        echo "File is an image - " . $check["mime"]. ".";
+        $uploadOk=1;
 
         if (file_exists($target_file))  //checks if file already exists
         {
@@ -39,7 +41,7 @@ if(isset($_POST["submit"])) {
         }else {
             if ($_FILES["fileToUpload"]["size"] > 100000) //checks if file size is greater than 100kb
                 {
-                $msg= "Sorry, your picture is too large.";
+                $msg= "Sorry, your picture is too large. File should be 100kb or less!";
                 } else {
                     //checks if file s the acceptable format
                     if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") { //function xecho($imageNOK){echo xssafe($imageNOK);}
