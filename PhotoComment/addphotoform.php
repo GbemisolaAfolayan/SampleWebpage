@@ -1,5 +1,5 @@
 <?php
-session_regenerate_id();
+//session_regenerate_id();
 include("check.php");
 include("addphoto.php");
 ?>
