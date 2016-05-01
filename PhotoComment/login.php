@@ -2,6 +2,7 @@
 	session_start();
     include("connection.php"); //Establishing connection with our database
   //  include('check.php'); // Include session & timeout
+
     $error = ""; //Variable for storing our errors.
 	if(isset($_POST["submit"])) {
         //Check Anti-CRSF token
@@ -18,7 +19,6 @@
 
             //prevents xss
             $username = htmlspecialchars($_POST['username']);
-            $username =xss_erase($username);
             $password = htmlspecialchars($_POST['password']);
 
             //escape function
