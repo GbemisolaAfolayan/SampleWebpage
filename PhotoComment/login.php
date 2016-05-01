@@ -64,10 +64,12 @@
 
             if (mysqli_num_rows($result) == 1) {
 
-                function xecho($success)
-                {
-                    echo xss_erase($success);
-                }
+               // function xecho($success)
+                //{
+                //    echo xss_erase($success);
+                $success = "success";
+
+               // }
 
                 $_SESSION['username'] = $username;// Initializing Session
                 //$_SESSION['userid'] = $userid;
