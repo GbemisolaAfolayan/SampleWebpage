@@ -21,7 +21,7 @@
             $photoID = htmlspecialchars($_GET['id']);
             $photoID = stripslashes($photoID);
             $photoID = mysqli_real_escape_string($db, $photoID);
-            $photoID = xss_erase($photoID);
+
 
             $photoSql="SELECT * FROM photos WHERE photoID='$photoID'";
             $photoresult=mysqli_query($db,$photoSql) or die(mysqli_error($db));
