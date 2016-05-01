@@ -9,6 +9,7 @@ if(isset($_GET['id']))
 
     //prevents xss
     $photoID = htmlspecialchars($_GET['id']);
+    $photoID = xss_erase($photoID);
 
     //escapes
     $photoID = stripslashes($photoID);

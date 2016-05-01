@@ -2,6 +2,13 @@
 session_start();
 include("connection.php"); //Establishing connection with our database
 
+//function to clean xss inputs
+function xss_erase ($input_str)
+{
+    $return_str = str_replace(array('<', '>', "'", '"', ')', '('), array('&lt;', '&gt;', '&apos;', '&#x22;', '&#x29;', '&#x28;'), $input_str);
+    $return_str = str_ireplace('%3Cscript', '', $return_str);
+    return $return_str;
+}
 //xss safe output - sanitizing output
 function xecho($error){ echo xssafe($error);}
 $msg = ""; //Variable for storing our errors.
@@ -26,6 +33,8 @@ if(isset($_POST["submit"]))
     //prevents xss
     $desc = htmlspecialchars($_POST["desc"]);
     $photoID = htmlspecialchars($_POST["photoID"]);
+    $desc = xss_erase($_POST["desc"]);
+    $photoID = xss_erase($_POST["photoID"]);
 
 
     $sql="SELECT userID FROM users WHERE username='$name'";

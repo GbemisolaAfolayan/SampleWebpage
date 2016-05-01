@@ -14,8 +14,12 @@ if(isset($_POST["submit"]))
 
     //prevents xss
     $name = htmlspecialchars($_POST["username"]);
+    $name =xss_erase($name);
     $email = htmlspecialchars($_POST["email"]);
+    $email =xss_erase($email);
     $password = htmlspecialchars($_POST["password"]);
+    $password =xss_erase($password);
+
 
     // strips special charachers
     $username = stripslashes($username);

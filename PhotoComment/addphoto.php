@@ -3,6 +3,13 @@ session_start();
 include("connection.php"); //Establishing connection with our database
 //include('check.php'); // Include session & timeout
 
+//function to clean xss inputs
+function xss_erase ($input_str)
+{
+    $return_str = str_replace(array('<', '>', "'", '"', ')', '('), array('&lt;', '&gt;', '&apos;', '&#x22;', '&#x29;', '&#x28;'), $input_str);
+    $return_str = str_ireplace('%3Cscript', '', $return_str);
+    return $return_str;
+}
 //xss safe output - sanitizing output
 function xecho($msg){echo xssafe($msg);}
 
@@ -22,6 +29,8 @@ if(isset($_POST["submit"])) {
     $desc = htmlspecialchars($_POST["desc"]);
     $title = stripslashes($title);
     $desc = stripslashes($desc);
+    $title = xss_erase($title);
+    $desc =  xss_erase($desc);
 
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -32,8 +41,8 @@ if(isset($_POST["submit"])) {
 
     $check=getimagesize($_FILES ["fileToUpload"]["tmp_name"]); //checks if file is an image
     if ($check !== false) {
-        echo "File is an image - " . $check["mime"]. ".";
-        $uploadOk=1;
+       // echo "File is an image - " . $check["mime"]. ".";
+        //$uploadOk=1;
 
         if (file_exists($target_file))  //checks if file already exists
         {
