@@ -78,10 +78,8 @@
                 header("location: photos.php"); // Redirecting To Other Page
             } else
             { //xss safe output - sanitizing output
-                function xecho($error)
-                {
-                    echo xss_erase($error);
 
+                $error = "Incorrect username or password.";
 
                 }
 
