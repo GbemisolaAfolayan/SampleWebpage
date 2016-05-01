@@ -2,9 +2,9 @@
 session_start();
 
 //xss safe output - sanitizing output
-function xecho($resultText){
-    echo xss_erase($resultText);
-}
+//function xecho($resultText){
+  //  echo xss_erase($resultText);
+//}
 
 $resultText = "";
 if(isset($_POST["submit"]))
