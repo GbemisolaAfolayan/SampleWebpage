@@ -18,6 +18,7 @@
 
             //prevents xss
             $username = htmlspecialchars($_POST['username']);
+            $username =xss_erase($username);
             $password = htmlspecialchars($_POST['password']);
 
             //escape function

@@ -18,7 +18,7 @@ if(isset($_POST["submit"]))
     $email = htmlspecialchars($_POST["email"]);
     $email =xss_erase($email);
     $password = htmlspecialchars($_POST["password"]);
-    $password =xss_erase($password);
+
 
 
     // strips special charachers
