@@ -1,6 +1,9 @@
 <?php
 //session_start();
 include("check.php");
+
+//xss safe output - sanitizing output
+function xecho($msg){echo xssafe($msg);}
 $resultText = "";
 if(isset($_SESSION['username']))
 {
@@ -24,21 +27,12 @@ if(isset($_SESSION['username']))
             }
         }
         else{
-            /*xss safe echo
-            function xecho ($resultText1) {
-                echo xssafe ($resultText1);
-            }*/
             $resultText = "no photos by you!";
         }
     }
     else
     {
-        /*xss safe echo
-        function xecho ($resultText2)
-        {
-            echo xssafe($resultText2);
-        }*/
-            $resultText = "no user with that username";
+        $resultText = "no user with that username";
 
     }
 }
