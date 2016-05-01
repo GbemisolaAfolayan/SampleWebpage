@@ -11,7 +11,7 @@ function xss_erase ($input_str)
     return $return_str;
 }
 //xss safe output - sanitizing output
-function xecho($msg){echo xssafe($msg);}
+function xecho($msg){echo xss_erase($msg);}
 
 $msg = ""; //Variable for storing our errors.
 if(isset($_POST["submit"])) {

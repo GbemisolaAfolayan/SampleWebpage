@@ -3,7 +3,7 @@
 include("check.php");
 
 //xss safe output - sanitizing output
-//function xecho($msg){echo xssafe($msg);}
+function xecho($resultText){echo xss_erase($resultText);}
 $resultText = "";
 if(isset($_SESSION['username']))
 {

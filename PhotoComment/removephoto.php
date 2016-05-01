@@ -25,7 +25,7 @@ if(isset($_GET['id']))
     else {
         //xss safe echo
         function xecho($deleteError) {
-            echo xssafe($deleteError);
+            echo xss_erase($deleteError);
         }
 
         //echo "Sorry, there was an error deleting the file.";

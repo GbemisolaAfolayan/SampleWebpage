@@ -1,7 +1,11 @@
 <?php
 session_start();
+
 //xss safe output - sanitizing output
-function xecho($resultText){echo xssafe($resultText);}
+function xecho($resultText){
+    echo xss_erase($resultText);
+}
+
 $resultText = "";
 if(isset($_POST["submit"]))
 {
@@ -33,20 +37,12 @@ if(isset($_POST["submit"]))
             }
         }
         else{
-            //xss safe echo
-           // function xecho ($resultText1) {
-            //    echo xssafe ($resultText1);
-            //}
             $resultText = "no photos by user";
         }
     }
     else
     {
-        //xss safe echo
-        //function xecho ($resultText2) {
-           // echo xssafe ($resultText2);
-        //}
-        $resultText = "no user with that username";
+         $resultText = "no user with that username";
 
     }
 }

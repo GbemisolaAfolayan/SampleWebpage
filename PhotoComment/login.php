@@ -1,5 +1,6 @@
 <?php
 	session_start();
+    session_regenerate_id();
 	include("connection.php"); //Establishing connection with our database
   //  include('check.php'); // Include session & timeout
     $error = ""; //Variable for storing our errors.
@@ -80,7 +81,7 @@
             { //xss safe output - sanitizing output
                 function xecho($error)
                 {
-                    echo xssafe($error);
+                    echo xss_erase($error);
 
 
                 }
