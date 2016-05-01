@@ -66,11 +66,11 @@
 
                 function xecho($success)
                 {
-                    echo xssafe($success);
+                    echo xss_erase($success);
                 }
 
                 $_SESSION['username'] = $username;// Initializing Session
-                $_SESSION['userid'] = $userid;
+                //$_SESSION['userid'] = $userid;
                 //$_SESSION['IP'] = $_SERVER['REMOTE_ADDR'];
                 /*$_SESSION['start'] = time(); // Taking now logged in time.
                 // Ending a session in 10 minutes from the starting time.
@@ -78,9 +78,12 @@
                 header("location: photos.php"); // Redirecting To Other Page
             } else
             { //xss safe output - sanitizing output
+                function xecho($error)
+                {
+                    echo xss_erase($error);
 
-                $error = "Incorrect username or password.";
 
+                }
 
             }
 
